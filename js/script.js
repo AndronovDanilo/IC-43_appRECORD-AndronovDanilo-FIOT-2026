@@ -1,60 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const labButtons = document.querySelectorAll('.lab-btn');
+    const labTabButtons = document.querySelectorAll('.lab-tab-btn');
+    const subtabsGroups = document.querySelectorAll('.subtabs-group');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    // Перемикання вкладок у межах поточної лабораторної
-    function setupSubtabs() {
-        document.querySelectorAll('.subtab-btn').forEach(btn => {
-            btn.onclick = () => {
-                const targetId = btn.getAttribute('data-target');
-                const parentNav = btn.parentElement;
+    // Налаштування кліків по овальних пілюлях підвкладок у сайдбарі
+    function setupSubtabPills() {
+        document.querySelectorAll('.subtab-pill').forEach(pill => {
+            pill.onclick = () => {
+                const targetId = pill.getAttribute('data-target');
+                const parentGroup = pill.closest('.subtabs-group');
 
-                parentNav.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+                if (parentGroup) {
+                    parentGroup.querySelectorAll('.subtab-pill').forEach(p => p.classList.remove('active'));
+                }
                 tabContents.forEach(c => c.classList.remove('active'));
 
-                btn.classList.add('active');
+                pill.classList.add('active');
                 const targetContent = document.getElementById(targetId);
                 if (targetContent) {
                     targetContent.classList.add('active');
+                    // Плавний скрол вгору робочої області
+                    const displayArea = document.querySelector('.content-display-area');
+                    if (displayArea) {
+                        displayArea.scrollTop = 0;
+                    }
                 }
             };
         });
     }
 
-    setupSubtabs();
+    setupSubtabPills();
 
-    // Перемикання лабораторних у боковому меню
-    labButtons.forEach(btn => {
+    // Перемикання лабораторних у горизонтальному ряду (№1 .. №9)
+    labTabButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const labNum = btn.getAttribute('data-lab');
-            labButtons.forEach(b => b.classList.remove('active'));
+
+            // Активуємо обрану кнопку лаби
+            labTabButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const lab1Subtabs = document.getElementById('lab1-subtabs');
-            const lab2Subtabs = document.getElementById('lab2-subtabs');
-            const lab3Subtabs = document.getElementById('lab3-subtabs');
-            const otherContainer = document.getElementById('other-labs-container');
-
+            // Приховуємо всі групи сайдбару та контент
+            subtabsGroups.forEach(g => g.style.display = 'none');
             tabContents.forEach(c => c.classList.remove('active'));
 
-            if (lab1Subtabs) lab1Subtabs.style.display = 'none';
-            if (lab2Subtabs) lab2Subtabs.style.display = 'none';
-            if (lab3Subtabs) lab3Subtabs.style.display = 'none';
-            if (otherContainer) otherContainer.style.display = 'none';
+            const targetGroup = document.getElementById(`lab${labNum}-subtabs`);
+            const otherContainer = document.getElementById('other-labs-container');
 
-            if (labNum === '1') {
-                lab1Subtabs.style.display = 'flex';
-                document.querySelector('.subtab-btn[data-target="lab1-topic"]').click();
-            } else if (labNum === '2') {
-                lab2Subtabs.style.display = 'flex';
-                document.querySelector('.subtab-btn[data-target="lab2-topic"]').click();
-            } else if (labNum === '3') {
-                lab3Subtabs.style.display = 'flex';
-                document.querySelector('.subtab-btn[data-target="lab3-topic"]').click();
+            if (targetGroup) {
+                targetGroup.style.display = 'flex';
+                // Активуємо першу доступну кнопку в цій групі
+                const firstPill = targetGroup.querySelector('.subtab-pill');
+                if (firstPill) {
+                    firstPill.click();
+                }
             } else {
-                otherContainer.style.display = 'block';
-                document.getElementById('other-lab-title').textContent = `Лабораторна робота №${labNum}`;
-                document.getElementById('other-lab-desc').textContent = `Матеріали та звітність для Лабораторної роботи №${labNum} будуть додані згідно з навчальним планом.`;
+                // Для лаб 4-9
+                if (otherContainer) {
+                    otherContainer.classList.add('active');
+                    document.getElementById('other-lab-title').textContent = `Лабораторна робота №${labNum}`;
+                    document.getElementById('other-lab-desc').textContent = `Матеріали та звітність для Лабораторної роботи №${labNum} будуть додані згідно з навчальним планом семестру.`;
+                }
             }
         });
     });

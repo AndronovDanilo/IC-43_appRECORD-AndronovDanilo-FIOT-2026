@@ -7,80 +7,90 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <div class="header-text">
-                <div class="header-title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</div>
-                <div class="header-subtitle">Дисципліна: «Веборієнтовані технології. Frontend розробка» | Кафедра ІСТ, ФІОТ, КПІ ім. Ігоря Сікорського</div>
-                <div class="student-info">
-                    <strong>Студент:</strong> Андронов Данило &nbsp;|&nbsp; 
-                    <strong>Група:</strong> ІС-43 &nbsp;|&nbsp; 
-                    <strong>Номер у списку:</strong> 1 (Варіант 1) &nbsp;|&nbsp;
-                    <strong>Викладач:</strong> ст. викл. Проскура Світлана Леонідівна &nbsp;|&nbsp; 
-                    <strong>Навчальний рік:</strong> 2026/2027
+        <header class="report-header">
+        <div class="header-container">
+            <div class="header-titles">
+                <h1 class="header-title-main">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+                <div class="header-course">З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</div>
+                <div class="header-student">
+                    Виконавець : Студент групи <strong>ІС-43</strong> <strong>Андронов Данило</strong> (№1 у списку, Варіант 1) &nbsp;|&nbsp;
+                    Викладач: <strong>ст. викл. Проскура Світлана Леонідівна</strong>
                 </div>
             </div>
-            <div class="header-photo-wrapper">
-                <img src="images/student-photo.png" alt="Фото студента: Андронов Данило" class="student-photo" title="Андронов Данило, група ІС-43">
+            <div class="student-photo-card">
+                <div class="photo-caption">ФОТО студента</div>
+                <img src="images/student-photo.png" alt="Андронов Данило" class="student-photo-img" title="Студент групи ІС-43 Андронов Данило">
             </div>
         </div>
     </header>
 
-    <div class="app-container">
-        <!-- Бокова панель вибору лабораторних робіт -->
-        <aside class="sidebar">
-            <h3>Лабораторні роботи</h3>
-            <button class="lab-btn active" data-lab="1">Лабораторна робота №1</button>
-            <button class="lab-btn" data-lab="2">Лабораторна робота №2</button>
-            <button class="lab-btn" data-lab="3">Лабораторна робота №3</button>
-            <button class="lab-btn" data-lab="4">Лабораторна робота №4</button>
-            <button class="lab-btn" data-lab="5">Лабораторна робота №5</button>
-            <button class="lab-btn" data-lab="6">Лабораторна робота №6</button>
-            <button class="lab-btn" data-lab="7">Лабораторна робота №7</button>
-            <button class="lab-btn" data-lab="8">Лабораторна робота №8</button>
-            <button class="lab-btn" data-lab="9">Лабораторна робота №9</button>
-        </aside>
+    <!-- Горизонтальний ряд лабораторних робіт (№1 .. №9) згідно з орієнтовним макетом викладача -->
+    <nav class="labs-horizontal-nav" aria-label="Вибір лабораторної роботи">
+        <div class="labs-nav-container">
+            <button class="lab-tab-btn active" data-lab="1">Лабораторна робота №1</button>
+            <button class="lab-tab-btn" data-lab="2">Лабораторна робота №2</button>
+            <button class="lab-tab-btn" data-lab="3">Лабораторна робота №3</button>
+            <button class="lab-tab-btn" data-lab="4">Лабораторна робота №4</button>
+            <button class="lab-tab-btn" data-lab="5">Лабораторна робота №5</button>
+            <button class="lab-tab-btn" data-lab="6">Лабораторна робота №6</button>
+            <button class="lab-tab-btn" data-lab="7">Лабораторна робота №7</button>
+            <button class="lab-tab-btn" data-lab="8">Лабораторна робота №8</button>
+            <button class="lab-tab-btn" data-lab="9">Лабораторна робота №9</button>
+        </div>
+    </nav>
 
-        <!-- Основна контентна зона -->
-        <main class="main-content">
-            <!-- Підвкладки для Лабораторної роботи №1 -->
-            <nav id="lab1-subtabs" class="subtabs-container">
-                <button class="subtab-btn active" data-target="lab1-topic">1. Тема, мета, адреси</button>
-                <button class="subtab-btn" data-target="lab1-domain">2. Опис предметної галузі</button>
-                <button class="subtab-btn" data-target="lab1-figma">3. Макет у Figma</button>
-                <button class="subtab-btn" data-target="lab1-structure">4. Структура документа (HTML)</button>
-                <button class="subtab-btn" data-target="lab1-table">5. Таблиця (код, прев'ю, теорія)</button>
-                <button class="subtab-btn" data-target="lab1-form">6. Форма (код, прев'ю, теорія)</button>
-                <button class="subtab-btn" data-target="lab1-lists">7. Списки (код, прев'ю, теорія)</button>
-                <button class="subtab-btn" data-target="lab1-images">8. Зображення (код, прев'ю, теорія)</button>
-                <button class="subtab-btn" data-target="lab1-conclusions">9. Висновки</button>
-            </nav>
+    <!-- Робочий простір: Лівий сайдбар з овальними кнопками-пілюлями + Праве місце виведення інформації -->
+    <div class="report-workspace">
+        <!-- Лівий сайдбар підвкладок завдань поточної лаби -->
+        <aside class="subtabs-sidebar" aria-label="Зміст лабораторної роботи">
+            <!-- Підвкладки для Лабораторної роботи №1 (точно як на рис.1 викладача) -->
+            <div id="lab1-subtabs" class="subtabs-group">
+                <button class="subtab-pill active" data-target="lab1-topic">Тема, Мета, Місце розташування сайту, звіту</button>
+                <button class="subtab-pill" data-target="lab1-domain">Опис предметного середовища. Опис бізнес-логіки</button>
+                <button class="subtab-pill" data-target="lab1-figma">Макет у Figma</button>
+                <button class="subtab-pill parent-pill" data-target="lab1-structure">Структура документа</button>
+                <button class="subtab-pill indented" data-target="lab1-table">HTML-код ТАБЛИЦІ</button>
+                <button class="subtab-pill indented" data-target="lab1-images">HTML-код ЗОБРАЖЕННЯ</button>
+                <button class="subtab-pill indented" data-target="lab1-form">HTML-код ФОРМИ</button>
+                <button class="subtab-pill indented" data-target="lab1-lists">HTML-код СПИСКІВ</button>
+                <button class="subtab-pill" data-target="lab1-live-site">Головна сторінка WEB-застосунку</button>
+                <button class="subtab-pill" data-target="lab1-conclusions">ВИСНОВКИ</button>
+            </div>
 
-            <!-- Підвкладки для Лабораторної роботи №2 -->
-            <nav id="lab2-subtabs" class="subtabs-container" style="display: none;">
-                <button class="subtab-btn active" data-target="lab2-topic">1. Тема, мета, адреси</button>
-                <button class="subtab-btn" data-target="lab2-tag-sel">2. Селектори тегу</button>
-                <button class="subtab-btn" data-target="lab2-class-sel">3. Селектори класу</button>
-                <button class="subtab-btn" data-target="lab2-id-sel">4. Селектори ідентифікатора</button>
-                <button class="subtab-btn" data-target="lab2-other-sel">5. Інші селектори</button>
-                <button class="subtab-btn" data-target="lab2-css-styling">6. Стильове оформлення (Шрифти, Таблиці, CSS Просунутий)</button>
-                <button class="subtab-btn" data-target="lab2-resume">7. Стилізація Резюме</button>
-                <button class="subtab-btn" data-target="lab2-conclusions">8. Висновки</button>
-                <button class="subtab-btn" data-target="lab2-questions">9. Контрольні запитання</button>
-            </nav>
+            <!-- Підвкладки для Лабораторної роботи №2 (точно як на рис.1 для ЛР2 викладача) -->
+            <div id="lab2-subtabs" class="subtabs-group" style="display: none;">
+                <button class="subtab-pill" data-target="lab2-topic">Тема, мета ЛР №2. Місце розташування сайту, звіту</button>
+                <button class="subtab-pill" data-target="lab2-styles-connect">Способи підключення стилів</button>
+                <button class="subtab-pill parent-pill" data-target="lab2-tag-sel">СЕЛЕКТОРИ</button>
+                <button class="subtab-pill indented" data-target="lab2-tag-sel">Селектори тегу</button>
+                <button class="subtab-pill indented" data-target="lab2-class-sel">Селектори класу</button>
+                <button class="subtab-pill indented" data-target="lab2-id-sel">Селектори ідентифікаторів</button>
+                <button class="subtab-pill indented" data-target="lab2-other-sel">Інші селектори</button>
+                <button class="subtab-pill" data-target="lab2-css-styling">CSS: Шрифти, Текст, Таблиці, Фон, Контур, Списки, CSS Просунутий</button>
+                <button class="subtab-pill" data-target="lab2-resume">Стилізація Резюме</button>
+                <button class="subtab-pill" data-target="lab2-conclusions">ВИСНОВКИ до ЛР №2</button>
+                <button class="subtab-pill" data-target="lab2-questions">Контрольні запитання</button>
+            </div>
 
             <!-- Підвкладки для Лабораторної роботи №3 -->
-            <nav id="lab3-subtabs" class="subtabs-container" style="display: none;">
-                <button class="subtab-btn active" data-target="lab3-topic">1. Тема, мета, адреси</button>
-                <button class="subtab-btn" data-target="lab3-task1-site">2. Завдання 1: Адаптивний сайт (Flexbox &amp; Бургер)</button>
-                <button class="subtab-btn" data-target="lab3-task2-table">3. Завдання 2: Таблична верстка (Вар 1)</button>
-                <button class="subtab-btn" data-target="lab3-task2-blocks">4. Завдання 2: Блокова верстка на float (Вар 2)</button>
-                <button class="subtab-btn" data-target="lab3-task3-flexbox">5. Завдання 3: Flexbox макет (Вар 1)</button>
-                <button class="subtab-btn" data-target="lab3-conclusions">6. Висновки</button>
-                <button class="subtab-btn" data-target="lab3-questions">7. Контрольні запитання</button>
-            </nav>
+            <div id="lab3-subtabs" class="subtabs-group" style="display: none;">
+                <button class="subtab-pill" data-target="lab3-topic">Тема, мета ЛР №3. Місце розташування сайту, звіту</button>
+                <button class="subtab-pill" data-target="lab3-task1-site">Завдання 1: Адаптивний сайт (Flexbox &amp; Бургер)</button>
+                <button class="subtab-pill" data-target="lab3-task2-table">Завдання 2: Таблична верстка (Варіант 1)</button>
+                <button class="subtab-pill" data-target="lab3-task2-blocks">Завдання 2: Блокова верстка на float (Варіант 2)</button>
+                <button class="subtab-pill" data-target="lab3-task3-flexbox">Завдання 3: Flexbox макет (Варіант 1)</button>
+                <button class="subtab-pill" data-target="lab3-conclusions">ВИСНОВКИ до ЛР №3</button>
+                <button class="subtab-pill" data-target="lab3-questions">Контрольні запитання</button>
+            </div>
+        </aside>
 
-            <!-- Вкладка 1: Тема, мета, посилання -->
+        <!-- ПРАВА ОСНОВНА ЗОНА: МІСЦЕ ВИВЕДЕННЯ ІНФОРМАЦІЇ -->
+        <main class="content-display-area" id="info-display-area">
+            <div class="display-area-header">
+                <span class="display-area-tag">Місце виведення інформації</span>
+                <span class="display-live-status">● Готово до захисту</span>
+            </div>
+
             <section id="lab1-topic" class="tab-content active">
                 <h2>Лабораторна робота №1</h2>
                 <div class="info-card">
@@ -571,6 +581,23 @@
             </section>
 
             <!-- Вкладка 8: Висновки ЛР1 -->
+                        <!-- Вкладка: Головна сторінка WEB-застосунку (як на орієнтовному макеті) -->
+            <section id="lab1-live-site" class="tab-content">
+                <h2>Головна сторінка власного WEB-застосунку («MandryStay»)</h2>
+                <div class="info-card">
+                    <p>Нижче представлено живий інтерактивний перегляд головної сторінки розробленого сайту <code>index.html</code> через вбудований фрейм, а також прямі посилання на GitHub та хостинг GitHub Pages.</p>
+                </div>
+                <div class="links-card">
+                    <p>
+                        <strong>🔗 Жива сторінка (GitHub Pages):</strong> <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/" target="_blank">Відкрити MandryStay у новому вікні ↗</a><br>
+                        <strong>📁 Репозиторій коду (GitHub):</strong> <a href="https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026" target="_blank">github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026 ↗</a>
+                    </p>
+                </div>
+                <div class="preview-box" style="padding: 10px;">
+                    <iframe src="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/" style="width: 100%; height: 750px; border: 1px solid #cbd5e1; border-radius: 8px;" title="MandryStay Live Demo"></iframe>
+                </div>
+            </section>
+
             <section id="lab1-conclusions" class="tab-content">
                 <h2>Висновки до Лабораторної роботи №1</h2>
                 <div class="info-card">
@@ -621,6 +648,41 @@
             </section>
 
             <!-- ЛР2: Вкладка 2 (Селектори тегу) -->
+                        <!-- Вкладка: Способи підключення стилів (як на схемі ЛР2) -->
+            <section id="lab2-styles-connect" class="tab-content">
+                <h2>Способи підключення стилів у веб-документі</h2>
+                <div class="info-card">
+                    <p>Відповідно до специфікації W3C та навчальної програми, існує 3 основні способи підключення каскадних таблиць стилів CSS до HTML-документа:</p>
+                </div>
+                <h3>1. Зовнішні стилі (External Stylesheet) — Основний метод:</h3>
+                <p>Підключення окремого файлу з розширенням <code>.css</code> через тег <code>&lt;link&gt;</code> всередині секції <code>&lt;head&gt;</code>. Забезпечує повне розділення контенту та оформлення, кешування браузером та повторне використання на багатьох сторінках сайту «MandryStay»:</p>
+                <div class="code-container">
+<pre>&lt;head&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="css/resume.css"&gt;
+&lt;/head&gt;</pre>
+                </div>
+                <h3>2. Внутрішні стилі (Internal / Embedded Styles):</h3>
+                <p>Розміщення CSS-правил всередині тегу <code>&lt;style&gt;</code> безпосередньо в <code>&lt;head&gt;</code> HTML-сторінки. Застосовується для специфічних стилів однієї конкретної сторінки або критичного CSS (Critical Path CSS):</p>
+                <div class="code-container">
+<pre>&lt;head&gt;
+    &lt;style&gt;
+        .hero-banner {
+            background: linear-gradient(135deg, #1e3a8a, #0284c7);
+            color: #ffffff;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</pre>
+                </div>
+                <h3>3. Вбудовані (рядкові / Inline) стилі:</h3>
+                <p>Запис CSS-властивостей безпосередньо в атрибут <code>style="..."</code> конкретного HTML-елемента. Має найвищий пріоритет специфічності (1000 пунктів), але ускладнює підтримку і не рекомендується для загальної верстки:</p>
+                <div class="code-container">
+<pre>&lt;p style="color: #0284c7; font-weight: bold; margin-top: 10px;"&gt;
+    Швидке онлайн-бронювання житла
+&lt;/p&gt;</pre>
+                </div>
+            </section>
+
             <section id="lab2-tag-sel" class="tab-content">
                 <h2>Селектори тегу (Type / Element Selectors)</h2>
                 <p>Селектори тегу застосовують правила оформлення до всіх зазначених HTML-елементів на сторінці безпосередньо за іменем їхнього тегу.</p>
