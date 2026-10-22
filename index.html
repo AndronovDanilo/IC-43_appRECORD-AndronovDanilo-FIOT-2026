@@ -60,6 +60,17 @@
                 <button class="subtab-btn" data-target="lab2-questions">9. Контрольні запитання</button>
             </nav>
 
+            <!-- Підвкладки для Лабораторної роботи №3 -->
+            <nav id="lab3-subtabs" class="subtabs-container" style="display: none;">
+                <button class="subtab-btn active" data-target="lab3-topic">1. Тема, мета, адреси</button>
+                <button class="subtab-btn" data-target="lab3-task1-site">2. Завдання 1: Адаптивний сайт (Flexbox &amp; Бургер)</button>
+                <button class="subtab-btn" data-target="lab3-task2-table">3. Завдання 2: Таблична верстка (Вар 1)</button>
+                <button class="subtab-btn" data-target="lab3-task2-blocks">4. Завдання 2: Блокова верстка на float (Вар 2)</button>
+                <button class="subtab-btn" data-target="lab3-task3-flexbox">5. Завдання 3: Flexbox макет (Вар 1)</button>
+                <button class="subtab-btn" data-target="lab3-conclusions">6. Висновки</button>
+                <button class="subtab-btn" data-target="lab3-questions">7. Контрольні запитання</button>
+            </nav>
+
             <!-- Вкладка 1: Тема, мета, посилання -->
             <section id="lab1-topic" class="tab-content active">
                 <h2>Лабораторна робота №1</h2>
@@ -937,6 +948,527 @@ tbody tr:hover {
                         <li><code>letter-spacing: 0.5px;</code> — міжбуквений інтервал (трекінг);</li>
                         <li><code>text-decoration: underline | none;</code> — підкреслення тексту або його скасування.</li>
                     </ul>
+                </div>
+            </section>
+
+            <!-- ============================================================= -->
+            <!-- РОЗДІЛИ ЛАБОРАТОРНОЇ РОБОТИ №3                                -->
+            <!-- ============================================================= -->
+
+            <!-- ЛР3: Вкладка 1 (Тема, мета, адреси) -->
+            <section id="lab3-topic" class="tab-content">
+                <h2>Лабораторна робота №3</h2>
+                <div class="info-card">
+                    <p><strong>Тема:</strong> ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА ЗАСОБАМИ CSS ТА FLEXBOX. АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT.</p>
+                    <p><strong>Мета:</strong> Придбати практичні навички верстки веб-сторінок засобами CSS, верстки на основі плаваючих елементів (float), з'ясувати переваги та недоліки типів макетів веб-сторінок. Опанувати сучасну методику гнучкої верстки сторінок засобами CSS та FLEXBOX. Налаштувати адаптивність інтерфейсу під мобільні, планшетні та десктопні екрани за допомогою медіа-запитів (@media) та метатегу viewport.</p>
+                </div>
+
+                <h3>Місце розташування проєктів та живих сторінок:</h3>
+                <div class="links-card">
+                    <ul>
+                        <li>
+                            <strong>1. Власний адаптивний WEB-застосунок («MandryStay»):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                        <li>
+                            <strong>2. Звітний HTML-документ (appRECORD):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appRECORD-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appRECORD-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                        <li>
+                            <strong>3. Сторінка Резюме (Resume):</strong><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/resume.html" target="_blank">https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/resume.html</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ЛР3: Вкладка 2 (Завдання 1: Адаптивний сайт) -->
+            <section id="lab3-task1-site" class="tab-content">
+                <h2>Завдання №1: Адаптивна верстка власного сайту «MandryStay»</h2>
+                <div class="info-card">
+                    <p>
+                        У власному веб-застосунку реалізовано повноцінну адаптивність під три категорії пристроїв (десктопи, планшети, смартфони) із застосуванням Flexbox, медіа-запитів з логічними операторами та мобільного бургер-меню.
+                    </p>
+                </div>
+
+                <h3>1. Семантичні компоненти інтерфейсу:</h3>
+                <ul>
+                    <li><code>&lt;header&gt;</code>: верхня плашка з векторним логотипом, гаслом сервісу, адаптивною кнопкою бургер-меню та списком навігації;</li>
+                    <li><code>&lt;main&gt;</code>: основна область із Hero-секцією, інтерактивною формою бронювання, адаптивною Flexbox-сіткою каталогу номерів та тарифною сіткою;</li>
+                    <li><code>&lt;footer&gt;</code>: нижній колонтитул із контактною інформацією в тегу <code>&lt;address&gt;</code> та навігаційними посиланнями.</li>
+                </ul>
+
+                <h3>2. Реалізація адаптивного Бургер-меню:</h3>
+                <p>На екранах із шириною менше 768px навігаційне меню трансформується у випадне бургер-меню з плавною CSS-анімацією трансформації іконки в хрестик:</p>
+                <div class="code-container">
+<pre>/* Кнопка бургер-меню (за замовчуванням прихована на десктопі) */
+.burger-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 34px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.burger-menu-btn span {
+    width: 100%;
+    height: 3.5px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Анімація перетворення в хрестик при активації */
+.burger-menu-btn.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.burger-menu-btn.active span:nth-child(2) { opacity: 0; }
+.burger-menu-btn.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }</pre>
+                </div>
+
+                <h3>3. Адаптивна Flexbox-сітка карток каталогу:</h3>
+                <div class="code-container">
+<pre>.rooms-flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* Десктоп (&gt; 1024px): 3 картки в ряд */
+@media screen and (min-width: 1025px) {
+    .rooms-flex-grid &gt; .room-card-article {
+        flex: 1 1 calc(33.333% - 16px);
+    }
+}
+
+/* Планшет (768px - 1024px): 2 картки в ряд */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .rooms-flex-grid &gt; .room-card-article {
+        flex: 1 1 calc(50% - 12px);
+    }
+}
+
+/* Мобільні пристрої (&lt;= 767px): 1 картка на 100% ширини */
+@media screen and (max-width: 767px) {
+    .burger-menu-btn { display: flex; }
+    nav &gt; ul.nav-bar-list { display: none; flex-direction: column; }
+    nav &gt; ul.nav-bar-list.active { display: flex; }
+    .rooms-flex-grid &gt; .room-card-article { flex: 1 1 100%; }
+}</pre>
+                </div>
+
+                <h3>4. Візуалізація адаптивного Flexbox-каталогу (Live Preview):</h3>
+                <div class="preview-box">
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <div style="flex: 1 1 calc(33.333% - 10px); min-width: 180px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <strong style="color: #0284c7;">Номер «Стандарт»</strong>
+                            <p style="font-size: 13px; color: #64748b; margin-top: 5px;">22 м², 1-2 гостя, Wi-Fi</p>
+                            <span style="font-weight: bold; color: #0f172a;">1 450 грн/доба</span>
+                        </div>
+                        <div style="flex: 1 1 calc(33.333% - 10px); min-width: 180px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <strong style="color: #0284c7;">Панорамний «Люкс»</strong>
+                            <p style="font-size: 13px; color: #64748b; margin-top: 5px;">45 м², тераса, сніданок + SPA</p>
+                            <span style="font-weight: bold; color: #0f172a;">4 100 грн/доба</span>
+                        </div>
+                        <div style="flex: 1 1 calc(33.333% - 10px); min-width: 180px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <strong style="color: #0284c7;">Альпійське шале</strong>
+                            <p style="font-size: 13px; color: #64748b; margin-top: 5px;">90 м², дров'яний камін, сауна</p>
+                            <span style="font-weight: bold; color: #0f172a;">8 900 грн/доба</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ЛР3: Вкладка 3 (Завдання 2: Таблична верстка, Варіант 1) -->
+            <section id="lab3-task2-table" class="tab-content">
+                <h2>Завдання №2: Таблична верстка макету (Варіант 1)</h2>
+                <div class="info-card">
+                    <p><strong>Номер варіанта:</strong> Остання цифра у списку групи: <strong>1</strong> (Варіант 1).</p>
+                    <p><strong>Структура макета:</strong> 3-зонна схема (Holy Grail Layout):</p>
+                    <ul>
+                        <li>Рядок 1: Верхній колонтитул (1) на всю ширину (<code>colspan="3"</code>);</li>
+                        <li>Рядок 2: Середній блок із 3-х колонок — Лівий сайдбар (2), Основний контент (3), Правий сайдбар (4);</li>
+                        <li>Рядок 3: Нижній колонтитул (5) на всю ширину (<code>colspan="3"</code>).</li>
+                    </ul>
+                </div>
+
+                <h3>1. Фіксована таблична верстка (Fixed Table Layout — ширина 800px):</h3>
+                <div class="code-container">
+<pre>&lt;!-- Фіксована таблична верстка (width: 800px) --&gt;
+&lt;table style="width: 800px; margin: 0 auto; border-collapse: collapse; text-align: center;"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3" style="background-color: #1e3a8a; color: white; height: 80px;"&gt;
+            &lt;strong&gt;1. Шапка (Header) — 800px&lt;/strong&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr style="height: 250px;"&gt;
+        &lt;td style="width: 160px; background-color: #bae6fd;"&gt;&lt;strong&gt;2. Лівий сайдбар (160px)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td style="width: 480px; background-color: #f1f5f9;"&gt;&lt;strong&gt;3. Центральний контент (480px)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td style="width: 160px; background-color: #bae6fd;"&gt;&lt;strong&gt;4. Правий сайдбар (160px)&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3" style="background-color: #0f172a; color: white; height: 60px;"&gt;
+            &lt;strong&gt;5. Підвал (Footer) — 800px&lt;/strong&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+                </div>
+
+                <div class="preview-box">
+                    <p><strong>Демонстрація фіксованого табличного макету (800px):</strong></p>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 800px; margin: 0 auto; border-collapse: collapse; text-align: center; font-size: 14px;">
+                            <tr>
+                                <td colspan="3" style="background-color: #1e3a8a; color: white; height: 70px; border: 1px solid #cbd5e1;">
+                                    <strong>1. Шапка (Header) — Фіксована ширина 800px</strong>
+                                </td>
+                            </tr>
+                            <tr style="height: 180px;">
+                                <td style="width: 160px; background-color: #bae6fd; color: #0369a1; border: 1px solid #cbd5e1;">
+                                    <strong>2. Лівий сайдбар (160px)</strong>
+                                </td>
+                                <td style="width: 480px; background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1;">
+                                    <strong>3. Основний контент (480px)</strong>
+                                </td>
+                                <td style="width: 160px; background-color: #bae6fd; color: #0369a1; border: 1px solid #cbd5e1;">
+                                    <strong>4. Правий сайдбар (160px)</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="background-color: #0f172a; color: white; height: 50px; border: 1px solid #cbd5e1;">
+                                    <strong>5. Підвал (Footer) — Фіксована ширина 800px</strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <h3>2. Гумова таблична верстка (Fluid Table Layout — ширина 100%):</h3>
+                <div class="code-container">
+<pre>&lt;!-- Гумова таблична верстка (width: 100%) --&gt;
+&lt;table style="width: 100%; border-collapse: collapse; text-align: center;"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3" style="background-color: #0284c7; color: white; height: 80px;"&gt;
+            &lt;strong&gt;1. Шапка (Header) — 100%&lt;/strong&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr style="height: 250px;"&gt;
+        &lt;td style="width: 20%; background-color: #e0f2fe;"&gt;&lt;strong&gt;2. Лівий сайдбар (20%)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td style="width: 60%; background-color: #ffffff;"&gt;&lt;strong&gt;3. Контент (60%)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td style="width: 20%; background-color: #e0f2fe;"&gt;&lt;strong&gt;4. Правий сайдбар (20%)&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3" style="background-color: #0f172a; color: white; height: 60px;"&gt;
+            &lt;strong&gt;5. Підвал (Footer) — 100%&lt;/strong&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+                </div>
+
+                <div class="preview-box">
+                    <p><strong>Демонстрація гумового табличного макету (100% ширини вікна):</strong></p>
+                    <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 14px;">
+                        <tr>
+                            <td colspan="3" style="background-color: #0284c7; color: white; height: 70px; border: 1px solid #cbd5e1;">
+                                <strong>1. Шапка (Header) — Гумова ширина 100%</strong>
+                            </td>
+                        </tr>
+                        <tr style="height: 180px;">
+                            <td style="width: 20%; background-color: #e0f2fe; color: #0284c7; border: 1px solid #cbd5e1;">
+                                <strong>2. Сайдбар (20%)</strong>
+                            </td>
+                            <td style="width: 60%; background-color: #ffffff; color: #0f172a; border: 1px solid #cbd5e1;">
+                                <strong>3. Основний контент (60%)</strong>
+                            </td>
+                            <td style="width: 20%; background-color: #e0f2fe; color: #0284c7; border: 1px solid #cbd5e1;">
+                                <strong>4. Сайдбар (20%)</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="background-color: #0f172a; color: white; height: 50px; border: 1px solid #cbd5e1;">
+                                <strong>5. Підвал (Footer) — Гумова ширина 100%</strong>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ЛР3: Вкладка 4 (Завдання 2: Блокова верстка на float, Варіант 2) -->
+            <section id="lab3-task2-blocks" class="tab-content">
+                <h2>Завдання №2: Блокова верстка за допомогою плаваючих елементів (Варіант 2)</h2>
+                <div class="info-card">
+                    <p><strong>Номер варіанта:</strong> Остання цифра у списку групи + 1: <strong>1 + 1 = 2</strong> (Варіант 2).</p>
+                    <p><strong>Механізм роботи:</strong> Використання CSS-властивостей <code>float: left</code>, <code>float: right</code> та обов'язкового очищення потоку за допомогою <code>clear: both</code>.</p>
+                </div>
+
+                <h3>1. Фрагмент CSS-коду блокової верстки:</h3>
+                <div class="code-container">
+<pre>/* Базові стилі блокового макету */
+.block-header {
+    width: 100%;
+    height: 80px;
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+}
+
+.block-sidebar-left {
+    float: left;
+    width: 25%;
+    height: 240px;
+    background-color: #bae6fd;
+    color: #0369a1;
+    text-align: center;
+    line-height: 240px;
+}
+
+.block-content-center {
+    float: left;
+    width: 50%;
+    height: 240px;
+    background-color: #f1f5f9;
+    color: #0f172a;
+    text-align: center;
+    line-height: 240px;
+}
+
+.block-sidebar-right {
+    float: right;
+    width: 25%;
+    height: 240px;
+    background-color: #bae6fd;
+    color: #0369a1;
+    text-align: center;
+    line-height: 240px;
+}
+
+/* Очищення потоку обтікання (Clearfix) */
+.block-footer {
+    clear: both;
+    width: 100%;
+    height: 60px;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}</pre>
+                </div>
+
+                <h3>2. Візуалізація гумового блокового макету на float:</h3>
+                <div class="preview-box">
+                    <div style="width: 100%; border: 1px solid #cbd5e1; border-radius: 6px; overflow: hidden;">
+                        <div style="background-color: #1e3a8a; color: white; height: 60px; text-align: center; line-height: 60px; font-weight: bold;">
+                            1. Блок Header (Ширина 100%)
+                        </div>
+                        <div style="float: left; width: 25%; height: 180px; background-color: #bae6fd; color: #0369a1; text-align: center; line-height: 180px; font-weight: bold; border-right: 1px solid #fff;">
+                            2. Лівий (25%)
+                        </div>
+                        <div style="float: left; width: 50%; height: 180px; background-color: #f8fafc; color: #0f172a; text-align: center; line-height: 180px; font-weight: bold;">
+                            3. Контент (50%)
+                        </div>
+                        <div style="float: right; width: 25%; height: 180px; background-color: #bae6fd; color: #0369a1; text-align: center; line-height: 180px; font-weight: bold; border-left: 1px solid #fff;">
+                            4. Правий (25%)
+                        </div>
+                        <div style="clear: both; background-color: #0f172a; color: white; height: 50px; text-align: center; line-height: 50px; font-weight: bold;">
+                            5. Блок Footer (clear: both — 100%)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ЛР3: Вкладка 5 (Завдання 3: Flexbox макет, Варіант 1) -->
+            <section id="lab3-task3-flexbox" class="tab-content">
+                <h2>Завдання №3: Верстка макету за технологією FLEXBOX (Варіант 1)</h2>
+                <div class="info-card">
+                    <p><strong>Номер варіанта:</strong> Остання цифра у списку групи: <strong>1</strong> (Варіант 1).</p>
+                    <p>
+                        Макет реалізовано на основі моделі гнучких контейнерів <strong>CSS Flexible Box Layout</strong> з керуванням головною та поперечною осями (Main Axis / Cross Axis).
+                    </p>
+                </div>
+
+                <h3>1. Фрагмент CSS-коду Flexbox-макету:</h3>
+                <div class="code-container">
+<pre>/* Головний вертикальний флекс-контейнер */
+.flex-layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.flex-layout-header {
+    background-color: #0284c7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Горизонтальний флекс-рядок із середніми блоками */
+.flex-layout-row {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    min-height: 220px;
+}
+
+.flex-sidebar-left {
+    flex: 0 0 220px; /* не стискається, базова ширина 220px */
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.flex-content-main {
+    flex: 1 1 auto;  /* займає весь доступний вільний простір */
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.flex-sidebar-right {
+    flex: 0 0 220px;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.flex-layout-footer {
+    background-color: #0f172a;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Адаптивність Flexbox для мобільних екранів */
+@media (max-width: 768px) {
+    .flex-layout-row {
+        flex-direction: column; /* автоматичне перестроювання в 1 стовпчик */
+    }
+    .flex-sidebar-left,
+    .flex-sidebar-right {
+        flex: 1 1 100%;
+    }
+}</pre>
+                </div>
+
+                <h3>2. Візуалізація Flexbox-макету (Live Preview):</h3>
+                <div class="preview-box">
+                    <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; font-size: 14px;">
+                        <div style="background-color: #0284c7; color: white; padding: 18px; text-align: center; border-radius: 6px; font-weight: bold;">
+                            1. Header (display: flex)
+                        </div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div style="flex: 1 1 180px; background-color: #e0f2fe; color: #0284c7; padding: 25px 15px; text-align: center; border-radius: 6px; font-weight: bold;">
+                                2. Сайдбар 1 (flex: 1 1 180px)
+                            </div>
+                            <div style="flex: 2 1 300px; background-color: #ffffff; border: 1px solid #cbd5e1; padding: 25px 15px; text-align: center; border-radius: 6px; font-weight: bold;">
+                                3. Головний контент (flex: 2 1 300px)
+                            </div>
+                            <div style="flex: 1 1 180px; background-color: #e0f2fe; color: #0284c7; padding: 25px 15px; text-align: center; border-radius: 6px; font-weight: bold;">
+                                4. Сайдбар 2 (flex: 1 1 180px)
+                            </div>
+                        </div>
+                        <div style="background-color: #0f172a; color: white; padding: 15px; text-align: center; border-radius: 6px; font-weight: bold;">
+                            5. Footer (display: flex)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ЛР3: Вкладка 6 (Висновки ЛР3) -->
+            <section id="lab3-conclusions" class="tab-content">
+                <h2>Висновки до Лабораторної роботи №3</h2>
+                <div class="info-card">
+                    <p>
+                        Під час виконання лабораторної роботи №3 було детально досліджені та реалізовані всі сучасні методики верстки веб-сторінок:
+                    </p>
+                    <ol>
+                        <li><strong>Еволюція методик верстки:</strong> Було практично порівняно застарілу табличну верстку, блокову верстку на плаваючих елементах (<code>float</code> з <code>clear: both</code>) та сучасний стандарт <strong>Flexbox</strong>. З'ясовано, що Flexbox усуває проблеми «випадання» блоків із потоку та значно спрощує вертикальне вирівнювання і динамічний розподіл простору.</li>
+                        <li><strong>Адаптивний веб-дизайн (RWD):</strong> Завдяки медіа-запитам <code>@media</code> з логічними операторами (<code>screen and (min-width: ...) and (max-width: ...)</code>) та метатегу <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> забезпечено бездоганне відображення інтерфейсу сайту «MandryStay» на екранах будь-якого розміру.</li>
+                        <li><strong>Мобільна навігація:</strong> Спроєктовано та впроваджено функціонал адаптивного бургер-меню, яке плавно анімується та оптимізує простір на мобільних пристроях.</li>
+                        <li><strong>Відносні одиниці вимірювання:</strong> Використано комбінацію відносних одиниць (<code>%</code>, <code>rem</code>, <code>em</code>, <code>vw</code>), що гарантує високу масштабованість елементів та комфорт читання для користувача.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ЛР3: Вкладка 7 (Контрольні запитання) -->
+            <section id="lab3-questions" class="tab-content">
+                <h2>Відповіді на контрольні запитання викладача до ЛР №3</h2>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>1. На яких трьох базових концепціях засновані всі методики верстки сторінок засобами CSS?</h3>
+                    <p>Усі методики верстки базуються на трьох фундаментальних концепціях:</p>
+                    <ol>
+                        <li><strong>Блокова модель (CSS Box Model):</strong> Кожен елемент інтерфейсу розглядається як прямокутний блок, що складається з власного контенту (content), внутрішніх відступів (padding), межі (border) та зовнішніх відступів (margin).</li>
+                        <li><strong>Нормальний потік документа (Normal Flow):</strong> Природний порядок розташування елементів у вікні браузера зверху вниз для блокових елементів та зліва направо для рядкових.</li>
+                        <li><strong>Позиціонування та керування потоком (Positioning / Flex / Grid / Float):</strong> Механізми вилучення або зміщення елементів відносно нормального потоку (статичне, відносне, абсолютне, фіксоване або липке позиціонування, плаваючі елементи та гнучкі сітки).</li>
+                    </ol>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>2. Дати визначення фіксованому типу макетів веб-сторінок. Переваги та недоліки.</h3>
+                    <p><strong>Фіксований макет (Fixed Layout):</strong> Верстка, за якої ширина основних колонок та контейнера задається у жорстких піксельних значеннях (наприклад, <code>width: 960px;</code> або <code>1200px;</code>) і не змінюється при зміні розміру вікна браузера.</p>
+                    <ul>
+                        <li><strong>Переваги:</strong> Повний контроль дизайнера над пропорціями, незмінне взаємне розташування елементів на всіх моніторах однакової або більшої ширини.</li>
+                        <li><strong>Недоліки:</strong> На моніторах із високою роздільною здатністю з боків виникає великий порожній простір, а на смартфонах з'являється незручна горизонтальна смуга прокручування.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>3. Дати визначення гумовому типу макетів веб-сторінок. Переваги та недоліки.</h3>
+                    <p><strong>Гумовий (рідкий) макет (Fluid / Liquid Layout):</strong> Верстка, в якій розміри блоків та колонок задаються у відсотках від ширини вікна перегляду (<code>width: 100%;</code>, <code>width: 25%;</code> тощо).</p>
+                    <ul>
+                        <li><strong>Переваги:</strong> Ефективно заповнює 100% простору екрана незалежно від його ширини, відсутній порожній простір по краях.</li>
+                        <li><strong>Недоліки:</strong> На занадто широких моніторах рядки тексту стають надмірно довгими (важко читати), а на вузьких екранах блоки можуть надмірно стискатися.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>4. Дати визначення еластичному типу макетів веб-сторінок. Переваги та недоліки.</h3>
+                    <p><strong>Еластичний макет (Elastic Layout):</strong> Верстка, за якої розміри блоків задаються у відносних одиницях типографіки — <code>em</code> або <code>rem</code>.</p>
+                    <ul>
+                        <li><strong>Переваги:</strong> При зміні користувачем базового розміру шрифту в налаштуваннях браузера пропорційно масштабується весь макет разом із блоками та відступами.</li>
+                        <li><strong>Недоліки:</strong> Складність точного розрахунку розмірів та ризик виходу елементів за межі екрана при екстремальному збільшенні шрифту.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>5. Дати визначення адаптивному типу макетів веб-сторінок. Переваги та недоліки.</h3>
+                    <p><strong>Адаптивний макет (Adaptive / Responsive Web Design — RWD):</strong> Підхід до проектування, за якого інтерфейс динамічно трансформує свою структуру (кількість колонок, розташування блоків, тип меню) за допомогою медіа-запитів <code>@media</code> під конкретні діапазони роздільної здатності екрана (Breakpoints).</p>
+                    <ul>
+                        <li><strong>Переваги:</strong> Максимальна зручність взаємодії (UX) як на смартфонах, так і на десктопах; єдиний URL сайту; відсутність потреби створювати окремі мобільні версії сайту.</li>
+                        <li><strong>Недоліки:</strong> Більша трудомісткість розробки, необхідність ретельного тестування на багатьох пристроях.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>6. Дати визначення комбінованому типу макетів веб-сторінок. Переваги та недоліки.</h3>
+                    <p><strong>Комбінований макет (Hybrid Layout):</strong> Верстка, яка поєднує різні підходи, наприклад, фіксовані бічні панелі (сайдбари шириною <code>250px</code>) із гумовою або еластичною центральною областю контенту (<code>width: calc(100% - 250px);</code>).</p>
+                    <ul>
+                        <li><strong>Переваги:</strong> Оптимальний компроміс між стабільністю розмірів службових блоків (меню, реклама) та гнучкістю основної інформації.</li>
+                        <li><strong>Недоліки:</strong> Вимагає застосування сучасних функцій <code>calc()</code> або Flexbox/Grid для уникнення накладання блоків.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>7. Як засобами HTML та CSS створити окремо веб-сторінку, використовуючи розмітку за допомогою таблиці?</h3>
+                    <p>Створюється контейнер <code>&lt;table&gt;</code> із параметрами <code>border-collapse: collapse; width: 100%;</code>. Рядки формуються тегами <code>&lt;tr&gt;</code>, а комірки — тегами <code>&lt;td&gt;</code>. Для об'єднання стовпців шапки чи підвалу застосовується атрибут <code>colspan</code>, а для об'єднання рядків сайдбару — <code>rowspan</code>. Ширина стовпців задається у стилях або через атрибут <code>width</code>.</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>8. Як засобами HTML та CSS створити окремо веб-сторінку, використовуючи розмітку за допомогою плаваючих блоків?</h3>
+                    <p>Сторінка розбивається на блокові теги <code>&lt;div&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>. Для розміщення колонок в один горизонтальний рядок застосовується CSS-властивість <code>float: left</code> (або <code>float: right</code>) із зазначенням ширини кожного блоку. Щоб запобігти «схлопуванню» батьківського контейнера та коректно розмістити підвал під плаваючими елементами, обов'язково застосовується очищення потоку через <code>clear: both</code> або псевдоелемент <code>.clearfix::after { content: ""; display: table; clear: both; }</code>.</p>
                 </div>
             </section>
 

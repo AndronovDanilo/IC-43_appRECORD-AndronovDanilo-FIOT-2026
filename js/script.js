@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const labButtons = document.querySelectorAll('.lab-btn');
-    const subtabButtons = document.querySelectorAll('.subtab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
     // Перемикання вкладок у межах поточної лабораторної
@@ -33,23 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const lab1Subtabs = document.getElementById('lab1-subtabs');
             const lab2Subtabs = document.getElementById('lab2-subtabs');
+            const lab3Subtabs = document.getElementById('lab3-subtabs');
             const otherContainer = document.getElementById('other-labs-container');
 
             tabContents.forEach(c => c.classList.remove('active'));
 
+            if (lab1Subtabs) lab1Subtabs.style.display = 'none';
+            if (lab2Subtabs) lab2Subtabs.style.display = 'none';
+            if (lab3Subtabs) lab3Subtabs.style.display = 'none';
+            if (otherContainer) otherContainer.style.display = 'none';
+
             if (labNum === '1') {
                 lab1Subtabs.style.display = 'flex';
-                if (lab2Subtabs) lab2Subtabs.style.display = 'none';
-                otherContainer.style.display = 'none';
                 document.querySelector('.subtab-btn[data-target="lab1-topic"]').click();
             } else if (labNum === '2') {
-                lab1Subtabs.style.display = 'none';
-                if (lab2Subtabs) lab2Subtabs.style.display = 'flex';
-                otherContainer.style.display = 'none';
+                lab2Subtabs.style.display = 'flex';
                 document.querySelector('.subtab-btn[data-target="lab2-topic"]').click();
+            } else if (labNum === '3') {
+                lab3Subtabs.style.display = 'flex';
+                document.querySelector('.subtab-btn[data-target="lab3-topic"]').click();
             } else {
-                lab1Subtabs.style.display = 'none';
-                if (lab2Subtabs) lab2Subtabs.style.display = 'none';
                 otherContainer.style.display = 'block';
                 document.getElementById('other-lab-title').textContent = `Лабораторна робота №${labNum}`;
                 document.getElementById('other-lab-desc').textContent = `Матеріали та звітність для Лабораторної роботи №${labNum} будуть додані згідно з навчальним планом.`;
