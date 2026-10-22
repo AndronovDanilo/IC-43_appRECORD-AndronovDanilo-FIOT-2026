@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звітний HTML-документ — Андронов Данило (ІС-43)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</div>
+        <div class="header-subtitle">Дисципліна: «Веборієнтовані технології. Frontend розробка» | Кафедра ІСТ, ФІОТ, КПІ ім. Ігоря Сікорського</div>
+        <div class="student-info">
+            <strong>Студент:</strong> Андронов Данило &nbsp;|&nbsp; 
+            <strong>Група:</strong> ІС-43 &nbsp;|&nbsp; 
+            <strong>Викладач:</strong> ст. викл. Проскура Світлана Леонідівна &nbsp;|&nbsp; 
+            <strong>Навчальний рік:</strong> 2026/2027
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Бокова панель вибору лабораторних робіт -->
+        <aside class="sidebar">
+            <h3>Лабораторні роботи</h3>
+            <button class="lab-btn active" data-lab="1">Лабораторна робота №1</button>
+            <button class="lab-btn" data-lab="2">Лабораторна робота №2</button>
+            <button class="lab-btn" data-lab="3">Лабораторна робота №3</button>
+            <button class="lab-btn" data-lab="4">Лабораторна робота №4</button>
+            <button class="lab-btn" data-lab="5">Лабораторна робота №5</button>
+            <button class="lab-btn" data-lab="6">Лабораторна робота №6</button>
+            <button class="lab-btn" data-lab="7">Лабораторна робота №7</button>
+            <button class="lab-btn" data-lab="8">Лабораторна робота №8</button>
+            <button class="lab-btn" data-lab="9">Лабораторна робота №9</button>
+        </aside>
+
+        <!-- Основна контентна зона -->
+        <main class="main-content">
+            <!-- Підвкладки для Лабораторної роботи №1 -->
+            <nav id="lab1-subtabs" class="subtabs-container">
+                <button class="subtab-btn active" data-target="lab1-topic">1. Тема, мета, адреси</button>
+                <button class="subtab-btn" data-target="lab1-domain">2. Опис предметної галузі</button>
+                <button class="subtab-btn" data-target="lab1-structure">3. Структура документа (HTML)</button>
+                <button class="subtab-btn" data-target="lab1-table">4. Таблиця (код, прев'ю, теорія)</button>
+                <button class="subtab-btn" data-target="lab1-form">5. Форма (код, прев'ю, теорія)</button>
+                <button class="subtab-btn" data-target="lab1-lists">6. Списки (код, прев'ю, теорія)</button>
+                <button class="subtab-btn" data-target="lab1-images">7. Зображення (код, прев'ю, теорія)</button>
+                <button class="subtab-btn" data-target="lab1-conclusions">8. Висновки</button>
+            </nav>
+
+            <!-- Вкладка 1: Тема, мета, посилання -->
+            <section id="lab1-topic" class="tab-content active">
+                <h2>Лабораторна робота №1</h2>
+                <div class="info-card">
+                    <p><strong>Тема:</strong> ТЕГИ ТА АТРИБУТИ HTML-ДОКУМЕНТА. СТРУКТУРНА РОЗМІТКА. GIT. GITHUB. РОБОТА З РЕПОЗИТОРІЯМИ. ОПИС ЛОГІКИ ВЛАСНОГО WEB-ЗАСТОСУНКУ.</p>
+                    <p><strong>Мета:</strong> Придбати практичні навички роботи з Git, GitHub, репозиторіями, структурою HTML-документа, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів виконання всіх лабораторних робіт.</p>
+                </div>
+
+                <h3>Місце розташування проєктів та живих сторінок:</h3>
+                <div class="links-card">
+                    <ul>
+                        <li>
+                            <strong>1. Власний WEB-застосунок («MandryStay»):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                        <li>
+                            <strong>2. Звітний HTML-документ (appRECORD):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appRECORD-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appRECORD-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                        <li>
+                            <strong>3. Самостійні роботи (appINDEPENDENT):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Вкладка 2: Опис предметної галузі -->
+            <section id="lab1-domain" class="tab-content">
+                <h2>Опис предметного середовища та бізнес-логіки</h2>
+                <div class="info-card">
+                    <p><strong>Обрана предметна галузь:</strong> Онлайн-сервіс бронювання готелів, курортних комплексів та туристичних турів («MandryStay»).</p>
+                </div>
+
+                <h3>1. Опис середовища застосунку:</h3>
+                <p>
+                    Веб-застосунок «MandryStay» призначений для користувачів, які планують індивідуальні та сімейні подорожі Україною та зарубіжжям. Платформа забезпечує централізований пошук доступного житла, порівняння параметрів номерів у зручній табличній формі та швидке бронювання з вибором додаткових опцій (харчування, трансфер, SPA).
+                </p>
+
+                <h3>2. Бізнес-сценарії (User Flow):</h3>
+                <ol>
+                    <li>Введення критеріїв пошуку: місто призначення, дати заїзду/виїзду, кількість дорослих та дітей.</li>
+                    <li>Ознайомлення з каталогом номерів та перегляд реальних фотографій.</li>
+                    <li>Аналіз тарифної сітки (площа номера, зручності, базова вартість за добу).</li>
+                    <li>Конфігурація додаткових послуг (сніданки, трансфер, проживання з тваринами).</li>
+                    <li>Заповнення форми контактних даних та вибір методу оплати.</li>
+                    <li>Фіксація бронювання з генерацією цифрового ваучера.</li>
+                </ol>
+
+                <h3>3. Функціональні та нефункціональні вимоги:</h3>
+                <ul>
+                    <li><strong>Функціональні:</strong> інтерактивна форма бронювання, структурована таблиця цін, навігаційне меню, підтримка валідації введених контактів.</li>
+                    <li><strong>Нефункціональні:</strong> 100% валідна семантична розмітка за специфікацією W3C HTML5, висока швидкість завантаження сторінки, кросбраузерна підтримка, доступність (наявність тегів label та alt-підписів).</li>
+                </ul>
+            </section>
+
+            <!-- Вкладка 3: Структура документа -->
+            <section id="lab1-structure" class="tab-content">
+                <h2>Структура головної сторінки (HTML-код)</h2>
+                <p>Нижче наведено семантичну структуру документа <code>index.html</code> веб-застосунку «MandryStay»:</p>
+                <div class="code-container">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;MandryStay — Сервіс бронювання відпочинку&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;div id="top-branding"&gt;...&lt;/div&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;Про сервіс&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#booking-form"&gt;Пошук та бронювання&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#rooms-catalog"&gt;Каталог номерів&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#pricing-table"&gt;Тарифна сітка&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#advantages"&gt;Переваги&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="description.html"&gt;Опис логіки&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section id="about"&gt;...&lt;/section&gt;
+        &lt;section id="booking-form"&gt;...&lt;/section&gt;
+        &lt;section id="rooms-catalog"&gt;...&lt;/section&gt;
+        &lt;section id="pricing-table"&gt;...&lt;/section&gt;
+        &lt;section id="advantages"&gt;...&lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;address&gt;...&lt;/address&gt;
+        &lt;p&gt;&amp;copy; 2026 MandryStay&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                </div>
+            </section>
+
+            <!-- Вкладка 4: Таблиця -->
+            <section id="lab1-table" class="tab-content">
+                <h2>Таблиця: Код, візуалізація та теоретичні відомості</h2>
+                
+                <h3>1. Візуалізація таблиці (Live Preview):</h3>
+                <div class="preview-box">
+                    <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <caption style="margin-bottom: 8px; font-weight: bold;">Тарифна сітка та порівняння категорій номерів MandryStay</caption>
+                        <thead>
+                            <tr style="background-color: #f1f5f9;">
+                                <th rowspan="2" style="border: 1px solid #cbd5e1;">Категорія номера</th>
+                                <th rowspan="2" style="border: 1px solid #cbd5e1;">Площа (м²)</th>
+                                <th rowspan="2" style="border: 1px solid #cbd5e1;">Місткість</th>
+                                <th colspan="3" style="border: 1px solid #cbd5e1;">Включені послуги</th>
+                                <th rowspan="2" style="border: 1px solid #cbd5e1;">Ціна за добу</th>
+                            </tr>
+                            <tr style="background-color: #f1f5f9;">
+                                <th style="border: 1px solid #cbd5e1;">Wi-Fi</th>
+                                <th style="border: 1px solid #cbd5e1;">Сніданок</th>
+                                <th style="border: 1px solid #cbd5e1;">SPA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="border: 1px solid #cbd5e1; text-align: left;">Standard Single</th>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">18</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">1 особа</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Так</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Ні</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Ні</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: right; font-weight: bold;">1 450 грн</td>
+                            </tr>
+                            <tr>
+                                <th style="border: 1px solid #cbd5e1; text-align: left;">Deluxe Panorama Suite</th>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">45</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">2+1 дитина</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Так</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Включено</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Включено</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: right; font-weight: bold;">4 100 грн</td>
+                            </tr>
+                            <tr>
+                                <th style="border: 1px solid #cbd5e1; text-align: left;">Alpine Chalet з каміном</th>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">90</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">до 6 осіб</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Так</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Включено</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: center;">Безліміт</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: right; font-weight: bold;">8 900 грн</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr style="background-color: #f8fafc;">
+                                <td colspan="6" style="border: 1px solid #cbd5e1; text-align: right; font-weight: bold;">Середня ціна:</td>
+                                <td style="border: 1px solid #cbd5e1; text-align: right; font-weight: bold;">4 816 грн</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <h3>2. HTML-код створення таблиці:</h3>
+                <div class="code-container">
+<pre>&lt;table border="1" cellpadding="8" cellspacing="0"&gt;
+    &lt;caption&gt;&lt;strong&gt;Таблиця 1.1 — Порівняльна характеристика категорій номерів&lt;/strong&gt;&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col" rowspan="2"&gt;Категорія номера&lt;/th&gt;
+            &lt;th scope="col" rowspan="2"&gt;Площа (м²)&lt;/th&gt;
+            &lt;th scope="col" rowspan="2"&gt;Місткість&lt;/th&gt;
+            &lt;th scope="col" colspan="3"&gt;Включені послуги&lt;/th&gt;
+            &lt;th scope="col" rowspan="2"&gt;Ціна за добу (UAH)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Wi-Fi&lt;/th&gt;
+            &lt;th scope="col"&gt;Сніданок&lt;/th&gt;
+            &lt;th scope="col"&gt;SPA-зона&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Standard Single&lt;/th&gt;
+            &lt;td align="center"&gt;18&lt;/td&gt;
+            &lt;td align="center"&gt;1 особа&lt;/td&gt;
+            &lt;td align="center"&gt;&amp;#10004; Так&lt;/td&gt;
+            &lt;td align="center"&gt;&amp;#10006; Ні&lt;/td&gt;
+            &lt;td align="center"&gt;&amp;#10006; Ні&lt;/td&gt;
+            &lt;td align="right"&gt;&lt;strong&gt;1 450 грн&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        ...
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="6" align="right"&gt;&lt;strong&gt;Середня вартість:&lt;/strong&gt;&lt;/td&gt;
+            &lt;td align="right"&gt;&lt;strong&gt;4 450 грн&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+                </div>
+
+                <h3>3. Теоретичні відомості про роботу з таблицями в HTML:</h3>
+                <ul>
+                    <li><code>&lt;table&gt;</code> — кореневий контейнер таблиці.</li>
+                    <li><code>&lt;caption&gt;</code> — заголовок та підпис таблиці, що відображається безпосередньо над нею.</li>
+                    <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> — структурні секції таблиці для логічного відокремлення шапки, основного вмісту та підсумкового рядка.</li>
+                    <li><code>&lt;tr&gt;</code> (table row) — рядок таблиці.</li>
+                    <li><code>&lt;th&gt;</code> (table header) — комірка заголовка (текст за замовчуванням жирний і вирівняний по центру). Атрибут <code>scope="col|row"</code> покращує доступність для скрінрідерів.</li>
+                    <li><code>&lt;td&gt;</code> (table data) — стандартна комірка даних.</li>
+                    <li><strong>Атрибути об'єднання комірок:</strong>
+                        <ul>
+                            <li><code>colspan="n"</code> — об'єднує <em>n</em> стовпців по горизонталі.</li>
+                            <li><code>rowspan="n"</code> — об'єднує <em>n</em> рядків по вертикалі.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Вкладка 5: Форма -->
+            <section id="lab1-form" class="tab-content">
+                <h2>Форма: Код, візуалізація та теоретичні відомості</h2>
+
+                <h3>1. Візуалізація форми (Live Preview):</h3>
+                <div class="preview-box">
+                    <form style="max-width: 650px;">
+                        <fieldset style="padding: 16px; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 12px;">
+                            <legend style="font-weight: bold; padding: 0 6px;">1. Параметри подорожі</legend>
+                            <label>Місто: <input type="text" placeholder="Буковель" style="padding: 4px; width: 60%;"></label><br><br>
+                            <label>Заїзд: <input type="date" value="2026-12-25" style="padding: 4px;"></label>&nbsp;&nbsp;
+                            <label>Виїзд: <input type="date" value="2026-12-30" style="padding: 4px;"></label><br><br>
+                            <label>Категорія: 
+                                <select style="padding: 4px;">
+                                    <option>Standard Twin (24 м²)</option>
+                                    <option>Deluxe Suite (45 м²)</option>
+                                    <option>Alpine Chalet (90 м²)</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
+                        <fieldset style="padding: 16px; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 12px;">
+                            <legend style="font-weight: bold; padding: 0 6px;">2. Додаткові опції</legend>
+                            <label><input type="checkbox" checked> Сніданок «Шведська лінія»</label><br>
+                            <label><input type="checkbox"> Безлімітний абонемент у SPA</label><br>
+                            <label><input type="checkbox"> Трансфер від вокзалу</label>
+                        </fieldset>
+
+                        <fieldset style="padding: 16px; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 12px;">
+                            <legend style="font-weight: bold; padding: 0 6px;">3. Контактні дані та спосіб оплати</legend>
+                            <label>ПІБ: <input type="text" placeholder="Андронов Данило" style="padding: 4px; width: 70%;"></label><br><br>
+                            <label>Email: <input type="email" placeholder="student@kpi.ua" style="padding: 4px; width: 70%;"></label><br><br>
+                            <label><input type="radio" name="p" checked> Онлайн банківською карткою</label>&nbsp;&nbsp;
+                            <label><input type="radio" name="p"> Оплата при заїзді</label>
+                        </fieldset>
+
+                        <button type="button" style="padding: 8px 18px; background: #0284c7; color: white; border: none; border-radius: 4px; cursor: pointer;">Забронювати номер</button>
+                    </form>
+                </div>
+
+                <h3>2. HTML-код створення форми:</h3>
+                <div class="code-container">
+<pre>&lt;form action="#" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;&lt;strong&gt;1. Параметри вашої подорожі&lt;/strong&gt;&lt;/legend&gt;
+        &lt;label for="dest-city"&gt;Місто:&lt;/label&gt;
+        &lt;input type="text" id="dest-city" name="destination" required&gt;
+        &lt;label for="check-in-date"&gt;Дата заїзду:&lt;/label&gt;
+        &lt;input type="date" id="check-in-date" name="check_in" required&gt;
+        &lt;select id="room-category-select" name="room_category" required&gt;
+            &lt;optgroup label="Стандартні номери"&gt;
+                &lt;option value="std-twin"&gt;Standard Twin/Double&lt;/option&gt;
+            &lt;/optgroup&gt;
+        &lt;/select&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;&lt;strong&gt;2. Опції та оплата&lt;/strong&gt;&lt;/legend&gt;
+        &lt;input type="checkbox" id="opt-breakfast" name="services" value="breakfast"&gt;
+        &lt;input type="radio" id="pay-card" name="payment_method" value="card" checked&gt;
+        &lt;textarea id="special-requests" name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;
+    &lt;/fieldset&gt;
+    &lt;button type="submit"&gt;Забронювати номер зараз&lt;/button&gt;
+&lt;/form&gt;</pre>
+                </div>
+
+                <h3>3. Теоретичні відомості про теги та атрибути форм:</h3>
+                <ul>
+                    <li><code>&lt;form&gt;</code> — контейнер форми. Основні атрибути: <code>action</code> (URL обробника) та <code>method</code> (HTTP-метод <code>GET</code> або <code>POST</code>).</li>
+                    <li><code>&lt;fieldset&gt;</code> та <code>&lt;legend&gt;</code> — логічне групування пов'язаних полів введення із рамкою та підписом.</li>
+                    <li><code>&lt;label&gt;</code> — текстова мітка елемента форми. Пов'язується через атрибут <code>for="id_елемента"</code>, що забезпечує активацію поля при кліку на текст мітки.</li>
+                    <li><code>&lt;input&gt;</code> — універсальне поле введення. Тип задається атрибутом <code>type</code>: <code>text</code>, <code>date</code>, <code>number</code>, <code>email</code>, <code>tel</code>, <code>radio</code>, <code>checkbox</code>, <code>password</code> тощо.</li>
+                    <li><code>&lt;select&gt;</code> та <code>&lt;option&gt;</code> — випадний список вибору. Може групуватися через <code>&lt;optgroup&gt;</code>.</li>
+                    <li><code>&lt;textarea&gt;</code> — багаторядкове текстове поле (атрибути <code>rows</code> та <code>cols</code>).</li>
+                    <li><code>&lt;button type="submit|reset|button"&gt;</code> — кнопка керування формою.</li>
+                </ul>
+            </section>
+
+            <!-- Вкладка 6: Списки -->
+            <section id="lab1-lists" class="tab-content">
+                <h2>Списки: Код, візуалізація та теоретичні відомості</h2>
+
+                <h3>1. Візуалізація різних видів списків:</h3>
+                <div class="preview-box">
+                    <h4>Маркований список (ul):</h4>
+                    <ul>
+                        <li>Миттєве підтвердження броні без дзвінків адміністратора;</li>
+                        <li>Гарантія найкращої ціни напряму від готелів;</li>
+                        <li>Підтримка клієнтів 24/7.</li>
+                    </ul>
+
+                    <h4>Нумерований список (ol):</h4>
+                    <ol>
+                        <li>Вибір дат та міста у пошуковій формі;</li>
+                        <li>Ознайомлення з тарифами в каталозі;</li>
+                        <li>Заповнення даних гостя та підтвердження резервації.</li>
+                    </ol>
+
+                    <h4>Багаторівневий (вкладений) список:</h4>
+                    <ol>
+                        <li>Правила реєстрації:
+                            <ul>
+                                <li>Check-in: з 14:00;</li>
+                                <li>Check-out: до 12:00.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4>Список визначень (dl / dt / dd):</h4>
+                    <dl>
+                        <dt><strong>Check-in:</strong></dt>
+                        <dd>Процедура поселення та оформлення гостя на рецепції.</dd>
+                        <dt><strong>City Tax:</strong></dt>
+                        <dd>Офіційний туристичний збір місцевої громади.</dd>
+                    </dl>
+                </div>
+
+                <h3>2. HTML-код списків:</h3>
+                <div class="code-container">
+<pre>&lt;!-- Маркований --&gt;
+&lt;ul&gt;
+    &lt;li&gt;Миттєве підтвердження броні&lt;/li&gt;
+    &lt;li&gt;Гарантія найкращої ціни&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Нумерований --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Вибір дат та міста&lt;/li&gt;
+    &lt;li&gt;Підтвердження замовлення&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Список визначень --&gt;
+&lt;dl&gt;
+    &lt;dt&gt;&lt;strong&gt;Check-in&lt;/strong&gt;&lt;/dt&gt;
+    &lt;dd&gt;Процедура реєстрації гостя на рецепції.&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+                </div>
+
+                <h3>3. Теоретичні відомості про типи списків:</h3>
+                <ul>
+                    <li><code>&lt;ul&gt;</code> (unordered list) — невпорядкований (маркований) список. Маркери за замовчуванням — крапки (disc, circle, square).</li>
+                    <li><code>&lt;ol&gt;</code> (ordered list) — впорядкований (нумерований) список. Підтримує атрибути: <code>type="1|a|A|i|I"</code>, <code>start="n"</code> (початковий номер) та <code>reversed</code> (зворотна нумерація).</li>
+                    <li><code>&lt;li&gt;</code> (list item) — елемент списку як у <code>&lt;ul&gt;</code>, так і в <code>&lt;ol&gt;</code>.</li>
+                    <li><code>&lt;dl&gt;</code> (description list) — список описів/визначень. Містить пари тегів <code>&lt;dt&gt;</code> (термін / назва) та <code>&lt;dd&gt;</code> (опис / значення терміна).</li>
+                </ul>
+            </section>
+
+            <!-- Вкладка 7: Зображення -->
+            <section id="lab1-images" class="tab-content">
+                <h2>Зображення: Код, візуалізація та теоретичні відомості</h2>
+
+                <h3>1. Візуалізація логотипу та ілюстрацій:</h3>
+                <div class="preview-box" style="text-align: center;">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="220" height="55">
+                            <rect width="240" height="60" rx="8" fill="#1e3a8a"/>
+                            <path d="M20 45 L35 20 L50 45 Z" fill="#38bdf8"/>
+                            <path d="M35 45 L48 27 L62 45 Z" fill="#0284c7"/>
+                            <circle cx="35" cy="20" r="4" fill="#facc15"/>
+                            <text x="75" y="38" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Mandry<tspan fill="#38bdf8">Stay</tspan></text>
+                        </svg>
+                        <figcaption style="margin-top: 8px; font-size: 13px; color: #64748b;">Фірмовий векторний логотип сервісу «MandryStay»</figcaption>
+                    </figure>
+                </div>
+
+                <h3>2. HTML-код підключення зображень:</h3>
+                <div class="code-container">
+<pre>&lt;figure&gt;
+    &lt;img src="images/hero-carpathians.svg" 
+         alt="Панорама гірського курорту MandryStay у Карпатах" 
+         width="800" 
+         height="400" 
+         title="Краєвид Карпатського резорту"&gt;
+    &lt;figcaption&gt;Курортний комплекс «MandryStay Bukovel Resort &amp; SPA»&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+                </div>
+
+                <h3>3. Теоретичні відомості про зображення в HTML:</h3>
+                <ul>
+                    <li><code>&lt;img&gt;</code> — одинарний тег для вбудовування графічних ресурсів у веб-документ.</li>
+                    <li><code>src</code> (source) — обов'язковий атрибут, що містить відносний або абсолютний URL файлу зображення.</li>
+                    <li><code>alt</code> (alternative text) — обов'язковий атрибут доступності, що описує зміст картинки при повільному з'єднанні та для незрячих користувачів (скрінрідерів).</li>
+                    <li><code>width</code> та <code>height</code> — геометричні розміри зображення в пікселях, резервують місце в макеті до завантаження файлу і запобігають стрибкам контенту (CLS).</li>
+                    <li><code>title</code> — спливаюча текстова підказка при наведенні курсора миші.</li>
+                    <li><code>&lt;figure&gt;</code> та <code>&lt;figcaption&gt;</code> — семантичні теги стандарту HTML5 для групування медіафайлів із підписом.</li>
+                </ul>
+            </section>
+
+            <!-- Вкладка 8: Висновки -->
+            <section id="lab1-conclusions" class="tab-content">
+                <h2>Висновки до Лабораторної роботи №1</h2>
+                <div class="info-card">
+                    <p>
+                        Під час виконання лабораторної роботи №1 було здобуто глибокі практичні навички роботи з сучасними стандартами веброзробки:
+                    </p>
+                    <ol>
+                        <li><strong>Робота з Git та GitHub:</strong> Налаштовано локальне оточення, створено репозиторії за шаблонами кафедри (<code>IC-43_appWEB-AndronovDanilo-FIOT-2026</code> та <code>IC-43_appRECORD-AndronovDanilo-FIOT-2026</code>), освоєно процес комітів та публікації сторінок на безкоштовному хостингу GitHub Pages.</li>
+                        <li><strong>Опис бізнес-логіки та вимог:</strong> Обрано предметну галузь «Онлайн-платформа бронювання відпочинку MandryStay», складено детальний опис функціоналу, сформульовано 6 функціональних та 5 нефункціональних вимог до проєкту.</li>
+                        <li><strong>Семантична HTML5-розмітка:</strong> Розроблено повноцінну головну сторінку застосунку без використання сторонніх фреймворків, застосовано заголовки різних рівнів, теги списків, багатофункціональну форму бронювання з різними типами полів введення та складну таблицю тарифів з об'єднанням комірок (colspan, rowspan).</li>
+                        <li><strong>Звітний HTML-документ:</strong> Спроєктовано та реалізовано інтерактивний портал звітів із зручною навігацією між лабораторними роботами та тематичними вкладками, де наочно представлено фрагменти коду, живі прев'ю та теоретичні пояснення.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Заглушка для інших лабораторних робіт (ЛР2-ЛР9) -->
+            <section id="other-labs-container" style="display: none;">
+                <h2 id="other-lab-title">Лабораторна робота</h2>
+                <div class="info-card">
+                    <p id="other-lab-desc">Матеріали та звітність для цієї лабораторної роботи будуть додані згідно з навчальним розкладом.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
