@@ -11,11 +11,41 @@ body {
     background-color: #f8fafc;
 }
 
-header {
+header, .main-header {
     background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
     color: #ffffff;
-    padding: 20px 30px;
+    padding: 18px 30px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-photo-wrapper {
+    flex-shrink: 0;
+}
+
+.student-photo {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.student-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 .header-title {
@@ -232,6 +262,16 @@ ul, ol {
 
 /* Адаптивність */
 @media (max-width: 900px) {
+    .header-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .student-photo {
+        width: 76px;
+        height: 76px;
+    }
     .app-container {
         flex-direction: column;
     }
