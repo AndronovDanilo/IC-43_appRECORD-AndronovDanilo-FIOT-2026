@@ -47,6 +47,19 @@
                 <button class="subtab-btn" data-target="lab1-conclusions">8. Висновки</button>
             </nav>
 
+            <!-- Підвкладки для Лабораторної роботи №2 -->
+            <nav id="lab2-subtabs" class="subtabs-container" style="display: none;">
+                <button class="subtab-btn active" data-target="lab2-topic">1. Тема, мета, адреси</button>
+                <button class="subtab-btn" data-target="lab2-tag-sel">2. Селектори тегу</button>
+                <button class="subtab-btn" data-target="lab2-class-sel">3. Селектори класу</button>
+                <button class="subtab-btn" data-target="lab2-id-sel">4. Селектори ідентифікатора</button>
+                <button class="subtab-btn" data-target="lab2-other-sel">5. Інші селектори</button>
+                <button class="subtab-btn" data-target="lab2-css-styling">6. Стильове оформлення (Шрифти, Таблиці, CSS Просунутий)</button>
+                <button class="subtab-btn" data-target="lab2-resume">7. Стилізація Резюме</button>
+                <button class="subtab-btn" data-target="lab2-conclusions">8. Висновки</button>
+                <button class="subtab-btn" data-target="lab2-questions">9. Контрольні запитання</button>
+            </nav>
+
             <!-- Вкладка 1: Тема, мета, посилання -->
             <section id="lab1-topic" class="tab-content active">
                 <h2>Лабораторна робота №1</h2>
@@ -453,7 +466,7 @@
                 </ul>
             </section>
 
-            <!-- Вкладка 8: Висновки -->
+            <!-- Вкладка 8: Висновки ЛР1 -->
             <section id="lab1-conclusions" class="tab-content">
                 <h2>Висновки до Лабораторної роботи №1</h2>
                 <div class="info-card">
@@ -466,6 +479,464 @@
                         <li><strong>Семантична HTML5-розмітка:</strong> Розроблено повноцінну головну сторінку застосунку без використання сторонніх фреймворків, застосовано заголовки різних рівнів, теги списків, багатофункціональну форму бронювання з різними типами полів введення та складну таблицю тарифів з об'єднанням комірок (colspan, rowspan).</li>
                         <li><strong>Звітний HTML-документ:</strong> Спроєктовано та реалізовано інтерактивний портал звітів із зручною навігацією між лабораторними роботами та тематичними вкладками, де наочно представлено фрагменти коду, живі прев'ю та теоретичні пояснення.</li>
                     </ol>
+                </div>
+            </section>
+
+            <!-- ============================================================= -->
+            <!-- РОЗДІЛИ ЛАБОРАТОРНОЇ РОБОТИ №2                                -->
+            <!-- ============================================================= -->
+
+            <!-- ЛР2: Вкладка 1 (Тема, мета, адреси) -->
+            <section id="lab2-topic" class="tab-content">
+                <h2>Лабораторна робота №2</h2>
+                <div class="info-card">
+                    <p><strong>Тема:</strong> КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ ТЕГУ, КЛАСУ, ІДЕНТИФІКАТОРА. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.</p>
+                    <p><strong>Мета:</strong> Придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішніми та внутрішніми відступами, плаваючими елементами, оформленням текстових елементів. Зробити стильове оформлення резюме згідно з макетом.</p>
+                </div>
+
+                <h3>Місце розташування проєктів та живих сторінок:</h3>
+                <div class="links-card">
+                    <ul>
+                        <li>
+                            <strong>1. Сторінка Резюме (Resume):</strong><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/resume.html" target="_blank">https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/resume.html</a><br>
+                            &bull; Файл у репозиторії: <a href="https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026/blob/main/resume.html" target="_blank">resume.html на GitHub</a>
+                        </li>
+                        <li>
+                            <strong>2. Власний WEB-застосунок («MandryStay»):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                        <li>
+                            <strong>3. Звітний HTML-документ (appRECORD):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appRECORD-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appRECORD-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ЛР2: Вкладка 2 (Селектори тегу) -->
+            <section id="lab2-tag-sel" class="tab-content">
+                <h2>Селектори тегу (Type / Element Selectors)</h2>
+                <p>Селектори тегу застосовують правила оформлення до всіх зазначених HTML-елементів на сторінці безпосередньо за іменем їхнього тегу.</p>
+
+                <h3>1. Фрагмент CSS-коду:</h3>
+                <div class="code-container">
+<pre>/* Стилізація заголовків першого та другого рівнів */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+
+/* Стилізація абзаців тексту */
+p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #334155;
+    margin-bottom: 14px;
+}
+
+/* Стилізація таблиці та заголовків комірок */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+th {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 12px 14px;
+    text-align: left;
+}</pre>
+                </div>
+
+                <h3>2. Фрагмент відповідного HTML-коду:</h3>
+                <div class="code-container">
+<pre>&lt;h1&gt;Відкрийте для себе найкращий відпочинок разом із MandryStay&lt;/h1&gt;
+&lt;h2&gt;Онлайн-бронювання номерів&lt;/h2&gt;
+&lt;p&gt;Плануєте відпустку в Карпатах чи бізнес-поїздку до Львова?...&lt;/p&gt;</pre>
+                </div>
+
+                <h3>3. Візуалізація у браузері (Live Preview):</h3>
+                <div class="preview-box">
+                    <h1 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Заголовок h1 (Селектор тегу)</h1>
+                    <h2 style="font-size: 1.7rem; font-weight: 700; color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px;">Підзаголовок h2 із нижньою рамкою</h2>
+                    <p style="color: #334155; line-height: 1.6;">Звичайний абзац &lt;p&gt;, стилізований кольором #334155 та збалансованим інтерліньяжем.</p>
+                </div>
+            </section>
+
+            <!-- ЛР2: Вкладка 3 (Селектори класу) -->
+            <section id="lab2-class-sel" class="tab-content">
+                <h2>Селектори класу (Class Selectors)</h2>
+                <p>Селектори класу позначаються крапкою (<code>.classname</code>) та дозволяють багаторазово застосовувати спільні правила стилізації до обраних елементів на сторінці.</p>
+
+                <h3>1. Фрагмент CSS-коду:</h3>
+                <div class="code-container">
+<pre>/* Стилізація головної кнопки бронювання */
+.btn-primary-action {
+    display: inline-block;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(2, 132, 199, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-primary-action:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    box-shadow: 0 6px 12px rgba(2, 132, 199, 0.35);
+}
+
+/* Стилізація другорядної кнопки очищення */
+.btn-reset-action {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 12px 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Стилізація карток каталогу номерів */
+.room-card-article {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.room-card-article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}</pre>
+                </div>
+
+                <h3>2. Фрагмент відповідного HTML-коду:</h3>
+                <div class="code-container">
+<pre>&lt;article class="room-card-article"&gt;
+    &lt;h3&gt;1. Номер категорії «Стандарт»&lt;/h3&gt;
+    &lt;img src="images/room-standard.svg" alt="Стандарт"&gt;
+&lt;/article&gt;
+
+&lt;button type="submit" class="btn-primary-action"&gt;Забронювати номер зараз&lt;/button&gt;
+&lt;button type="reset" class="btn-reset-action"&gt;Очистити форму&lt;/button&gt;</pre>
+                </div>
+
+                <h3>3. Візуалізація у браузері (Live Preview):</h3>
+                <div class="preview-box">
+                    <button type="button" class="btn-primary-action">Забронювати номер зараз (.btn-primary-action)</button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn-reset-action">Очистити форму (.btn-reset-action)</button>
+                </div>
+            </section>
+
+            <!-- ЛР2: Вкладка 4 (Селектори ідентифікатора) -->
+            <section id="lab2-id-sel" class="tab-content">
+                <h2>Селектори ідентифікатора (ID Selectors)</h2>
+                <p>Селектори ідентифікатора позначаються знаком решітки (<code>#idname</code>) та застосовуються до єдиного унікального елемента документа з найвищим пріоритетом специфічності.</p>
+
+                <h3>1. Фрагмент CSS-коду:</h3>
+                <div class="code-container">
+<pre>/* Верхній блок логотипу та гасла */
+#top-branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Форма онлайн-бронювання */
+#booking-form {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Блок переваг платформи */
+#advantages {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 40px;
+}</pre>
+                </div>
+
+                <h3>2. Фрагмент відповідного HTML-коду:</h3>
+                <div class="code-container">
+<pre>&lt;div id="top-branding"&gt;
+    &lt;img src="images/logo.svg" alt="Логотип"&gt;
+    &lt;p&gt;&lt;em&gt;Сервіс швидкого та безпечного бронювання житла...&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;section id="booking-form"&gt;
+    &lt;h2&gt;Онлайн-бронювання номерів&lt;/h2&gt;
+    ...
+&lt;/section&gt;</pre>
+                </div>
+
+                <h3>3. Візуалізація у браузері (Live Preview):</h3>
+                <div class="preview-box">
+                    <div style="background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                        <strong style="color: #1e3a8a;">#booking-form контейнер</strong>
+                        <p style="margin-top: 8px; font-size: 14px; color: #64748b;">Унікальна секція з тінню, заокругленням кутів 12px та білим фоном.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ЛР2: Вкладка 5 (Інші селектори) -->
+            <section id="lab2-other-sel" class="tab-content">
+                <h2>Інші селектори: Універсальний, дочірній, сусідній, атрибута</h2>
+                <p>У проєкті використано повний спектр розширених селекторів та комбінаторів CSS3:</p>
+
+                <h3>1. Фрагмент CSS-коду:</h3>
+                <div class="code-container">
+<pre>/* 1. Універсальний селектор (скидання відступів та box-sizing) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Дочірній селектор (Child Combinator >) */
+nav > ul {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 12px;
+}
+
+fieldset > p {
+    margin-bottom: 12px;
+}
+
+/* 3. Сусідній селектор (Adjacent Sibling Combinator +) */
+h2 + p {
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+label + input {
+    margin-top: 4px;
+}
+
+/* 4. Селектори атрибутів (Attribute Selectors) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Псевдоклас фокусу для селекторів атрибута */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}</pre>
+                </div>
+
+                <h3>2. Опис механізму роботи:</h3>
+                <ul>
+                    <li><code>*</code> — вибирає абсолютно всі елементи дерева DOM, застосовує глобальне правило <code>box-sizing: border-box</code>.</li>
+                    <li><code>A > B</code> — вибирає лише ті елементи B, які є прямими нащадками (дітьми першого рівня) елемента A.</li>
+                    <li><code>A + B</code> — вибирає елемент B, що розташований безпосередньо після елемента A на тому ж рівні ієрархії.</li>
+                    <li><code>input[type="..."]</code> — точково стилізує поля вводу конкретного типу, не зачіпаючи чекбокси чи радіокнопки.</li>
+                </ul>
+            </section>
+
+            <!-- ЛР2: Вкладка 6 (Стильове оформлення: Шрифти, Таблиці, CSS Просунутий) -->
+            <section id="lab2-css-styling" class="tab-content">
+                <h2>Стильове оформлення: Шрифти, Текст, Таблиці, Фон, Контур, Списки, CSS Просунутий</h2>
+
+                <h3>1. Шрифти та типографіка:</h3>
+                <p>Застосовано надійний стек системних шрифтів із високою швидкістю рендерингу (Zero CLS):</p>
+                <div class="code-container">
+<pre>font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-size: 16px;
+line-height: 1.65;
+letter-spacing: -0.5px; /* для h1 */</pre>
+                </div>
+
+                <h3>2. Контури, фон та кольорова палітра:</h3>
+                <ul>
+                    <li>Градієнтний фон шапки: <code>linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0284c7 100%)</code>;</li>
+                    <li>Стильні контури: <code>border: 1.5px solid #cbd5e1; border-radius: 8px / 12px / 16px</code>;</li>
+                    <li>М'які тривимірні тіні: <code>box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.2)</code>.</li>
+                </ul>
+
+                <h3>3. Стилізація таблиць (Табличний CSS):</h3>
+                <div class="code-container">
+<pre>/* Сучасна таблиця: об'єднані межі, темна шапка, смугаста зебра та hover */
+table {
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc; /* парні рядки */
+}
+
+tbody tr:hover {
+    background-color: #e0f2fe; /* підсвічування рядка при наведенні */
+    transition: background-color 0.2s ease-in-out;
+}</pre>
+                </div>
+
+                <h3>4. CSS Просунутий (Advanced CSS):</h3>
+                <ul>
+                    <li><strong>Псевдокласи стану:</strong> <code>:hover</code> (наведення курсора), <code>:focus</code> (фокус введення), <code>:active</code> (клік по кнопці);</li>
+                    <li><strong>Плавні анімації:</strong> <code>transition: all 0.2s ease</code> для плавної зміни фону, кольору рамки та розміру тіні;</li>
+                    <li><strong>Трансформації:</strong> <code>transform: translateY(-3px)</code> для візуального ефекту підняття карток при наведенні миші.</li>
+                </ul>
+            </section>
+
+            <!-- ЛР2: Вкладка 7 (Стилізація Резюме) -->
+            <section id="lab2-resume" class="tab-content">
+                <h2>Стильове оформлення Резюме</h2>
+                <div class="info-card">
+                    <p>
+                        Розроблено окрему сторінку <strong><code>resume.html</code></strong> зі стилями <strong><code>css/resume.css</code></strong>, що представляє професійне резюме студента Андронова Данила за двоколонковою схемою.
+                    </p>
+                    <p>
+                        🔗 <strong>Живе посилання на резюме:</strong> <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/resume.html" target="_blank">Відкрити резюме у новому вікні</a>
+                    </p>
+                </div>
+
+                <h3>1. Структура макета резюме:</h3>
+                <ul>
+                    <li><strong>Ліва темна колонка (35% ширини):</strong> Векторний аватар, ПІБ, посада (Trainee Frontend & Java Developer), блок контактів (email, телефон, GitHub, Київ), перелік технічних навичок у вигляді бейджів (HTML5, CSS3, Flexbox, JavaScript, Java 23, Gradle, JUnit 5) та мовні компетенції.</li>
+                    <li><strong>Права світла колонка (65% ширини):</strong> Професійний профіль (Summary), блок вищої освіти в НТУУ «КПІ ім. Ігоря Сікорського» (ФІОТ, ІС-43, спеціальність 126), детальний опис практичних проєктів («MandryStay» та «kpi-java-labs») та особисті якості.</li>
+                </ul>
+
+                <h3>2. Фрагмент CSS-коду макета резюме:</h3>
+                <div class="code-container">
+<pre>.resume-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resume-sidebar {
+    width: 35%;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    padding: 35px 25px;
+}
+
+.resume-main {
+    width: 65%;
+    padding: 35px 35px;
+}
+
+.skill-tag.highlight {
+    background-color: #0284c7;
+}</pre>
+                </div>
+            </section>
+
+            <!-- ЛР2: Вкладка 8 (Висновки ЛР2) -->
+            <section id="lab2-conclusions" class="tab-content">
+                <h2>Висновки до Лабораторної роботи №2</h2>
+                <div class="info-card">
+                    <p>Під час виконання лабораторної роботи №2 було успішно опановано каскадні таблиці стилів (CSS3):</p>
+                    <ol>
+                        <li><strong>Практичне застосування селекторів:</strong> Застосовано всі ключові види селекторів (тегу, класу, унікального id, універсальний <code>*</code>, дочірні <code>></code>, сусідні <code>+</code> та селектори атрибутів <code>input[type="..."]</code>). З'ясовано механізм специфічності (ваги) селекторів (inline &gt; ID &gt; Class &gt; Tag).</li>
+                        <li><strong>Типографіка та оформлення:</strong> Оформлено текстові блоки, налаштовано ієрархію заголовків за розмірами та насиченістю шрифтів, встановлено комфортний інтерліньяж <code>line-height: 1.65</code>.</li>
+                        <li><strong>Таблиці та форми:</strong> Реалізовано професійне оформлення тарифної сітки із застосуванням смугастого чергування рядків (<code>nth-child(even)</code>) та динамічного підсвічування при наведенні (<code>:hover</code>). Форму оснащено плавними переходами (<code>transition</code>) та контурним неоновим підсвічуванням полів у фокусі (<code>:focus</code>).</li>
+                        <li><strong>Створення резюме:</strong> Створено стильне двоколонкове резюме студента (<code>resume.html</code>) з інтегрованими даними щодо освітніх програм, навичок та розроблених проєктів.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ЛР2: Вкладка 9 (Контрольні запитання) -->
+            <section id="lab2-questions" class="tab-content">
+                <h2>Відповіді на контрольні запитання викладача</h2>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3>1. Для чого використовуються каскадні таблиці стилів (CSS)?</h3>
+                    <p>CSS (Cascading Style Sheets) використовується для відокремлення візуального оформлення та дизайну веб-сторінки від її семантичної структури (HTML). Це дозволяє централізовано змінювати стиль багатьох сторінок, підвищує швидкість завантаження, полегшує підтримку коду та забезпечує адаптивність інтерфейсу під різні розміри екранів.</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>2. Які методи визначення стилів у HTML-документі ви знаєте?</h3>
+                    <p>Існує три основні методи підключення CSS:</p>
+                    <ul>
+                        <li><strong>Зовнішній (External):</strong> Підключення окремого файлу <code>.css</code> через тег <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> у секції <code>&lt;head&gt;</code> (найкраща практика).</li>
+                        <li><strong>Внутрішній (Internal):</strong> Оголошення стилів усередині тега <code>&lt;style&gt;</code> у заголовку документа.</li>
+                        <li><strong>Вбудований (Inline):</strong> Задання стилів безпосередньо для конкретного HTML-елемента через атрибут <code>style="..."</code> (має найвищу специфічність, але ускладнює підтримку).</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>3. У чому різниця між принципами каскадування і спадкування?</h3>
+                    <p><strong>Каскадування (Cascading):</strong> Це набір правил, за якими браузер вирішує конфлікти, коли до одного й того самого елемента застосовуються різні стильові правила. Браузер враховує джерело стилю, важливість (<code>!important</code>), специфічність селектора та порядок оголошення в коді (останнє правило перемагає).</p>
+                    <p><strong>Спадкування (Inheritance):</strong> Це передача значень певних властивостей (переважно типографіки: <code>color</code>, <code>font-family</code>, <code>font-size</code>, <code>line-height</code>) від батьківських елементів до їхніх дочірніх нащадків за замовчуванням.</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>4. Як в HTML-документі оформлюються селектори тегу і класу?</h3>
+                    <p>У CSS-файлі селектор тегу записується просто іменем тегу без розділових знаків (наприклад, <code>p { color: red; }</code>), а селектор класу записується з крапкою на початку (наприклад, <code>.btn { padding: 10px; }</code>). В HTML елементу присвоюється клас за допомогою атрибута <code>class="btn"</code>.</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>5. Для чого використовується ідентифікатор?</h3>
+                    <p>Ідентифікатор (атрибут <code>id="..."</code> в HTML та селектор <code>#id_name</code> у CSS) використовується для позначення унікального елемента на веб-сторінці (на сторінці не може бути двох елементів з однаковим id). Він застосовується для якорної навігації (наприклад, <code>href="#booking-form"</code>), для маніпуляцій з DOM у JavaScript (<code>getElementById</code>) та для зв'язування полів форми з тегами <code>&lt;label for="..."&gt;</code>.</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3>6. Навести приклади оформлення текстових елементів.</h3>
+                    <p>Приклади базових та просунутих властивостей CSS для роботи з текстом:</p>
+                    <ul>
+                        <li><code>color: #1e293b;</code> — колір символів тексту;</li>
+                        <li><code>font-family: 'Segoe UI', Roboto, sans-serif;</code> — гарнітура шрифту;</li>
+                        <li><code>font-size: 1.25rem;</code> — кегль (розмір) шрифту;</li>
+                        <li><code>font-weight: 700;</code> — насиченість (товщина) літер (bold);</li>
+                        <li><code>line-height: 1.6;</code> — міжрядковий інтервал (інтерліньяж);</li>
+                        <li><code>text-align: center | justify | left | right;</code> — вирівнювання тексту;</li>
+                        <li><code>text-transform: uppercase | lowercase | capitalize;</code> — зміна регістру літер;</li>
+                        <li><code>letter-spacing: 0.5px;</code> — міжбуквений інтервал (трекінг);</li>
+                        <li><code>text-decoration: underline | none;</code> — підкреслення тексту або його скасування.</li>
+                    </ul>
                 </div>
             </section>
 

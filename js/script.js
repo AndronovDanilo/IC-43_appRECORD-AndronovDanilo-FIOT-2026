@@ -4,20 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabContents = document.querySelectorAll('.tab-content');
 
     // Перемикання вкладок у межах поточної лабораторної
-    subtabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-target');
+    function setupSubtabs() {
+        document.querySelectorAll('.subtab-btn').forEach(btn => {
+            btn.onclick = () => {
+                const targetId = btn.getAttribute('data-target');
+                const parentNav = btn.parentElement;
 
-            subtabButtons.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
+                parentNav.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
 
-            btn.classList.add('active');
-            const targetContent = document.getElementById(targetId);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
+                btn.classList.add('active');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            };
         });
-    });
+    }
+
+    setupSubtabs();
 
     // Перемикання лабораторних у боковому меню
     labButtons.forEach(btn => {
@@ -26,16 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
             labButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
+            const lab1Subtabs = document.getElementById('lab1-subtabs');
+            const lab2Subtabs = document.getElementById('lab2-subtabs');
+            const otherContainer = document.getElementById('other-labs-container');
+
+            tabContents.forEach(c => c.classList.remove('active'));
+
             if (labNum === '1') {
-                document.getElementById('lab1-subtabs').style.display = 'flex';
-                document.getElementById('other-labs-container').style.display = 'none';
-                // Відкриваємо першу вкладку ЛР1
+                lab1Subtabs.style.display = 'flex';
+                if (lab2Subtabs) lab2Subtabs.style.display = 'none';
+                otherContainer.style.display = 'none';
                 document.querySelector('.subtab-btn[data-target="lab1-topic"]').click();
+            } else if (labNum === '2') {
+                lab1Subtabs.style.display = 'none';
+                if (lab2Subtabs) lab2Subtabs.style.display = 'flex';
+                otherContainer.style.display = 'none';
+                document.querySelector('.subtab-btn[data-target="lab2-topic"]').click();
             } else {
-                document.getElementById('lab1-subtabs').style.display = 'none';
-                tabContents.forEach(c => c.classList.remove('active'));
-                
-                const otherContainer = document.getElementById('other-labs-container');
+                lab1Subtabs.style.display = 'none';
+                if (lab2Subtabs) lab2Subtabs.style.display = 'none';
                 otherContainer.style.display = 'block';
                 document.getElementById('other-lab-title').textContent = `Лабораторна робота №${labNum}`;
                 document.getElementById('other-lab-desc').textContent = `Матеріали та звітність для Лабораторної роботи №${labNum} будуть додані згідно з навчальним планом.`;
