@@ -27,15 +27,15 @@
     <!-- Горизонтальний ряд лабораторних робіт (№1 .. №9) згідно з орієнтовним макетом викладача -->
     <nav class="labs-horizontal-nav" aria-label="Вибір лабораторної роботи">
         <div class="labs-nav-container">
-            <button class="lab-tab-btn active" data-lab="1">Лабораторна робота №1</button>
-            <button class="lab-tab-btn" data-lab="2">Лабораторна робота №2</button>
-            <button class="lab-tab-btn" data-lab="3">Лабораторна робота №3</button>
-            <button class="lab-tab-btn" data-lab="4">Лабораторна робота №4</button>
-            <button class="lab-tab-btn" data-lab="5">Лабораторна робота №5</button>
-            <button class="lab-tab-btn" data-lab="6">Лабораторна робота №6</button>
-            <button class="lab-tab-btn" data-lab="7">Лабораторна робота №7</button>
-            <button class="lab-tab-btn" data-lab="8">Лабораторна робота №8</button>
-            <button class="lab-tab-btn" data-lab="9">Лабораторна робота №9</button>
+            <button class="lab-tab-btn active" data-lab="1" title="Лабораторна робота №1"><span class="lab-full-text">Лабораторна №1</span><span class="lab-short-text">ЛР №1</span></button>
+            <button class="lab-tab-btn" data-lab="2" title="Лабораторна робота №2"><span class="lab-full-text">Лабораторна №2</span><span class="lab-short-text">ЛР №2</span></button>
+            <button class="lab-tab-btn" data-lab="3" title="Лабораторна робота №3"><span class="lab-full-text">Лабораторна №3</span><span class="lab-short-text">ЛР №3</span></button>
+            <button class="lab-tab-btn" data-lab="4" title="Лабораторна робота №4"><span class="lab-full-text">Лабораторна №4</span><span class="lab-short-text">ЛР №4</span></button>
+            <button class="lab-tab-btn" data-lab="5" title="Лабораторна робота №5"><span class="lab-full-text">Лабораторна №5</span><span class="lab-short-text">ЛР №5</span></button>
+            <button class="lab-tab-btn" data-lab="6" title="Лабораторна робота №6"><span class="lab-full-text">Лабораторна №6</span><span class="lab-short-text">ЛР №6</span></button>
+            <button class="lab-tab-btn" data-lab="7" title="Лабораторна робота №7"><span class="lab-full-text">Лабораторна №7</span><span class="lab-short-text">ЛР №7</span></button>
+            <button class="lab-tab-btn" data-lab="8" title="Лабораторна робота №8"><span class="lab-full-text">Лабораторна №8</span><span class="lab-short-text">ЛР №8</span></button>
+            <button class="lab-tab-btn" data-lab="9" title="Лабораторна робота №9"><span class="lab-full-text">Лабораторна №9</span><span class="lab-short-text">ЛР №9</span></button>
         </div>
     </nav>
 
@@ -48,11 +48,13 @@
                 <button class="subtab-pill active" data-target="lab1-topic">Тема, Мета, Місце розташування сайту, звіту</button>
                 <button class="subtab-pill" data-target="lab1-domain">Опис предметного середовища. Опис бізнес-логіки</button>
                 <button class="subtab-pill" data-target="lab1-figma">Макет у Figma</button>
-                <button class="subtab-pill parent-pill" data-target="lab1-structure">Структура документа</button>
-                <button class="subtab-pill indented" data-target="lab1-table">HTML-код ТАБЛИЦІ</button>
-                <button class="subtab-pill indented" data-target="lab1-images">HTML-код ЗОБРАЖЕННЯ</button>
-                <button class="subtab-pill indented" data-target="lab1-form">HTML-код ФОРМИ</button>
-                <button class="subtab-pill indented" data-target="lab1-lists">HTML-код СПИСКІВ</button>
+                <button class="subtab-pill parent-pill" data-target="lab1-structure">Структура документа ▾</button>
+                <div class="subtabs-nested-group">
+                    <button class="subtab-pill sub-item" data-target="lab1-table">HTML-код ТАБЛИЦІ</button>
+                    <button class="subtab-pill sub-item" data-target="lab1-images">HTML-код ЗОБРАЖЕННЯ</button>
+                    <button class="subtab-pill sub-item" data-target="lab1-form">HTML-код ФОРМИ</button>
+                    <button class="subtab-pill sub-item" data-target="lab1-lists">HTML-код СПИСКІВ</button>
+                </div>
                 <button class="subtab-pill" data-target="lab1-live-site">Головна сторінка WEB-застосунку</button>
                 <button class="subtab-pill" data-target="lab1-conclusions">ВИСНОВКИ</button>
             </div>
@@ -61,11 +63,13 @@
             <div id="lab2-subtabs" class="subtabs-group" style="display: none;">
                 <button class="subtab-pill" data-target="lab2-topic">Тема, мета ЛР №2. Місце розташування сайту, звіту</button>
                 <button class="subtab-pill" data-target="lab2-styles-connect">Способи підключення стилів</button>
-                <button class="subtab-pill parent-pill" data-target="lab2-tag-sel">СЕЛЕКТОРИ</button>
-                <button class="subtab-pill indented" data-target="lab2-tag-sel">Селектори тегу</button>
-                <button class="subtab-pill indented" data-target="lab2-class-sel">Селектори класу</button>
-                <button class="subtab-pill indented" data-target="lab2-id-sel">Селектори ідентифікаторів</button>
-                <button class="subtab-pill indented" data-target="lab2-other-sel">Інші селектори</button>
+                <button class="subtab-pill parent-pill" data-target="lab2-tag-sel">СЕЛЕКТОРИ ▾</button>
+                <div class="subtabs-nested-group">
+                    <button class="subtab-pill sub-item" data-target="lab2-tag-sel">Селектори тегу</button>
+                    <button class="subtab-pill sub-item" data-target="lab2-class-sel">Селектори класу</button>
+                    <button class="subtab-pill sub-item" data-target="lab2-id-sel">Селектори ідентифікаторів</button>
+                    <button class="subtab-pill sub-item" data-target="lab2-other-sel">Інші селектори</button>
+                </div>
                 <button class="subtab-pill" data-target="lab2-css-styling">CSS: Шрифти, Текст, Таблиці, Фон, Контур, Списки, CSS Просунутий</button>
                 <button class="subtab-pill" data-target="lab2-resume">Стилізація Резюме</button>
                 <button class="subtab-pill" data-target="lab2-conclusions">ВИСНОВКИ до ЛР №2</button>

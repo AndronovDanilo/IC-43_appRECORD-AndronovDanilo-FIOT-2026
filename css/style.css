@@ -11,12 +11,13 @@ body {
     background-color: #f1f5f9;
 }
 
-/* 1. ВЕРХНІЙ КОЛОНТИТУЛ (HEADER) ЗГІДНО З ОРІЄНТОВНИМ МАКЕТОМ */
+/* 1. ШАПКА ДОКУМЕНТА (HEADER) — СТРИМАНА ТА АКАДЕМІЧНА */
 .report-header {
     background: #ffffff;
-    border-bottom: 2px solid #cbd5e1;
-    padding: 20px 40px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid #e2e8f0;
+    border-top: 4px solid #1e3a8a;
+    padding: 16px 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -25,7 +26,7 @@ body {
     align-items: center;
     max-width: 1600px;
     margin: 0 auto;
-    gap: 25px;
+    gap: 20px;
 }
 
 .header-titles {
@@ -34,122 +35,150 @@ body {
 }
 
 .header-title-main {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     color: #0f172a;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .header-course {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    color: #1e3a8a;
+    color: #0284c7;
     text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
 }
 
 .header-student {
-    font-size: 15px;
-    color: #334155;
+    font-size: 14px;
+    color: #475569;
 }
 
 .header-student strong {
     color: #0f172a;
 }
 
-/* Блок фото студента у правому верхньому куті (як на макеті) */
+/* Блок фото студента */
 .student-photo-card {
-    border: 2px solid #0f172a;
-    background: #ffffff;
-    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    padding: 6px 10px;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 8px;
     flex-shrink: 0;
-    box-shadow: 2px 2px 0px #0f172a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
 
 .photo-caption {
-    font-size: 11px;
-    font-weight: 800;
+    font-size: 10px;
+    font-weight: 700;
     text-transform: uppercase;
-    color: #0f172a;
-    letter-spacing: 0.8px;
-    margin-bottom: 6px;
+    color: #64748b;
+    letter-spacing: 0.6px;
+    margin-bottom: 4px;
 }
 
 .student-photo-img {
-    width: 82px;
-    height: 82px;
+    width: 76px;
+    height: 76px;
     object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    border: 1px solid #94a3b8;
     display: block;
     margin: 0 auto;
 }
 
-/* 2. ГОРИЗОНТАЛЬНИЙ РЯД ЛАБОРАТОРНИХ РОБІТ (№1 .. №9) */
+/* 2. ГОРИЗОНТАЛЬНИЙ РЯД ЛАБОРАТОРНИХ (ВМІЩУЄ ВСІ 9 БЕЗ СКРОЛУ) */
 .labs-horizontal-nav {
-    background-color: #0f172a;
-    border-bottom: 3px solid #1e293b;
-    padding: 12px 40px 0 40px;
-    overflow-x: auto;
+    background-color: #f1f5f9;
+    border-bottom: 2px solid #cbd5e1;
+    padding: 10px 20px 0 20px;
 }
 
 .labs-nav-container {
-    display: flex;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 5px;
     max-width: 1600px;
     margin: 0 auto;
 }
 
 .lab-tab-btn {
-    padding: 12px 18px;
-    border: 2px solid #334155;
+    width: 100%;
+    padding: 10px 4px;
+    border: 1px solid #cbd5e1;
     border-bottom: none;
-    border-radius: 12px 12px 0 0;
-    background-color: #1e293b;
-    color: #cbd5e1;
+    border-radius: 8px 8px 0 0;
+    background-color: #ffffff;
+    color: #475569;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
+    text-align: center;
     white-space: nowrap;
-    transition: all 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.15s ease;
 }
 
 .lab-tab-btn:hover {
-    background-color: #334155;
-    color: #ffffff;
+    background-color: #f0f9ff;
+    color: #0284c7;
+    border-color: #93c5fd;
 }
 
-/* Активна лаба — яскраве виділення як на орієнтовному макеті (жовте/золоте) */
+/* Активна вкладка — чистий, контрастний синій без кислотності */
 .lab-tab-btn.active {
-    background-color: #facc15;
-    border-color: #facc15;
-    color: #0f172a;
-    box-shadow: 0 -2px 10px rgba(250, 204, 21, 0.4);
-    transform: translateY(-2px);
+    background-color: #ffffff;
+    color: #1e3a8a;
+    border: 2px solid #2563eb;
+    border-top: 4px solid #2563eb;
+    border-bottom: 2px solid #ffffff;
+    font-weight: 800;
+    box-shadow: 0 -2px 8px rgba(37, 99, 235, 0.12);
+    position: relative;
+    z-index: 2;
+    margin-bottom: -2px;
 }
 
-/* 3. ОСНОВНИЙ РОБОЧИЙ ПРОСТІР (САЙДБАР ЗЛІВА + КОНТЕНТ СПРАВА) */
+.lab-short-text {
+    display: none;
+}
+
+@media (max-width: 1366px) {
+    .lab-full-text {
+        display: none;
+    }
+    .lab-short-text {
+        display: inline;
+        font-weight: 700;
+    }
+    .lab-tab-btn {
+        font-size: 12px;
+        padding: 9px 2px;
+    }
+}
+
+/* 3. ОСНОВНИЙ РОБОЧИЙ ПРОСТІР */
 .report-workspace {
     display: flex;
     max-width: 1600px;
     margin: 0 auto;
-    min-height: calc(100vh - 210px);
+    min-height: calc(100vh - 190px);
     background-color: #ffffff;
-    border-left: 1px solid #cbd5e1;
-    border-right: 1px solid #cbd5e1;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
 }
 
-/* Ліва колонка — овальні кнопки-пілюлі завдань */
+/* Лівий сайдбар підвкладок завдань */
 .subtabs-sidebar {
     width: 320px;
     background-color: #f8fafc;
-    border-right: 2px solid #e2e8f0;
-    padding: 25px 16px;
+    border-right: 1px solid #e2e8f0;
+    padding: 20px 14px;
     flex-shrink: 0;
     overflow-y: auto;
 }
@@ -157,25 +186,25 @@ body {
 .subtabs-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
-/* Овальна форма кнопок (як на схемах рис.1 викладача) */
+/* Овальні кнопки-пілюлі завдань */
 .subtab-pill {
     display: block;
     width: 100%;
-    text-align: center;
-    padding: 10px 14px;
-    border: 2px solid #64748b;
-    border-radius: 50px;
+    text-align: left;
+    padding: 9px 15px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 25px;
     background-color: #ffffff;
-    color: #0f172a;
+    color: #1e293b;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     line-height: 1.35;
-    transition: all 0.2s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .subtab-pill:hover {
@@ -188,36 +217,56 @@ body {
     background-color: #1e3a8a;
     border-color: #1e3a8a;
     color: #ffffff;
-    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.25);
+    box-shadow: 0 2px 6px rgba(30, 58, 138, 0.25);
 }
 
-/* Головні батьківські пункти */
+/* Батьківська категорія (напр. СТРУКТУРА ДОКУМЕНТА / СЕЛЕКТОРИ) */
 .subtab-pill.parent-pill {
-    border: 2px solid #0f172a;
-    font-weight: 800;
-    text-transform: uppercase;
     background-color: #f1f5f9;
-}
-
-/* Вкладені пункти (зі зміщенням вправо, як на схемі викладача) */
-.subtab-pill.indented {
-    width: calc(100% - 24px);
-    margin-left: 24px;
     border: 1.5px solid #94a3b8;
-    font-size: 12px;
-    padding: 8px 12px;
+    color: #0f172a;
+    font-weight: 800;
 }
 
-.subtab-pill.indented.active {
+/* Контейнер вкладених підпунктів — чітке дерево без жодних накладань! */
+.subtabs-nested-group {
+    margin-left: 14px;
+    padding-left: 10px;
+    border-left: 2px solid #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.subtab-pill.sub-item {
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #475569;
+    font-size: 12px;
+    padding: 7px 12px;
+}
+
+.subtab-pill.sub-item:hover {
+    border-color: #0284c7;
+    background-color: #f0f9ff;
+    color: #0284c7;
+}
+
+.subtab-pill.sub-item.active {
     background-color: #0284c7;
     border-color: #0284c7;
     color: #ffffff;
+    font-weight: 700;
 }
 
-/* 4. ПРАВА КОЛОНКА — МІСЦЕ ВИВЕДЕННЯ ІНФОРМАЦІЇ */
+/* 4. ПРАВА ОСНОВНА ЗОНА: МІСЦЕ ВИВЕДЕННЯ ІНФОРМАЦІЇ */
 .content-display-area {
     flex-grow: 1;
-    padding: 30px 40px;
+    padding: 25px 35px;
     overflow-y: auto;
     background-color: #ffffff;
 }
@@ -228,14 +277,14 @@ body {
     align-items: center;
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .display-area-tag {
     font-size: 11px;
     text-transform: uppercase;
     font-weight: 800;
-    color: #64748b;
+    color: #475569;
     letter-spacing: 1.2px;
     background: #f1f5f9;
     padding: 4px 10px;
@@ -249,7 +298,7 @@ body {
     font-weight: 700;
 }
 
-/* Контейнери вмісту */
+/* Секції вмісту вкладок */
 .tab-content {
     display: none;
 }
@@ -265,7 +314,7 @@ body {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 20px;
     color: #0f172a;
     margin-bottom: 16px;
     padding-bottom: 8px;
@@ -273,10 +322,10 @@ h2 {
 }
 
 h3 {
-    font-size: 17px;
+    font-size: 16px;
     color: #1e3a8a;
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-top: 22px;
+    margin-bottom: 10px;
 }
 
 p, li {
@@ -294,7 +343,7 @@ ul, ol {
 .code-container {
     background-color: #0f172a;
     color: #f8fafc;
-    padding: 18px;
+    padding: 16px;
     border-radius: 8px;
     overflow-x: auto;
     font-family: "Consolas", "Fira Code", monospace;
@@ -355,10 +404,10 @@ ul, ol {
     .subtabs-sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 2px solid #e2e8f0;
+        border-bottom: 1px solid #e2e8f0;
     }
     .content-display-area {
-        padding: 20px;
+        padding: 20px 15px;
     }
 }
 
@@ -368,10 +417,6 @@ ul, ol {
         text-align: center;
     }
     .labs-horizontal-nav {
-        padding: 10px 15px 0 15px;
-    }
-    .subtabs-pill.indented {
-        width: 100%;
-        margin-left: 0;
+        padding: 8px 10px 0 10px;
     }
 }
