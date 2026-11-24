@@ -27,11 +27,11 @@
     <!-- Горизонтальний ряд лабораторних робіт (№1 .. №9) згідно з орієнтовним макетом викладача -->
     <nav class="labs-horizontal-nav" aria-label="Вибір лабораторної роботи">
         <div class="labs-nav-container">
-            <button class="lab-tab-btn active" data-lab="1" title="Лабораторна робота №1"><span class="lab-full-text">Лабораторна №1</span><span class="lab-short-text">ЛР №1</span></button>
+            <button class="lab-tab-btn" data-lab="1" title="Лабораторна робота №1"><span class="lab-full-text">Лабораторна №1</span><span class="lab-short-text">ЛР №1</span></button>
             <button class="lab-tab-btn" data-lab="2" title="Лабораторна робота №2"><span class="lab-full-text">Лабораторна №2</span><span class="lab-short-text">ЛР №2</span></button>
             <button class="lab-tab-btn" data-lab="3" title="Лабораторна робота №3"><span class="lab-full-text">Лабораторна №3</span><span class="lab-short-text">ЛР №3</span></button>
             <button class="lab-tab-btn" data-lab="4" title="Лабораторна робота №4"><span class="lab-full-text">Лабораторна №4</span><span class="lab-short-text">ЛР №4</span></button>
-            <button class="lab-tab-btn" data-lab="5" title="Лабораторна робота №5"><span class="lab-full-text">Лабораторна №5</span><span class="lab-short-text">ЛР №5</span></button>
+            <button class="lab-tab-btn active" data-lab="5" title="Лабораторна робота №5"><span class="lab-full-text">Лабораторна №5</span><span class="lab-short-text">ЛР №5</span></button>
             <button class="lab-tab-btn" data-lab="6" title="Лабораторна робота №6"><span class="lab-full-text">Лабораторна №6</span><span class="lab-short-text">ЛР №6</span></button>
             <button class="lab-tab-btn" data-lab="7" title="Лабораторна робота №7"><span class="lab-full-text">Лабораторна №7</span><span class="lab-short-text">ЛР №7</span></button>
             <button class="lab-tab-btn" data-lab="8" title="Лабораторна робота №8"><span class="lab-full-text">Лабораторна №8</span><span class="lab-short-text">ЛР №8</span></button>
@@ -44,7 +44,7 @@
         <!-- Лівий сайдбар підвкладок завдань поточної лаби -->
         <aside class="subtabs-sidebar" aria-label="Зміст лабораторної роботи">
             <!-- Підвкладки для Лабораторної роботи №1 (точно як на рис.1 викладача) -->
-            <div id="lab1-subtabs" class="subtabs-group">
+            <div id="lab1-subtabs" class="subtabs-group" style="display: none;">
                 <button class="subtab-pill active" data-target="lab1-topic">Тема, Мета, Місце розташування сайту, звіту</button>
                 <button class="subtab-pill" data-target="lab1-domain">Опис предметного середовища. Опис бізнес-логіки</button>
                 <button class="subtab-pill" data-target="lab1-figma">Макет у Figma</button>
@@ -55,6 +55,7 @@
                 <button class="subtab-pill" data-target="lab1-lists">HTML-код СПИСКІВ</button>
                 <button class="subtab-pill" data-target="lab1-live-site">Головна сторінка WEB-застосунку</button>
                 <button class="subtab-pill" data-target="lab1-conclusions">ВИСНОВКИ</button>
+                <button class="subtab-pill" data-target="lab1-questions">Контрольні запитання</button>
             </div>
 
             <!-- Підвкладки для Лабораторної роботи №2 (точно як на рис.1 для ЛР2 викладача) -->
@@ -90,7 +91,7 @@
                 
             </div>
 
-            <section id="lab1-topic" class="tab-content active">
+            <section id="lab1-topic" class="tab-content">
                 <h2>Лабораторна робота №1</h2>
                 <div class="info-card">
                     <p><strong>Тема:</strong> ТЕГИ ТА АТРИБУТИ HTML-ДОКУМЕНТА. СТРУКТУРНА РОЗМІТКА. GIT. GITHUB. РОБОТА З РЕПОЗИТОРІЯМИ. ОПИС ЛОГІКИ ВЛАСНОГО WEB-ЗАСТОСУНКУ.</p>
@@ -609,6 +610,136 @@
                         <li><strong>Семантична HTML5-розмітка:</strong> Розроблено повноцінну головну сторінку застосунку без використання сторонніх фреймворків, застосовано заголовки різних рівнів, теги списків, багатофункціональну форму бронювання з різними типами полів введення та складну таблицю тарифів з об'єднанням комірок (colspan, rowspan).</li>
                         <li><strong>Звітний HTML-документ:</strong> Спроєктовано та реалізовано інтерактивний портал звітів із зручною навігацією між лабораторними роботами та тематичними вкладками, де наочно представлено фрагменти коду, живі прев'ю та теоретичні пояснення.</li>
                     </ol>
+                </div>
+            </section>
+
+            <!-- ЛР1: Вкладка 11 (Контрольні запитання ЛР №1) -->
+            <section id="lab1-questions" class="tab-content">
+                <h2>Відповіді на контрольні запитання викладача до ЛР №1</h2>
+
+                <div style="margin-bottom: 25px;">
+                    <h3>1. Яка структура базового HTML5-документа? Призначення основних тегів.</h3>
+                    <p>Стандартний HTML5-документ має чітку деревоподібну структуру (DOM-дерево), що починається з декларації стандарту:</p>
+                    <ul>
+                        <li><code>&lt;!DOCTYPE html&gt;</code> — обов'язковий рядок на самому початку файлу. Він повідомляє браузеру, що документ використовує сучасний стандарт HTML5, та вмикає стандартний режим відображення (No-Quirks Mode) замість режиму сумісності зі старими браузерами.</li>
+                        <li><code>&lt;html lang="uk"&gt;</code> — кореневий тег усього веб-документа. Атрибут <code>lang="uk"</code> вказує мову документа для пошукових роботів Google, програм синтезу мовлення та скрінрідерів.</li>
+                        <li><code>&lt;head&gt;</code> — контейнер службової інформації (метаданих), яка безпосередньо не відображається у робочій зоні сторінки:
+                            <ul>
+                                <li><code>&lt;meta charset="UTF-8"&gt;</code> — визначає таблицю кодування символів Unicode, що запобігає спотворенню кириличних літер;</li>
+                                <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> — наріжний камінь адаптивної верстки, що прирівнює ширину сторінки до фізичної ширини пристрою з початковим масштабом 1:1;</li>
+                                <li><code>&lt;title&gt;</code> — назва сторінки у вкладці браузера та в заголовках пошукової видачі;</li>
+                                <li><code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code> — підключення зовнішніх таблиць стилів CSS;</li>
+                                <li><code>&lt;link rel="icon" href="..."&gt;</code> — фавіконка сайту.</li>
+                            </ul>
+                        </li>
+                        <li><code>&lt;body&gt;</code> — тіло документа, що містить увесь візуальний вміст: текст, графіку, таблиці, форми, меню та мультимедіа.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3>2. Семантичні теги HTML5 та їх переваги перед несемантичними &lt;div&gt; та &lt;span&gt;.</h3>
+                    <p><strong>Семантичні теги</strong> — це структурні елементи HTML5, ім'я яких безпосередньо передає призначення та зміст контенту людині й браузеру:</p>
+                    <ul>
+                        <li><code>&lt;header&gt;</code> — вступна частина сторінки або окремої статті (логотип, слоган, меню навігації);</li>
+                        <li><code>&lt;nav&gt;</code> — контейнер основних навігаційних посилань веб-сайту;</li>
+                        <li><code>&lt;main&gt;</code> — центральний унікальний контент поточної сторінки (може зустрічатися лише один раз на сторінці);</li>
+                        <li><code>&lt;section&gt;</code> — логічно завершений тематичний блок сторінки (зазвичай містить заголовок <code>&lt;h2&gt;</code>–<code>&lt;h6&gt;</code>);</li>
+                        <li><code>&lt;article&gt;</code> — автономний інформаційний блок, придатний для незалежного поширення (стаття блогу, картка товару, новина, відгук);</li>
+                        <li><code>&lt;aside&gt;</code> — додатковий контент, побічно пов'язаний із основним (боковий сайдбар, рекламний блок, виноски);</li>
+                        <li><code>&lt;footer&gt;</code> — завершальний колонтитул документа (контакти в <code>&lt;address&gt;</code>, копірайт, юридична інформація);</li>
+                        <li><code>&lt;figure&gt;</code> та <code>&lt;figcaption&gt;</code> — графічний або медійний блок разом із текстовим підписом.</li>
+                    </ul>
+                    <p><strong>Головні переваги використання семантики:</strong></p>
+                    <ol>
+                        <li><em>Пошукова оптимізація (SEO):</em> пошукові системи (Google, Bing) розуміють ієрархію контенту та надають перевагу сайтам із семантичною розміткою;</li>
+                        <li><em>Цифрова доступність (Accessibility / a11y):</em> люди з порушеннями зору, які використовують екранні диктори (screen readers), можуть миттєво переходити між орієнтирами сторінки;</li>
+                        <li><em>Чистота та підтримка коду:</em> ліквідується явище «div soup» (безладного нагромадження однакових div-ів), спрощується командна розробка.</li>
+                    </ol>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3>3. Які види списків існують в HTML? Навести правила їх побудови.</h3>
+                    <p>В HTML стандартизовано три базові типи списків, а також підтримку багаторівневих вкладених списків:</p>
+                    <ul>
+                        <li><strong>Марковані (невпорядковані) списки — <code>&lt;ul&gt;</code>:</strong> Призначені для переліку елементів, послідовність яких не є критичною (перелік послуг, меню, список покупок). Кожен елемент списку огортається тегом <code>&lt;li&gt;</code>. Стиль маркера можна змінювати в CSS через властивість <code>list-style-type: disc | circle | square | none;</code>.</li>
+                        <li><strong>Нумеровані (впорядковані) списки — <code>&lt;ol&gt;</code>:</strong> Використовуються, коли порядок пунктів має принципове значення (кроки алгоритму, інструкції, рейтинги). Елементи також задаються тегами <code>&lt;li&gt;</code>. Підтримує специфічні атрибути:
+                            <ul>
+                                <li><code>type="1|a|A|i|I"</code> — визначає нумерацію: арабські цифри, малі/великі латинські букви, римські цифри;</li>
+                                <li><code>start="n"</code> — встановлює стартове число для нумерації;</li>
+                                <li><code>reversed</code> — перемикає нумерацію у зворотний порядок (від більшого до меншого).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Списки описів (визначень) — <code>&lt;dl&gt;</code>:</strong> Оптимальні для структур формату «термін — розшифровка» або «ключ — значення» (глосарії, словники, FAQ, технічні параметри). Складаються з пар тегів: <code>&lt;dt&gt;</code> (Definition Term — термін) та <code>&lt;dd&gt;</code> (Definition Description — його пояснення або значення).</li>
+                        <li><strong>Вкладені списки (Nested Lists):</strong> Будуються шляхом вкладення дочірнього <code>&lt;ul&gt;</code> або <code>&lt;ol&gt;</code> безпосередньо всередину тега <code>&lt;li&gt;</code> батьківського списку.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3>4. Як будуються таблиці в HTML? Як реалізувати об'єднання комірок по горизонталі та вертикалі?</h3>
+                    <p>Таблична розмітка в HTML будується на основі контейнера <code>&lt;table&gt;</code> та семантичних розділів:</p>
+                    <ul>
+                        <li><code>&lt;thead&gt;</code> — шапка таблиці, де розміщуються заголовки стовпців у тегах <code>&lt;th&gt;</code> (за замовчуванням текст напівжирний і центрований);</li>
+                        <li><code>&lt;tbody&gt;</code> — основна зона даних, що містить рядки <code>&lt;tr&gt;</code> із типовими комірками <code>&lt;td&gt;</code>;</li>
+                        <li><code>&lt;tfoot&gt;</code> — підвал таблиці для підсумкових підрахунків (разом, середня ціна тощо);</li>
+                        <li><code>&lt;caption&gt;</code> — загальний текстовий заголовок над або під таблицею.</li>
+                    </ul>
+                    <p><strong>Механізм об'єднання комірок:</strong></p>
+                    <ul>
+                        <li><code>colspan="n"</code> (Column Span) — об'єднує комірку на <code>n</code> колонок по горизонталі. При цьому в поточному рядку <code>&lt;tr&gt;</code> фізична кількість наступних тегів <code>&lt;td&gt;</code> має бути зменшена на <code>(n - 1)</code>, інакше таблиця розшириться та зламається.</li>
+                        <li><code>rowspan="n"</code> (Row Span) — об'єднує комірку на <code>n</code> рядків по вертикалі. У наступних <code>(n - 1)</code> рядках <code>&lt;tr&gt;</code> відповідна комірка не оголошується, оскільки місце для неї резервується верхньою коміркою.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3>5. Структура HTML-форми, типи полів введення та механізми валідації.</h3>
+                    <p>Форми створюються контейнером <code>&lt;form action="url" method="get|post"&gt;</code> для збору та передачі даних на бекенд.</p>
+                    <p><strong>Ключові елементи та атрибути:</strong></p>
+                    <ul>
+                        <li><code>&lt;label for="id_input"&gt;</code> — текстова мітка, зв'язана з полем через ідентифікатор <code>id</code>. Це підвищує зручність (клік по тексту ставить курсор у поле);</li>
+                        <li><code>&lt;input type="..."&gt;</code> — універсальний елемент введення:
+                            <ul>
+                                <li><code>type="text"</code>, <code>type="email"</code>, <code>type="tel"</code>, <code>type="password"</code> — текстові поля введення різного призначення;</li>
+                                <li><code>type="number"</code> — числові значення з опціями <code>min</code>, <code>max</code>, <code>step</code>;</li>
+                                <li><code>type="date"</code> — нативний вибір дати з календаря;</li>
+                                <li><code>type="checkbox"</code> (прапорець вибору декількох опцій) та <code>type="radio"</code> (радіокнопка для вибору лише однієї опції в групі з однаковим <code>name</code>);</li>
+                                <li><code>type="file"</code> — завантаження файлів з комп'ютера;</li>
+                                <li><code>type="submit"</code> / <code>type="reset"</code> — кнопки надсилання та скидання форми.</li>
+                            </ul>
+                        </li>
+                        <li><code>&lt;select&gt;</code> та <code>&lt;option&gt;</code> — випадні списки, що підтримують логічні групи через <code>&lt;optgroup label="..."&gt;</code>;</li>
+                        <li><code>&lt;textarea&gt;</code> — багаторядкове поле введення довільного тексту;</li>
+                        <li><code>&lt;fieldset&gt;</code> та <code>&lt;legend&gt;</code> — візуальне та смислове групування секцій форми.</li>
+                    </ul>
+                    <p><strong>Вбудована клієнтська валідація (HTML5 Form Validation):</strong></p>
+                    <ul>
+                        <li><code>required</code> — забороняє відправлення форми, якщо поле порожнє;</li>
+                        <li><code>pattern="[A-Za-z0-9]+"</code> — перевірка введення на відповідність регулярному виразу;</li>
+                        <li><code>minlength</code> та <code>maxlength</code> — обмеження кількості символів;</li>
+                        <li>Браузер автоматично перевіряє коректність синтаксису введеного email (наявність символу <code>@</code> та доменної зони).</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3>6. Які є види гіперпосилань в HTML? Атрибути тега &lt;a&gt;.</h3>
+                    <p>Гіперпосилання створюються парним тегом <code>&lt;a href="..."&gt;</code>. За типом цільової адреси розрізняють:</p>
+                    <ul>
+                        <li><strong>Абсолютні посилання:</strong> Містять повну URL-адресу з протоколом (наприклад, <code>https://github.com/AndronovDanilo</code>), що веде на зовнішні ресурси;</li>
+                        <li><strong>Відносні посилання:</strong> Вказують шлях до файлу відносно поточної сторінки у структурі проєкту (наприклад, <code>resume.html</code>, <code>./css/style.css</code>, <code>../index.html</code>);</li>
+                        <li><strong>Якірні (анкорні) посилання:</strong> Здійснюють миттєву прокрутку до елемента з відповідним <code>id</code> на тій самій сторінці (наприклад, <code>href="#booking-form"</code>);</li>
+                        <li><strong>Спеціальні посилання на системні протоколи:</strong>
+                            <ul>
+                                <li><code>href="mailto:support@mandrystay.ua"</code> — відкриває встановлений поштовий клієнт;</li>
+                                <li><code>href="tel:+380441234567"</code> — ініціює дзвінок на смартфонах.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Основні атрибути тега &lt;a&gt;:</strong></p>
+                    <ul>
+                        <li><code>target="_blank"</code> — відкриває сторінку в новій вкладці браузера;</li>
+                        <li><code>rel="noopener noreferrer"</code> — критичний атрибут кібербезпеки: захищає від атаки «reverse tabnabbing» (маніпуляції вихідною вкладкою через об'єкт <code>window.opener</code>) та запобігає витоку реферера;</li>
+                        <li><code>download</code> — вказує браузеру завантажити файл на диск замість переходу за посиланням;</li>
+                        <li><code>title</code> — відображає спливаючу підказку при наведенні курсора миші.</li>
+                    </ul>
                 </div>
             </section>
 
@@ -1131,7 +1262,12 @@ tbody tr:hover {
                             &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appRECORD-AndronovDanilo-FIOT-2026/</a>
                         </li>
                         <li>
-                            <strong>3. Сторінка Резюме (Resume):</strong><br>
+                            <strong>3. Самостійні роботи (appINDEPENDENT):</strong><br>
+                            &bull; Репозиторій на GitHub: <a href="https://github.com/AndronovDanilo/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026" target="_blank">https://github.com/AndronovDanilo/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026</a><br>
+                            &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026/" target="_blank">https://andronovdanilo.github.io/IC-43_appINDEPENDENT-AndronovDanilo-FIOT-2026/</a>
+                        </li>
+                        <li>
+                            <strong>4. Сторінка Резюме (Resume):</strong><br>
                             &bull; Жива сторінка (GitHub Pages): <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/resume.html" target="_blank">https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/resume.html</a>
                         </li>
                     </ul>
@@ -1143,97 +1279,284 @@ tbody tr:hover {
                 <h2>Завдання №1: Адаптивна верстка власного сайту «MandryStay»</h2>
                 <div class="info-card">
                     <p>
-                        У власному веб-застосунку реалізовано повноцінну адаптивність під три категорії пристроїв (десктопи, планшети, смартфони) із застосуванням Flexbox, медіа-запитів з логічними операторами та мобільного бургер-меню.
+                        У власному веб-застосунку <strong>«MandryStay»</strong> реалізовано повноцінну адаптивність під три ключові категорії пристроїв (десктопи, планшети, смартфони) із застосуванням стандартів <strong>Responsive Web Design (RWD)</strong>: гнучких сіток Flexbox, медіа-запитів <code>@media</code> з логічними операторами, анімованого мобільного бургер-меню та метатегу <code>viewport</code>.
                     </p>
                 </div>
 
-                <h3>1. Семантичні компоненти інтерфейсу:</h3>
-                <ul>
-                    <li><code>&lt;header&gt;</code>: верхня плашка з векторним логотипом, гаслом сервісу, адаптивною кнопкою бургер-меню та списком навігації;</li>
-                    <li><code>&lt;main&gt;</code>: основна область із Hero-секцією, інтерактивною формою бронювання, адаптивною Flexbox-сіткою каталогу номерів та тарифною сіткою;</li>
-                    <li><code>&lt;footer&gt;</code>: нижній колонтитул із контактною інформацією в тегу <code>&lt;address&gt;</code> та навігаційними посиланнями.</li>
-                </ul>
-
-                <h3>2. Реалізація адаптивного Бургер-меню:</h3>
-                <p>На екранах із шириною менше 768px навігаційне меню трансформується у випадне бургер-меню з плавною CSS-анімацією трансформації іконки в хрестик:</p>
-                <div class="code-container">
-<pre>/* Кнопка бургер-меню (за замовчуванням прихована на десктопі) */
-.burger-menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 34px;
-    height: 30px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.burger-menu-btn span {
-    width: 100%;
-    height: 3.5px;
-    background-color: #ffffff;
-    border-radius: 4px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Анімація перетворення в хрестик при активації */
-.burger-menu-btn.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.burger-menu-btn.active span:nth-child(2) { opacity: 0; }
-.burger-menu-btn.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }</pre>
+                <h3>1. Прев'ю та графічні макети головної сторінки «MandryStay»:</h3>
+                <div class="links-card">
+                    <p>
+                        <strong>🔗 Жива сторінка на GitHub Pages:</strong> <a href="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/" target="_blank">Відкрити MandryStay в окремому вікні ↗</a><br>
+                        <strong>📁 Репозиторій сайту на GitHub:</strong> <a href="https://github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026" target="_blank">github.com/AndronovDanilo/IC-43_appWEB-AndronovDanilo-FIOT-2026 ↗</a>
+                    </p>
                 </div>
 
-                <h3>3. Адаптивна Flexbox-сітка карток каталогу:</h3>
-                <div class="code-container">
-<pre>.rooms-flex-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-}
+                <!-- Інтерактивне прев'ю адаптивного сайту через iframe -->
+                <div class="preview-box" style="padding: 12px; background: #0f172a; border: 2px solid #334155;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; background: #1e293b; border-radius: 6px 6px 0 0; color: #94a3b8; font-size: 12px;">
+                        <span>🌐 Інтерактивне вікно тестування адаптивності MandryStay:</span>
+                        <span style="color: #38bdf8; font-weight: bold;">Десктоп / Планшет / Смартфон (Live Viewport)</span>
+                    </div>
+                    <iframe src="https://andronovdanilo.github.io/IC-43_appWEB-AndronovDanilo-FIOT-2026/" 
+                            style="width: 100%; height: 720px; border: none; background: #ffffff;" 
+                            title="MandryStay Live Demo Viewport"></iframe>
+                </div>
 
-/* Десктоп (&gt; 1024px): 3 картки в ряд */
+                <!-- Графічні макети розробки (Figma Mockups) -->
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 25px 0;">
+                    <figure style="flex: 1 1 48%; min-width: 300px; margin: 0; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; text-align: center;">
+                        <img src="images/figma-mockup-desktop.svg" alt="Десктопний макет MandryStay" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                        <figcaption style="font-size: 13px; color: #475569; margin-top: 8px; font-weight: 600;">Десктопна версія інтерфейсу (ширина від 1025px)</figcaption>
+                    </figure>
+                    <figure style="flex: 1 1 48%; min-width: 300px; margin: 0; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; text-align: center;">
+                        <img src="images/figma-mockup-mobile.svg" alt="Мобільний макет MandryStay" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                        <figcaption style="font-size: 13px; color: #475569; margin-top: 8px; font-weight: 600;">Мобільна версія з бургер-меню (ширина до 767px)</figcaption>
+                    </figure>
+                </div>
+
+                <h3>2. Повний фрагмент семантичної HTML-розмітки сторінки MandryStay (index.html):</h3>
+                <div class="code-container">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="MandryStay — Платформа онлайн-бронювання готелів та відпочинку в Україні."&gt;
+    &lt;title&gt;MandryStay — Сервіс бронювання відпочинку&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Верхня плашка: брендинг, слоган та бургер-кнопка --&gt;
+    &lt;header&gt;
+        &lt;div id="top-branding"&gt;
+            &lt;img src="images/logo.svg" alt="Логотип платформи MandryStay" width="200" height="50"&gt;
+            &lt;p&gt;&lt;em&gt;Сервіс швидкого та безпечного бронювання житла й відпочинку&lt;/em&gt;&lt;/p&gt;
+            &lt;button class="burger-menu-btn" id="burger-btn" aria-label="Відкрити меню навігації"&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Навігаційне меню (на мобільному розгортається по кліку) --&gt;
+        &lt;nav&gt;
+            &lt;ul class="nav-bar-list"&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="#about"&gt;Про сервіс&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="#booking-form"&gt;Пошук та бронювання&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="#rooms-catalog"&gt;Каталог номерів&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="#pricing-table"&gt;Тарифна сітка&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="#advantages"&gt;Переваги&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="#faq"&gt;Питання та відповіді&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="resume.html" target="_blank"&gt;Резюме розробника&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-link-item"&gt;&lt;a href="description.html" target="_blank"&gt;Бізнес-логіка&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;!-- Hero-секція з презентаційним банером --&gt;
+        &lt;section id="about"&gt;
+            &lt;h1&gt;Відкрийте для себе найкращий відпочинок разом із MandryStay&lt;/h1&gt;
+            &lt;p&gt;MandryStay пропонує перевірені готелі, затишні шале та сучасні апартаменти в Карпатах.&lt;/p&gt;
+            &lt;figure&gt;
+                &lt;img src="images/hero-carpathians.svg" alt="Панорама Карпатського резорту" width="800" height="400"&gt;
+                &lt;figcaption&gt;Курортний комплекс «MandryStay Bukovel Resort &amp; SPA»&lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Форма онлайн-бронювання --&gt;
+        &lt;section id="booking-form"&gt;
+            &lt;h2&gt;Онлайн-бронювання номерів&lt;/h2&gt;
+            &lt;form action="#" method="post"&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;1. Параметри вашої подорожі&lt;/legend&gt;
+                    &lt;p&gt;
+                        &lt;label for="dest-city"&gt;Місто / Регіон відпочинку: *&lt;/label&gt;&lt;br&gt;
+                        &lt;input type="text" id="dest-city" name="destination" placeholder="Яремче, Буковель" required&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;label for="check-in-date"&gt;Дата заїзду:&lt;/label&gt;
+                        &lt;input type="date" id="check-in-date" name="check_in" required&gt;
+                        &lt;label for="check-out-date"&gt;Дата виїзду:&lt;/label&gt;
+                        &lt;input type="date" id="check-out-date" name="check_out" required&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;label for="room-cat"&gt;Категорія номера:&lt;/label&gt;
+                        &lt;select id="room-cat" name="room_category" required&gt;
+                            &lt;option value="std"&gt;Standard Twin/Double (2 особи)&lt;/option&gt;
+                            &lt;option value="dlx"&gt;Deluxe Panorama Suite (2-3 особи)&lt;/option&gt;
+                            &lt;option value="chalet"&gt;Alpine Chalet (6-8 осіб)&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/p&gt;
+                    &lt;button type="submit"&gt;Розрахувати вартість та забронювати&lt;/button&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Адаптивна Flexbox-сітка каталогу номерів --&gt;
+        &lt;section id="rooms-catalog"&gt;
+            &lt;h2&gt;Каталог номерів та апартаментів&lt;/h2&gt;
+            &lt;div class="rooms-flex-grid"&gt;
+                &lt;article class="room-card-article"&gt;
+                    &lt;img src="images/room-standard.svg" alt="Номер Стандарт"&gt;
+                    &lt;h3&gt;Номер «Стандарт»&lt;/h3&gt;
+                    &lt;p&gt;22 м², ліжко King-size, Wi-Fi 100 Мбіт/с, душова кабіна.&lt;/p&gt;
+                    &lt;span class="price-tag"&gt;1 450 грн/доба&lt;/span&gt;
+                &lt;/article&gt;
+                &lt;article class="room-card-article"&gt;
+                    &lt;img src="images/room-deluxe.svg" alt="Панорамний Люкс"&gt;
+                    &lt;h3&gt;Панорамний «Люкс»&lt;/h3&gt;
+                    &lt;p&gt;45 м², тераса з видом на гори, кавомашина, сніданок + SPA.&lt;/p&gt;
+                    &lt;span class="price-tag"&gt;4 100 грн/доба&lt;/span&gt;
+                &lt;/article&gt;
+                &lt;article class="room-card-article"&gt;
+                    &lt;img src="images/room-chalet.svg" alt="Альпійське шале"&gt;
+                    &lt;h3&gt;Альпійське шале&lt;/h3&gt;
+                    &lt;p&gt;90 м², власний дров'яний камін, фінська сауна, мангал-зона.&lt;/p&gt;
+                    &lt;span class="price-tag"&gt;8 900 грн/доба&lt;/span&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Тарифна сітка --&gt;
+        &lt;section id="pricing-table"&gt;
+            &lt;h2&gt;Тарифна сітка проживання&lt;/h2&gt;
+            &lt;table&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;&lt;th&gt;Категорія&lt;/th&gt;&lt;th&gt;Низький сезон&lt;/th&gt;&lt;th&gt;Високий сезон&lt;/th&gt;&lt;th&gt;Святковий період&lt;/th&gt;&lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;&lt;td&gt;Standard&lt;/td&gt;&lt;td&gt;1 450 грн&lt;/td&gt;&lt;td&gt;1 850 грн&lt;/td&gt;&lt;td&gt;2 400 грн&lt;/td&gt;&lt;/tr&gt;
+                    &lt;tr&gt;&lt;td&gt;Deluxe Panorama&lt;/td&gt;&lt;td&gt;4 100 грн&lt;/td&gt;&lt;td&gt;4 900 грн&lt;/td&gt;&lt;td&gt;6 200 грн&lt;/td&gt;&lt;/tr&gt;
+                    &lt;tr&gt;&lt;td&gt;Alpine Chalet&lt;/td&gt;&lt;td&gt;8 900 грн&lt;/td&gt;&lt;td&gt;10 500 грн&lt;/td&gt;&lt;td&gt;14 000 грн&lt;/td&gt;&lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;address&gt;вул. Курортна, 14, с. Поляниця (Буковель), Івано-Франківська обл. | Тел: +38 (067) 500-11-22&lt;/address&gt;
+        &lt;p&gt;&amp;copy; 2026 MandryStay Platform. Усі права захищено.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                </div>
+
+                <h3>3. Детальні пояснення створення десктопної, планшетної та мобільної версій:</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Роль метатегу Viewport:</h4>
+                    <p>
+                        У секції <code>&lt;head&gt;</code> оголошено метатег: 
+                        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>. 
+                        Параметр <code>width=device-width</code> примушує мобільний браузер задавати ширину області перегляду рівною фактичній роздільній здатності екрана в CSS-пікселях замість стандартної десктопної ширини за замовчуванням (980px). Параметр <code>initial-scale=1.0</code> задає початковий масштаб 100% без небажаного віддалення чи наближення.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h4>1. Десктопна версія (Desktop — ширина екрана &gt; 1024px):</h4>
+                    <ul>
+                        <li><strong>Медіа-запит:</strong> <code>@media screen and (min-width: 1025px)</code>.</li>
+                        <li><strong>Шапка та навігація:</strong> Навігаційне меню <code>nav &gt; ul.nav-bar-list</code> відображається повністю як горизонтальний флекс-рядок (<code>display: flex; flex-direction: row; gap: 20px;</code>). Кнопка бургер-меню повністю прихована (<code>display: none;</code>).</li>
+                        <li><strong>Каталог номерів:</strong> Флекс-сітка <code>.rooms-flex-grid</code> вибудовує елементи у 3 колонки за формулою: <code>flex: 1 1 calc(33.333% - 16px);</code> із проміжком <code>gap: 24px;</code>.</li>
+                        <li><strong>Форма бронювання:</strong> Поля дати заїзду та виїзду розміщені в один горизонтальний рядок для економії вертикального простору екрана.</li>
+                        <li><strong>Таблиця цін:</strong> Відображається у повному обсязі на всю ширину робочої області без необхідності скролу.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h4>2. Планшетна версія (Tablet — ширина екрана від 768px до 1024px):</h4>
+                    <ul>
+                        <li><strong>Медіа-запит з логічним оператором and:</strong> <code>@media screen and (min-width: 768px) and (max-width: 1024px)</code>.</li>
+                        <li><strong>Оптимізація простору:</strong> Встановлено бічні поля сторінки <code>padding: 0 20px 30px;</code>, пропорційно зменшено кегль головного заголовка <code>h1 { font-size: 1.9rem; }</code> для запобігання переносу слів на 4 рядки.</li>
+                        <li><strong>Каталог номерів:</strong> Flexbox динамічно перераховує ширину карток під 2 колонки в ряду: <code>flex: 1 1 calc(50% - 12px);</code>. При цьому третя картка гармонійно займає місце в наступному рядку або центрується.</li>
+                        <li><strong>Зручність керування:</strong> Збільшено площу кліку кнопок та полів форми для зручного натискання пальцями на планшетних сенсорних екранах.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h4>3. Мобільна версія (Mobile — ширина екрана &le; 767px):</h4>
+                    <ul>
+                        <li><strong>Медіа-запит:</strong> <code>@media screen and (max-width: 767px)</code>.</li>
+                        <li><strong>Адаптивне Бургер-меню:</strong> Звичайна горизонтальна навігаційна панель приховується (<code>display: none;</code>). Натомість активується мобільна кнопка бургера <code>.burger-menu-btn { display: flex; }</code>, складена з трьох смужок <code>&lt;span&gt;</code>. При кліку меню розгортається у вертикальний випадний список з плавною анімацією <code>slideDown</code>, а смужки плавно повертаються, формуючи хрестик <code>X</code>:
+                            <code>transform: translateY(9px) rotate(45deg);</code> та <code>opacity: 0;</code> для середньої смужки.</li>
+                        <li><strong>Каталог номерів:</strong> Картки переходять у вертикальний стек з 1 колонки: <code>flex: 1 1 100%; min-width: 100%;</code>, заповнюючи всю корисну ширину екрана смартфона.</li>
+                        <li><strong>Форма бронювання:</strong> Усі поля введення розтягуються на 100% ширини контейнера (<code>max-width: 100%;</code>) і шикуються строго одне під одним.</li>
+                        <li><strong>Таблиця:</strong> Контейнер таблиці отримує властивість <code>overflow-x: auto;</code> з фіксованою мінімальною шириною <code>table { min-width: 600px; }</code>. Це гарантує зручну горизонтальну прокрутку таблиці всередині блоку без виникнення загального горизонтального скролу всієї сторінки.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h4>Застосування логічних операторів у CSS Media Queries:</h4>
+                    <ul>
+                        <li>Логічний оператор <code>and</code>: дозволяє об'єднати тип носія (<code>screen</code>) та декілька діапазонів характеристик (<code>(min-width: 768px) and (max-width: 1024px)</code>), що активує стилі виключно для планшетів.</li>
+                        <li>Логічний оператор <code>,</code> (кома / логічне АБО): застосовує стильові правила, якщо виконується хоча б одна з умов, наприклад, <code>@media (max-width: 600px), (orientation: portrait)</code>.</li>
+                        <li>Логічний оператор <code>not</code>: інвертує результат виконання медіа-запиту.</li>
+                    </ul>
+                </div>
+
+                <h3>4. CSS-код медіа-запитів власного сайту:</h3>
+                <div class="code-container">
+<pre>/* ==========================================================================
+   Адаптивні медіа-запити сайту MandryStay
+   ========================================================================== */
+
+/* ДЕСКТОП: від 1025px */
 @media screen and (min-width: 1025px) {
     .rooms-flex-grid &gt; .room-card-article {
-        flex: 1 1 calc(33.333% - 16px);
+        flex: 1 1 calc(33.333% - 16px); /* 3 колонки */
     }
 }
 
-/* Планшет (768px - 1024px): 2 картки в ряд */
+/* ПЛАНШЕТ: від 768px до 1024px (використання логічного оператора and) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    body { padding: 0 20px 30px; }
+    h1 { font-size: 1.9rem; }
     .rooms-flex-grid &gt; .room-card-article {
-        flex: 1 1 calc(50% - 12px);
+        flex: 1 1 calc(50% - 12px); /* 2 колонки */
     }
+    #booking-form { padding: 20px; }
 }
 
-/* Мобільні пристрої (&lt;= 767px): 1 картка на 100% ширини */
+/* МОБІЛЬНІ ПРИСТРОЇ: до 767px */
 @media screen and (max-width: 767px) {
-    .burger-menu-btn { display: flex; }
-    nav &gt; ul.nav-bar-list { display: none; flex-direction: column; }
-    nav &gt; ul.nav-bar-list.active { display: flex; }
-    .rooms-flex-grid &gt; .room-card-article { flex: 1 1 100%; }
-}</pre>
-                </div>
+    body { padding: 0 10px 20px; font-size: 15px; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.35rem; }
 
-                <h3>4. Візуалізація адаптивного Flexbox-каталогу (Live Preview):</h3>
-                <div class="preview-box">
-                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                        <div style="flex: 1 1 calc(33.333% - 10px); min-width: 180px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <strong style="color: #0284c7;">Номер «Стандарт»</strong>
-                            <p style="font-size: 13px; color: #64748b; margin-top: 5px;">22 м², 1-2 гостя, Wi-Fi</p>
-                            <span style="font-weight: bold; color: #0f172a;">1 450 грн/доба</span>
-                        </div>
-                        <div style="flex: 1 1 calc(33.333% - 10px); min-width: 180px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <strong style="color: #0284c7;">Панорамний «Люкс»</strong>
-                            <p style="font-size: 13px; color: #64748b; margin-top: 5px;">45 м², тераса, сніданок + SPA</p>
-                            <span style="font-weight: bold; color: #0f172a;">4 100 грн/доба</span>
-                        </div>
-                        <div style="flex: 1 1 calc(33.333% - 10px); min-width: 180px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <strong style="color: #0284c7;">Альпійське шале</strong>
-                            <p style="font-size: 13px; color: #64748b; margin-top: 5px;">90 м², дров'яний камін, сауна</p>
-                            <span style="font-weight: bold; color: #0f172a;">8 900 грн/доба</span>
-                        </div>
-                    </div>
+    /* Активація кнопки мобільного бургер-меню */
+    .burger-menu-btn { display: flex; }
+
+    /* Перетворення горизонтального меню у випадний вертикальний список */
+    nav &gt; ul.nav-bar-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav &gt; ul.nav-bar-list.active {
+        display: flex;
+        animation: slideDown 0.3s ease-out forwards;
+    }
+
+    /* 1 колонка для карток номерів */
+    .rooms-flex-grid &gt; .room-card-article {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    /* Поля форми на 100% ширини */
+    input[type="text"], input[type="date"], select {
+        max-width: 100%;
+    }
+
+    /* Горизонтальна прокрутка таблиці */
+    #pricing-table { overflow-x: auto; }
+    table { min-width: 600px; }
+}</pre>
                 </div>
             </section>
 
@@ -1354,190 +1677,729 @@ tbody tr:hover {
             <!-- ЛР3: Вкладка 4 (Завдання 2: Блокова верстка на float, Варіант 2) -->
             <section id="lab3-task2-blocks" class="tab-content">
                 <h2>Завдання №2: Блокова верстка за допомогою плаваючих елементів (Варіант 2)</h2>
+                
                 <div class="info-card">
                     <p><strong>Номер варіанта:</strong> Остання цифра у списку групи + 1: <strong>1 + 1 = 2</strong> (Варіант 2).</p>
-                    <p><strong>Механізм роботи:</strong> Використання CSS-властивостей <code>float: left</code>, <code>float: right</code> та обов'язкового очищення потоку за допомогою <code>clear: both</code>.</p>
+                    <p>
+                        <strong>Схема макету Варіанта 2:</strong>
+                    </p>
+                    <ul>
+                        <li><strong>Ліворуч:</strong> Високий вертикальний блок 2 (бокова колонка/сайдбар на всю висоту контентної частини);</li>
+                        <li><strong>Праворуч зверху:</strong> Горизонтальний блок 1 (шапка контенту / інформаційний банер);</li>
+                        <li><strong>Праворуч під блоком 1:</strong> Блоки 3 (центральний контент) та 4 (права колонка), які розташовані поруч за допомогою <code>float: left</code>;</li>
+                        <li><strong>Знизу:</strong> Завершальний горизонтальний блок 5 (підвал / footer), до якого застосовано обов'язкове очищення потоку за допомогою <code>clear: both;</code>.</li>
+                    </ul>
                 </div>
 
-                <h3>1. Фрагмент CSS-коду блокової верстки:</h3>
+                <!-- Зразок схеми макету з методички -->
+                <div style="margin: 20px 0; text-align: center;">
+                    <figure style="display: inline-block; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px;">
+                        <img src="images/task2-variant2-schema.png" alt="Схема Варіанта 2 з методички ЛР №3" style="width: 180px; height: auto; border: 1px solid #94a3b8; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                        <figcaption style="font-size: 13px; color: #475569; margin-top: 10px; font-weight: 700;">Еталонна схема макету Варіанта 2 (ЛР №3 з методичних вказівок)</figcaption>
+                    </figure>
+                </div>
+
+                <!-- 1. ФІКСОВАНА ВЕРСТКА НА 800px -->
+                <h3>1. Фіксована блокова верстка на float (Fixed Layout — ширина 800px):</h3>
+                <p>
+                    У фіксованому варіанті загальна ширина контейнера жорстко зафіксована на <code>800px</code> та центрована у вікні (<code>margin: 0 auto;</code>). 
+                    Блок 2 має фіксовану ширину <code>220px</code> та висоту <code>360px</code> (<code>float: left;</code>). 
+                    Права колонка (шириною <code>580px</code>) містить блок 1 (<code>width: 100%; height: 90px;</code>) та розташовані поруч блоки 3 (<code>width: 350px; float: left;</code>) і 4 (<code>width: 230px; float: left;</code>). 
+                    Підвал 5 розташований знизу та очищує потік через <code>clear: both;</code>.
+                </p>
+
                 <div class="code-container">
-<pre>/* Базові стилі блокового макету */
-.block-header {
+<pre>&lt;!-- HTML-розмітка: Фіксований блоковий макет (800px) --&gt;
+&lt;div class="float-layout-fixed"&gt;
+    &lt;!-- Лівий вертикальний блок 2 --&gt;
+    &lt;div class="fixed-block-2"&gt;
+        &lt;span&gt;2. Лівий вертикальний блок (220px × 360px)&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Права частина --&gt;
+    &lt;div class="fixed-right-col"&gt;
+        &lt;!-- Блок 1: горизонтальний зверху --&gt;
+        &lt;div class="fixed-block-1"&gt;
+            &lt;span&gt;1. Верхній правий блок (580px × 90px)&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;!-- Блок 3: контент ліворуч --&gt;
+        &lt;div class="fixed-block-3"&gt;
+            &lt;span&gt;3. Центральний блок (350px × 270px)&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;!-- Блок 4: блок праворуч --&gt;
+        &lt;div class="fixed-block-4"&gt;
+            &lt;span&gt;4. Блок праворуч (230px × 270px)&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Блок 5: підвал з clear: both --&gt;
+    &lt;div class="fixed-block-5"&gt;
+        &lt;span&gt;5. Підвал (Footer — 800px × 60px, clear: both)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+
+                <div class="code-container">
+<pre>/* CSS-стилі: Фіксована верстка на float (800px) */
+.float-layout-fixed {
+    width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 2px solid #94a3b8;
+}
+
+.float-layout-fixed::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fixed-block-2 {
+    float: left;
+    width: 220px;
+    height: 360px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.fixed-right-col {
+    float: left;
+    width: 580px;
+}
+
+.fixed-block-1 {
     width: 100%;
-    height: 80px;
-    background-color: #1e3a8a;
-    color: white;
-    text-align: center;
-    line-height: 80px;
-}
-
-.block-sidebar-left {
-    float: left;
-    width: 25%;
-    height: 240px;
-    background-color: #bae6fd;
-    color: #0369a1;
-    text-align: center;
-    line-height: 240px;
-}
-
-.block-content-center {
-    float: left;
-    width: 50%;
-    height: 240px;
-    background-color: #f1f5f9;
+    height: 90px;
+    background-color: #f59e0b;
     color: #0f172a;
-    text-align: center;
-    line-height: 240px;
+    border-bottom: 2px solid #ffffff;
 }
 
-.block-sidebar-right {
-    float: right;
-    width: 25%;
-    height: 240px;
-    background-color: #bae6fd;
-    color: #0369a1;
-    text-align: center;
-    line-height: 240px;
+.fixed-block-3 {
+    float: left;
+    width: 350px;
+    height: 270px;
+    background-color: #f8fafc;
+    color: #0f172a;
+    border-right: 2px solid #ffffff;
 }
 
-/* Очищення потоку обтікання (Clearfix) */
-.block-footer {
+.fixed-block-4 {
+    float: left;
+    width: 230px;
+    height: 270px;
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.fixed-block-5 {
     clear: both;
     width: 100%;
     height: 60px;
-    background-color: #0f172a;
-    color: white;
-    text-align: center;
-    line-height: 60px;
+    background-color: #f59e0b;
+    color: #0f172a;
+    border-top: 2px solid #ffffff;
 }</pre>
                 </div>
 
-                <h3>2. Візуалізація гумового блокового макету на float:</h3>
                 <div class="preview-box">
-                    <div style="width: 100%; border: 1px solid #cbd5e1; border-radius: 6px; overflow: hidden;">
-                        <div style="background-color: #1e3a8a; color: white; height: 60px; text-align: center; line-height: 60px; font-weight: bold;">
-                            1. Блок Header (Ширина 100%)
-                        </div>
-                        <div style="float: left; width: 25%; height: 180px; background-color: #bae6fd; color: #0369a1; text-align: center; line-height: 180px; font-weight: bold; border-right: 1px solid #fff;">
-                            2. Лівий (25%)
-                        </div>
-                        <div style="float: left; width: 50%; height: 180px; background-color: #f8fafc; color: #0f172a; text-align: center; line-height: 180px; font-weight: bold;">
-                            3. Контент (50%)
-                        </div>
-                        <div style="float: right; width: 25%; height: 180px; background-color: #bae6fd; color: #0369a1; text-align: center; line-height: 180px; font-weight: bold; border-left: 1px solid #fff;">
-                            4. Правий (25%)
-                        </div>
-                        <div style="clear: both; background-color: #0f172a; color: white; height: 50px; text-align: center; line-height: 50px; font-weight: bold;">
-                            5. Блок Footer (clear: both — 100%)
+                    <p><strong>Демонстрація фіксованого блокового макету (Live Preview — 800px):</strong></p>
+                    <div class="float-demo-container">
+                        <div class="float-layout-fixed">
+                            <div class="fixed-block-2">
+                                <strong>Блок 2</strong>
+                                <span style="font-size: 11px; margin-top: 6px; opacity: 0.9;">Ліва колонка<br>(220px × 360px)</span>
+                            </div>
+                            <div class="fixed-right-col">
+                                <div class="fixed-block-1">
+                                    <strong>Блок 1: Верхній правий горизонтальний (580px × 90px)</strong>
+                                </div>
+                                <div class="fixed-block-3">
+                                    <strong style="color: #0f172a;">Блок 3</strong>
+                                    <span style="font-size: 11px; color: #64748b; margin-top: 6px;">Центральний контент<br>(350px × 270px)</span>
+                                </div>
+                                <div class="fixed-block-4">
+                                    <strong>Блок 4</strong>
+                                    <span style="font-size: 11px; margin-top: 6px; opacity: 0.9;">Права колонка<br>(230px × 270px)</span>
+                                </div>
+                            </div>
+                            <div class="fixed-block-5">
+                                <strong>5. Блок Підвал (Footer — 800px × 60px, clear: both)</strong>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 2. ГУМОВА ВЕРСТКА НА 100% -->
+                <h3>2. Гумова блокова верстка на float (Fluid Layout — ширина 100%):</h3>
+                <p>
+                    У гумовому макеті всі розміри задаються у відсотках (<code>%</code>) від ширини батьківського контейнера, що дозволяє макету плавно розтягуватися на всю ширину екрана монітора:
+                    Блок 2 займає <code>25%</code>, права колонка — <code>75%</code> (у ній блок 1 займає <code>100%</code>, блок 3 — <code>60%</code>, блок 4 — <code>40%</code>), а блок 5 займає <code>100%</code> ширини з <code>clear: both;</code>.
+                </p>
+
+                <div class="code-container">
+<pre>&lt;!-- HTML-розмітка: Гумовий блоковий макет (100%) --&gt;
+&lt;div class="float-layout-fluid"&gt;
+    &lt;div class="fluid-block-2"&gt;
+        &lt;span&gt;2. Лівий (25%)&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="fluid-right-col"&gt;
+        &lt;div class="fluid-block-1"&gt;
+            &lt;span&gt;1. Верхній правий (100% від 75%)&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="fluid-block-3"&gt;
+            &lt;span&gt;3. Контент (60%)&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="fluid-block-4"&gt;
+            &lt;span&gt;4. Правий блок (40%)&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="fluid-block-5"&gt;
+        &lt;span&gt;5. Підвал (100%, clear: both)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+
+                <div class="code-container">
+<pre>/* CSS-стилі: Гумова верстка на float (100%) */
+.float-layout-fluid {
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #94a3b8;
+}
+
+.float-layout-fluid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fluid-block-2 {
+    float: left;
+    width: 25%;
+    height: 360px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.fluid-right-col {
+    float: left;
+    width: 75%;
+}
+
+.fluid-block-1 {
+    width: 100%;
+    height: 90px;
+    background-color: #f59e0b;
+    color: #0f172a;
+    border-bottom: 2px solid #ffffff;
+}
+
+.fluid-block-3 {
+    float: left;
+    width: 60%;
+    height: 270px;
+    background-color: #f8fafc;
+    color: #0f172a;
+    border-right: 2px solid #ffffff;
+}
+
+.fluid-block-4 {
+    float: left;
+    width: 40%;
+    height: 270px;
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.fluid-block-5 {
+    clear: both;
+    width: 100%;
+    height: 60px;
+    background-color: #f59e0b;
+    color: #0f172a;
+    border-top: 2px solid #ffffff;
+}</pre>
+                </div>
+
+                <div class="preview-box">
+                    <p><strong>Демонстрація гумового блокового макету (Live Preview — 100% ширини вікна):</strong></p>
+                    <div class="float-demo-container">
+                        <div class="float-layout-fluid">
+                            <div class="fluid-block-2">
+                                <strong>Блок 2</strong>
+                                <span style="font-size: 11px; margin-top: 6px; opacity: 0.9;">Ліва колонка (25%)</span>
+                            </div>
+                            <div class="fluid-right-col">
+                                <div class="fluid-block-1">
+                                    <strong>Блок 1: Верхній правий блок (100%)</strong>
+                                </div>
+                                <div class="fluid-block-3">
+                                    <strong style="color: #0f172a;">Блок 3</strong>
+                                    <span style="font-size: 11px; color: #64748b; margin-top: 6px;">Центральний контент (60%)</span>
+                                </div>
+                                <div class="fluid-block-4">
+                                    <strong>Блок 4</strong>
+                                    <span style="font-size: 11px; margin-top: 6px; opacity: 0.9;">Права колонка (40%)</span>
+                                </div>
+                            </div>
+                            <div class="fluid-block-5">
+                                <strong>5. Блок Підвал (Footer — 100%, clear: both)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. ТЕОРЕТИЧНІ ВІДОМОСТІ -->
+                <h3>3. Теоретичні відомості: механізм float, явище Float Collapse та очищення потоку:</h3>
+                <ul>
+                    <li><strong>Механізм роботи <code>float: left</code>:</strong> Елемент вилучається з нормального блокового потоку документа та притискається до лівого краю батьківського контейнера або до попереднього плаваючого елемента. Наступний текстовий або рядковий контент обтікає його праворуч.</li>
+                    <li><strong>Проблема «схлопування» висоти (Float Collapse):</strong> Оскільки плаваючі блоки не беруть участі у розрахунку висоти свого звичайного батьківського контейнера, висота батьківського елемента зменшується до нуля (або до висоти лише неплаваючих елементів), і наступні елементи сторінки підтягуються вгору і перекривають макет.</li>
+                    <li><strong>Властивість <code>clear: both</code>:</strong> Забороняє розташування будь-яких плаваючих блоків як зліва, так і справа від елемента. Це повертає елемент (наприклад, підвал <code>.block-5</code>) у нормальний вертикальний потік строго під усіма плаваючими елементами.</li>
+                    <li><strong>Сучасний Clearfix:</strong> Застосування псевдоелемента <code>.container::after { content: ""; display: table; clear: both; }</code> дозволяє батьківському контейнеру самостійно охоплювати всі свої плаваючі дочірні блоки без потреби вставки зайвих порожніх тегів <code>&lt;div style="clear:both"&gt;</code> у HTML-код.</li>
+                </ul>
             </section>
 
             <!-- ЛР3: Вкладка 5 (Завдання 3: Flexbox макет, Варіант 1) -->
             <section id="lab3-task3-flexbox" class="tab-content">
-                <h2>Завдання №3: Верстка макету за технологією FLEXBOX (Варіант 1)</h2>
+                <h2>Завдання №3: Верстка сайту IT-Академії за технологією FLEXBOX (Варіант 1)</h2>
+                
                 <div class="info-card">
                     <p><strong>Номер варіанта:</strong> Остання цифра у списку групи: <strong>1</strong> (Варіант 1).</p>
                     <p>
-                        Макет реалізовано на основі моделі гнучких контейнерів <strong>CSS Flexible Box Layout</strong> з керуванням головною та поперечною осями (Main Axis / Cross Axis).
+                        <strong>Складові макету Варіанта 1 згідно з методичними вказівками:</strong>
                     </p>
+                    <ol>
+                        <li><strong>Шапка сайту:</strong> Навігаційне меню з фірмовим логотипом IT-Академії, кнопками розділів (<em>«Форми навчання»</em>, <em>«Заходи»</em>, <em>«Про Академію»</em>, <em>«Контакти»</em>) та інтерактивним випадаючим списком вибору міста (<em>«Київ ▼»</em>, <em>«Львів»</em>, <em>«Одеса»</em>, <em>«Харків»</em>, <em>«Дніпро»</em>);</li>
+                        <li><strong>Секція «Для кого розроблена програма»:</strong> 4 адаптивні флекс-картки з чергуванням положення тексту та фотографій (Школярі та випускники 15-18 років, Студенти ВНЗ 18-23 роки, Представники інших професій 23-55 років, Усі бажаючі підвищити IT-кваліфікацію);</li>
+                        <li><strong>Секція «Як проходить навчання»:</strong> 3 флекс-картки з реальними фотографіями навчального процесу в сучасних лабораторіях;</li>
+                        <li><strong>Секція «Партнери Академії»:</strong> Презентаційний блок глобальної IT-компанії <strong>Luxoft</strong> (A DXC Technology Company) із логотипом зліва та детальним описом справа.</li>
+                    </ol>
                 </div>
 
-                <h3>1. Фрагмент CSS-коду Flexbox-макету:</h3>
+                <!-- 1. LIVE PREVIEW: САЙТ IT-АКАДЕМІЇ -->
+                <h3>1. Інтерактивна демонстрація макету IT-Академії (Live Flexbox Preview):</h3>
+                <div class="preview-box" style="padding: 0; background: transparent; border: none;">
+                    <div class="ita-wrapper">
+                        <!-- Навігаційний бар IT-Академії -->
+                        <header class="ita-header-bar">
+                            <div class="ita-logo">IT-<span>ACADEMY</span></div>
+                            <nav>
+                                <ul class="ita-nav-menu">
+                                    <li><a href="#forms" class="ita-nav-btn">Форми навчання</a></li>
+                                    <li><a href="#events" class="ita-nav-btn">Заходи</a></li>
+                                    <li><a href="#about-academy" class="ita-nav-btn">Про Академію</a></li>
+                                    <li><a href="#contacts" class="ita-nav-btn">Контакти</a></li>
+                                    <!-- Випадаючий список міст -->
+                                    <li class="ita-dropdown">
+                                        <button class="ita-dropdown-btn" type="button">
+                                            <span>Київ</span>
+                                            <span class="ita-dropdown-icon">▼</span>
+                                        </button>
+                                        <div class="ita-dropdown-content">
+                                            <a href="#city-kyiv">Київ (Головний офіс)</a>
+                                            <a href="#city-lviv">Львів</a>
+                                            <a href="#city-odesa">Одеса</a>
+                                            <a href="#city-kharkiv">Харків</a>
+                                            <a href="#city-dnipro">Дніпро</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </header>
+
+                        <!-- Секція 1: Для кого розроблена програма -->
+                        <section class="ita-section" style="background: #ffffff;">
+                            <h3 class="ita-section-title">Для кого розроблена програма</h3>
+                            <div class="ita-program-grid">
+                                <!-- Картка 1: Текст зверху, фото знизу -->
+                                <article class="ita-program-card">
+                                    <div class="ita-card-text">
+                                        <h4>Школярі та випускники (15-18 років)</h4>
+                                        <p>отримають першу професію, не відкладаючи на потім свою мрію стати програмістом</p>
+                                    </div>
+                                    <div class="ita-card-img-wrap">
+                                        <svg viewBox="0 0 300 180" style="width: 100%; height: 130px; display: block; border-radius: 8px;">
+                                            <rect width="300" height="180" fill="#f97316"/>
+                                            <circle cx="100" cy="80" r="35" fill="#fed7aa"/>
+                                            <rect x="50" y="125" width="100" height="55" rx="10" fill="#1e293b"/>
+                                            <circle cx="200" cy="90" r="30" fill="#fed7aa"/>
+                                            <rect x="160" y="130" width="80" height="50" rx="10" fill="#3b82f6"/>
+                                            <text x="150" y="165" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">15-18 років</text>
+                                        </svg>
+                                    </div>
+                                </article>
+
+                                <!-- Картка 2: Фото зверху, текст знизу -->
+                                <article class="ita-program-card">
+                                    <div class="ita-card-img-wrap img-top">
+                                        <svg viewBox="0 0 300 180" style="width: 100%; height: 130px; display: block; border-radius: 8px;">
+                                            <rect width="300" height="180" fill="#eab308"/>
+                                            <circle cx="150" cy="70" r="38" fill="#fef08a"/>
+                                            <rect x="90" y="120" width="120" height="60" rx="10" fill="#0f172a"/>
+                                            <rect x="110" y="140" width="80" height="40" rx="4" fill="#38bdf8"/>
+                                            <text x="150" y="165" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Студенти ВНЗ</text>
+                                        </svg>
+                                    </div>
+                                    <div class="ita-card-text">
+                                        <h4>Студенти ВНЗ (18-23 роки)</h4>
+                                        <p>освоять другу спеціальність паралельно з університетською освітою.</p>
+                                    </div>
+                                </article>
+
+                                <!-- Картка 3: Текст зверху, фото знизу -->
+                                <article class="ita-program-card">
+                                    <div class="ita-card-text">
+                                        <h4>Представники інших професій (23-55 років)</h4>
+                                        <p>яких не влаштовує поточна кар'єрна і фінансова перспектива, зможуть перевчитися на розробника ПЗ і отримати затребувану професію.</p>
+                                    </div>
+                                    <div class="ita-card-img-wrap">
+                                        <svg viewBox="0 0 300 180" style="width: 100%; height: 130px; display: block; border-radius: 8px;">
+                                            <rect width="300" height="180" fill="#0284c7"/>
+                                            <circle cx="120" cy="75" r="35" fill="#bae6fd"/>
+                                            <rect x="70" y="120" width="100" height="60" rx="10" fill="#1e293b"/>
+                                            <circle cx="210" cy="85" r="30" fill="#bae6fd"/>
+                                            <rect x="175" y="125" width="70" height="55" rx="10" fill="#475569"/>
+                                            <text x="150" y="165" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Світчери (23-55)</text>
+                                        </svg>
+                                    </div>
+                                </article>
+
+                                <!-- Картка 4: Фото зверху, текст знизу -->
+                                <article class="ita-program-card">
+                                    <div class="ita-card-img-wrap img-top">
+                                        <svg viewBox="0 0 300 180" style="width: 100%; height: 130px; display: block; border-radius: 8px;">
+                                            <rect width="300" height="180" fill="#6366f1"/>
+                                            <circle cx="150" cy="70" r="35" fill="#c7d2fe"/>
+                                            <rect x="95" y="115" width="110" height="65" rx="8" fill="#1e1b4b"/>
+                                            <text x="150" y="165" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">PRO рівень</text>
+                                        </svg>
+                                    </div>
+                                    <div class="ita-card-text">
+                                        <h4>Всі бажаючі підвищити IT-кваліфікацію</h4>
+                                        <p>систематизують свої знання і отримають робочі навички, затребувані сучасному IT.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Секція 2: Як проходить навчання -->
+                        <section class="ita-section" style="background: #f1f5f9;">
+                            <h3 class="ita-section-title">Як проходить навчання</h3>
+                            <div class="ita-process-grid">
+                                <article class="ita-process-card">
+                                    <svg viewBox="0 0 400 240" style="width: 100%; height: 180px; display: block;">
+                                        <rect width="400" height="240" fill="#1e293b"/>
+                                        <rect x="30" y="50" width="100" height="70" rx="6" fill="#38bdf8"/>
+                                        <rect x="150" y="50" width="100" height="70" rx="6" fill="#38bdf8"/>
+                                        <rect x="270" y="50" width="100" height="70" rx="6" fill="#38bdf8"/>
+                                        <rect x="20" y="140" width="360" height="15" fill="#475569"/>
+                                        <text x="200" y="200" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Сучасні комп'ютерні аудиторії</text>
+                                    </svg>
+                                    <div class="ita-process-card-desc">
+                                        <h4>Практичні заняття на потужних станціях</h4>
+                                        <p>Кожен студент забезпечений окремим робочим місцем із сучасним програмним забезпеченням та двома моніторами.</p>
+                                    </div>
+                                </article>
+
+                                <article class="ita-process-card">
+                                    <svg viewBox="0 0 400 240" style="width: 100%; height: 180px; display: block;">
+                                        <rect width="400" height="240" fill="#0369a1"/>
+                                        <circle cx="140" cy="90" r="40" fill="#bae6fd"/>
+                                        <circle cx="260" cy="90" r="40" fill="#bae6fd"/>
+                                        <rect x="80" y="145" width="120" height="70" rx="10" fill="#0f172a"/>
+                                        <rect x="200" y="145" width="120" height="70" rx="10" fill="#0f172a"/>
+                                        <text x="200" y="40" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Командні воркшопи та менторство</text>
+                                    </svg>
+                                    <div class="ita-process-card-desc">
+                                        <h4>Робота в командах за Agile / Scrum</h4>
+                                        <p>Розробка спільних проєктів, досвід командної взаємодії, щоденні мітинги та спільні code review з ментором.</p>
+                                    </div>
+                                </article>
+
+                                <article class="ita-process-card">
+                                    <svg viewBox="0 0 400 240" style="width: 100%; height: 180px; display: block;">
+                                        <rect width="400" height="240" fill="#1e1b4b"/>
+                                        <rect x="50" y="40" width="300" height="130" rx="8" fill="#312e81" stroke="#6366f1" stroke-width="2"/>
+                                        <text x="70" y="80" font-family="monospace" font-size="14" fill="#38bdf8">&gt; git commit -m "Done"</text>
+                                        <text x="70" y="110" font-family="monospace" font-size="14" fill="#4ade80">&gt; tests: 100% passed</text>
+                                        <text x="200" y="210" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Реальні комерційні кейси</text>
+                                    </svg>
+                                    <div class="ita-process-card-desc">
+                                        <h4>Захист дипломних робіт перед IT-компаніями</h4>
+                                        <p>Створення індивідуального портфоліо на GitHub та проходження тренувальних технічних співбесід.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Секція 3: Партнери Академії (Luxoft) -->
+                        <section class="ita-section" style="background: #ffffff;">
+                            <h3 class="ita-section-title">Партнери Академії</h3>
+                            <div class="ita-partners-box">
+                                <div class="ita-partner-logo-card">
+                                    <div class="ita-partner-logo-title">Luxoft</div>
+                                    <div class="ita-partner-logo-sub">A DXC Technology Company</div>
+                                    <div style="margin-top: 15px; width: 60px; height: 4px; background: #0284c7; border-radius: 2px;"></div>
+                                </div>
+                                <div class="ita-partner-info">
+                                    <h4>Luxoft</h4>
+                                    <p>
+                                        <strong>Luxoft</strong> — глобальна технологічна компанія, одна із лідерів на ринку послуг цифрової трансформації та створення програмних продуктів. Luxoft пропонує індивідуальні IT-рішення, які заохочують до змін у бізнесах клієнтів в усьому світі.
+                                    </p>
+                                    <p>
+                                        Luxoft об'єднує понад 13 000 спеціалістів із 22 країн світу зі штаб-квартирою у м. Цуг, Швейцарія. Україна є однією з найпотужніших локацій в географії Luxoft. Близько 3500 фахівців усіх ключових напрямків зосереджені в офісах Києва, Одеси і Дніпра.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- 2. ГРАФІЧНІ ЕТАЛОНИ З МЕТОДИЧНИХ ВКАЗІВОК -->
+                <h3>2. Зразки макетів Варіанта 1 з методичних вказівок викладача:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 20px 0;">
+                    <figure style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; text-align: center; margin: 0;">
+                        <img src="images/it-academy-nav.png" alt="Навігація з випадаючим списком" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <figcaption style="font-size: 12px; color: #64748b; margin-top: 6px; font-weight: 600;">Рис. 1: Меню вибору міста</figcaption>
+                    </figure>
+                    <figure style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; text-align: center; margin: 0;">
+                        <img src="images/it-academy-audience.png" alt="Для кого розроблена програма" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <figcaption style="font-size: 12px; color: #64748b; margin-top: 6px; font-weight: 600;">Рис. 2: 4 картки аудиторії</figcaption>
+                    </figure>
+                    <figure style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; text-align: center; margin: 0;">
+                        <img src="images/it-academy-process.png" alt="Як проходить навчання" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <figcaption style="font-size: 12px; color: #64748b; margin-top: 6px; font-weight: 600;">Рис. 3: 3 фото-картки процесу</figcaption>
+                    </figure>
+                    <figure style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; text-align: center; margin: 0;">
+                        <img src="images/it-academy-partners.png" alt="Партнери Академії (Luxoft)" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <figcaption style="font-size: 12px; color: #64748b; margin-top: 6px; font-weight: 600;">Рис. 4: Блок партнера Luxoft</figcaption>
+                    </figure>
+                </div>
+
+                <!-- 3. HTML-КОД ВЕРСТКИ -->
+                <h3>3. Повний HTML-код розмітки сайту IT-Академії (Flexbox):</h3>
                 <div class="code-container">
-<pre>/* Головний вертикальний флекс-контейнер */
-.flex-layout-wrapper {
+<pre>&lt;!-- Головний контейнер сайту IT-Академії --&gt;
+&lt;div class="ita-wrapper"&gt;
+    &lt;!-- Навігація з випадаючим списком міст --&gt;
+    &lt;header class="ita-header-bar"&gt;
+        &lt;div class="ita-logo"&gt;IT-&lt;span&gt;ACADEMY&lt;/span&gt;&lt;/div&gt;
+        &lt;nav&gt;
+            &lt;ul class="ita-nav-menu"&gt;
+                &lt;li&gt;&lt;a href="#forms" class="ita-nav-btn"&gt;Форми навчання&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#events" class="ita-nav-btn"&gt;Заходи&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about" class="ita-nav-btn"&gt;Про Академію&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contacts" class="ita-nav-btn"&gt;Контакти&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="ita-dropdown"&gt;
+                    &lt;button class="ita-dropdown-btn" type="button"&gt;Київ &lt;span&gt;▼&lt;/span&gt;&lt;/button&gt;
+                    &lt;div class="ita-dropdown-content"&gt;
+                        &lt;a href="#"&gt;Київ&lt;/a&gt;
+                        &lt;a href="#"&gt;Львів&lt;/a&gt;
+                        &lt;a href="#"&gt;Одеса&lt;/a&gt;
+                        &lt;a href="#"&gt;Харків&lt;/a&gt;
+                        &lt;a href="#"&gt;Дніпро&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;!-- 4 картки "Для кого розроблена програма" --&gt;
+    &lt;section class="ita-section"&gt;
+        &lt;h3 class="ita-section-title"&gt;Для кого розроблена програма&lt;/h3&gt;
+        &lt;div class="ita-program-grid"&gt;
+            &lt;article class="ita-program-card"&gt;
+                &lt;div class="ita-card-text"&gt;
+                    &lt;h4&gt;Школярі та випускники (15-18 років)&lt;/h4&gt;
+                    &lt;p&gt;отримають першу професію, не відкладаючи на потім свою мрію стати програмістом&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="ita-card-img-wrap"&gt;&lt;img src="images/students1.jpg" alt="Школярі"&gt;&lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="ita-program-card"&gt;
+                &lt;div class="ita-card-img-wrap img-top"&gt;&lt;img src="images/students2.jpg" alt="Студенти"&gt;&lt;/div&gt;
+                &lt;div class="ita-card-text"&gt;
+                    &lt;h4&gt;Студенти ВНЗ (18-23 роки)&lt;/h4&gt;
+                    &lt;p&gt;освоять другу спеціальність паралельно з університетською освітою.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="ita-program-card"&gt;
+                &lt;div class="ita-card-text"&gt;
+                    &lt;h4&gt;Представники інших професій (23-55 років)&lt;/h4&gt;
+                    &lt;p&gt;перевчаться на розробника ПЗ і отримають затребувану професію.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="ita-card-img-wrap"&gt;&lt;img src="images/switchers.jpg" alt="Світчери"&gt;&lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="ita-program-card"&gt;
+                &lt;div class="ita-card-img-wrap img-top"&gt;&lt;img src="images/pro.jpg" alt="PRO"&gt;&lt;/div&gt;
+                &lt;div class="ita-card-text"&gt;
+                    &lt;h4&gt;Всі бажаючі підвищити IT-кваліфікацію&lt;/h4&gt;
+                    &lt;p&gt;систематизують свої знання і отримають затребувані навички.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 3 фото-картки "Як проходить навчання" --&gt;
+    &lt;section class="ita-section"&gt;
+        &lt;h3 class="ita-section-title"&gt;Як проходить навчання&lt;/h3&gt;
+        &lt;div class="ita-process-grid"&gt;
+            &lt;article class="ita-process-card"&gt;
+                &lt;img src="images/class1.jpg" alt="Аудиторія"&gt;
+                &lt;div class="ita-process-card-desc"&gt;
+                    &lt;h4&gt;Сучасні лабораторії&lt;/h4&gt;
+                    &lt;p&gt;Окремі робочі станції з новітнім софтом.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="ita-process-card"&gt;
+                &lt;img src="images/class2.jpg" alt="Воркшопи"&gt;
+                &lt;div class="ita-process-card-desc"&gt;
+                    &lt;h4&gt;Командні воркшопи&lt;/h4&gt;
+                    &lt;p&gt;Робота над спільними Scrum-проєктами.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="ita-process-card"&gt;
+                &lt;img src="images/class3.jpg" alt="Комерційні кейси"&gt;
+                &lt;div class="ita-process-card-desc"&gt;
+                    &lt;h4&gt;Комерційні кейси&lt;/h4&gt;
+                    &lt;p&gt;Захист дипломів перед IT-роботодавцями.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Партнери Академії (Luxoft) --&gt;
+    &lt;section class="ita-section"&gt;
+        &lt;h3 class="ita-section-title"&gt;Партнери Академії&lt;/h3&gt;
+        &lt;div class="ita-partners-box"&gt;
+            &lt;div class="ita-partner-logo-card"&gt;
+                &lt;div class="ita-partner-logo-title"&gt;Luxoft&lt;/div&gt;
+                &lt;div class="ita-partner-logo-sub"&gt;A DXC Technology Company&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="ita-partner-info"&gt;
+                &lt;h4&gt;Luxoft&lt;/h4&gt;
+                &lt;p&gt;&lt;strong&gt;Luxoft&lt;/strong&gt; — глобальна технологічна компанія, одна із лідерів на ринку послуг цифрової трансформації...&lt;/p&gt;
+                &lt;p&gt;Понад 13 000 спеціалістів у 22 країнах. Близько 3500 в офісах Києва, Одеси і Дніпра.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;</pre>
+                </div>
+
+                <!-- 4. CSS-КОД ВЕРСТКИ -->
+                <h3>4. Повний CSS-код Flexbox-макету IT-Академії:</h3>
+                <div class="code-container">
+<pre>/* Навігаційний бар Flexbox */
+.ita-header-bar {
+    background-color: #000000;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.ita-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+/* Випадаюче меню міст на чистому CSS */
+.ita-dropdown { position: relative; display: inline-block; }
+.ita-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #0f172a;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    border-radius: 6px;
+    z-index: 50;
+}
+.ita-dropdown:hover .ita-dropdown-content { display: block; }
+
+/* 4 картки: гнучкий розподіл простору */
+.ita-program-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.ita-program-card {
+    flex: 1 1 calc(25% - 15px); /* базова ширина 25% */
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px 16px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    width: 100%;
+    justify-content: space-between;
 }
 
-.flex-layout-header {
-    background-color: #0284c7;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-/* Горизонтальний флекс-рядок із середніми блоками */
-.flex-layout-row {
+/* 3 фото-картки навчального процесу */
+.ita-process-grid {
     display: flex;
-    flex-direction: row;
-    gap: 12px;
-    min-height: 220px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-.flex-sidebar-left {
-    flex: 0 0 220px; /* не стискається, базова ширина 220px */
-    background-color: #e0f2fe;
-    color: #0369a1;
-    padding: 20px;
-    border-radius: 8px;
+.ita-process-card {
+    flex: 1 1 calc(33.333% - 14px); /* базова ширина 33.333% */
+    min-width: 250px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.flex-content-main {
-    flex: 1 1 auto;  /* займає весь доступний вільний простір */
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-    padding: 20px;
-    border-radius: 8px;
+/* Блок Luxoft: Flexbox вирівнювання логотипу та опису */
+.ita-partners-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px;
 }
 
-.flex-sidebar-right {
-    flex: 0 0 220px;
-    background-color: #e0f2fe;
-    color: #0369a1;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.flex-layout-footer {
-    background-color: #0f172a;
-    color: white;
-    padding: 16px;
+.ita-partner-logo-card {
+    flex: 1 1 280px;
     text-align: center;
-    border-radius: 8px;
 }
 
-/* Адаптивність Flexbox для мобільних екранів */
-@media (max-width: 768px) {
-    .flex-layout-row {
-        flex-direction: column; /* автоматичне перестроювання в 1 стовпчик */
-    }
-    .flex-sidebar-left,
-    .flex-sidebar-right {
-        flex: 1 1 100%;
-    }
+.ita-partner-info {
+    flex: 2 1 420px; /* вдвічі більший коефіцієнт росту */
 }</pre>
                 </div>
 
-                <h3>2. Візуалізація Flexbox-макету (Live Preview):</h3>
-                <div class="preview-box">
-                    <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; font-size: 14px;">
-                        <div style="background-color: #0284c7; color: white; padding: 18px; text-align: center; border-radius: 6px; font-weight: bold;">
-                            1. Header (display: flex)
-                        </div>
-                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                            <div style="flex: 1 1 180px; background-color: #e0f2fe; color: #0284c7; padding: 25px 15px; text-align: center; border-radius: 6px; font-weight: bold;">
-                                2. Сайдбар 1 (flex: 1 1 180px)
-                            </div>
-                            <div style="flex: 2 1 300px; background-color: #ffffff; border: 1px solid #cbd5e1; padding: 25px 15px; text-align: center; border-radius: 6px; font-weight: bold;">
-                                3. Головний контент (flex: 2 1 300px)
-                            </div>
-                            <div style="flex: 1 1 180px; background-color: #e0f2fe; color: #0284c7; padding: 25px 15px; text-align: center; border-radius: 6px; font-weight: bold;">
-                                4. Сайдбар 2 (flex: 1 1 180px)
-                            </div>
-                        </div>
-                        <div style="background-color: #0f172a; color: white; padding: 15px; text-align: center; border-radius: 6px; font-weight: bold;">
-                            5. Footer (display: flex)
-                        </div>
-                    </div>
-                </div>
+                <!-- 5. ТЕОРЕТИЧНІ ВІДОМОСТІ -->
+                <h3>5. Теоретичні відомості: модель гнучких контейнерів CSS Flexible Box Layout:</h3>
+                <ul>
+                    <li><strong>Концепція двох осей:</strong> Flexbox керує елементами відносно головної (<strong>Main Axis</strong>) та поперечної (<strong>Cross Axis</strong>) осей. Напрямок головної осі визначається правилом <code>flex-direction: row | column;</code>.</li>
+                    <li><strong>Керування переносом та розподілом:</strong> Правило <code>flex-wrap: wrap;</code> дозволяє флекс-елементам переноситися на наступний рядок при звуженні вікна браузера, а <code>justify-content: space-between;</code> рівномірно розподіляє вільний простір між картками без ручних розрахунків відступів.</li>
+                    <li><strong>Скорочена властивість <code>flex</code>:</strong> Об'єднує три фундаментальні параметри:
+                        <ul>
+                            <li><code>flex-grow</code> (коефіцієнт росту) — пропорція розподілу залишку вільного простору між елементами;</li>
+                            <li><code>flex-shrink</code> (коефіцієнт стискання) — ступінь зменшення елемента при дефіциті простору;</li>
+                            <li><code>flex-basis</code> (базовий розмір) — початковий розмір елемента до початку розподілу вільного або дефіцитного простору.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Переваги над Float:</strong> Не потребує «костилів» на зразок очищення потоку <code>clear: both</code> чи Clearfix; дозволяє легко реалізовувати однакову висоту карток у рядку незалежно від кількості тексту в них (<code>align-items: stretch</code>).</li>
+                </ul>
             </section>
 
             <!-- ЛР3: Вкладка 6 (Висновки ЛР3) -->
@@ -1636,6 +2498,8 @@ tbody tr:hover {
         </main>
     </div>
 
+    <script src="js/lab4-record-data.js"></script>
+    <script src="js/lab5-record-data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
