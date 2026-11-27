@@ -838,7 +838,7 @@ const LAB5_SUBTABS = [
     id: 'lab5-topic',
     pillLabel: 'Тема. Мета. Місце розташування сайтів, звіту',
     title: 'Лабораторна робота №5',
-    html: `<h2>Лабораторна робота №5 (Варіант №1)</h2>
+    html: `<h2>Лабораторна робота №5</h2>
 <div class="info-card">
     <p><strong>Тема:</strong> ОБ'ЄКТ. МЕТОДИ ОБ'ЄКТА. МАСИВ ОБ'ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТІВ. CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК КОЛБЕКИ. ПЕРЕБИРАЮЧІ МЕТОДИ МАСИВУ.</p>
     <p><strong>Мета:</strong> Придбати практичні навички роботи з об'єктами, методами об'єктів, масивами об'єктів, деструктуризацією об'єктів, callback-функціями, стрілочними функціями, стрілочними функціями як колбеками та перебираючими методами масиву (<code>forEach()</code>, <code>findIndex()</code>, <code>reduce()</code> тощо).</p>
@@ -1055,29 +1055,6 @@ ${renderScreenshotFigure('lab5-console-subtopics-7-8.png', 'Рис. 1.8: Рез�
         <li><strong>Перебираючі методи масивів та тестування:</strong> Застосовано <code>forEach()</code>, <code>findIndex()</code> і <code>reduce()</code> зі стрілочними функціями на кількох наборах даних; коректність усіх 19 завдань підтверджено 10 автотестами <code>node --test</code> та перевіркою в headless Chrome (0 винятків у консолі).</li>
     </ol>
 </div>`,
-  },
-  {
-    id: 'lab5-questions',
-    pillLabel: 'Контрольні питання',
-    title: 'Відповіді на контрольні питання та практичні контрольні завдання',
-    html: `<h2>Контрольні питання до Лабораторної роботи №5</h2>
-<div class="info-card">
-    <p>Нижче наведено стислі відповіді на <strong>35 теоретичних контрольних запитань</strong> та розв'язання <strong>12 практичних контрольних завдань</strong> із методичних вказівок до ЛР №5.</p>
-</div>
-<h3>Частина 1. Теоретичні контрольні запитання (1–35)</h3>
-${THEORETICAL_QUESTIONS.map(
-  (item, idx) => `<div style="margin-bottom: 16px;">
-    <h4 style="color: #1e3a8a; margin-bottom: 4px;">${idx + 1}. ${escapeHtml(item.q)}</h4>
-    <p>${item.a}</p>
-</div>`
-).join('\n')}
-<h3>Частина 2. Практичні контрольні завдання (1–12)</h3>
-${PRACTICAL_CONTROL_TASKS.map(
-  (item) => `<div style="margin-bottom: 18px;">
-    <h4 style="color: #1e3a8a; margin-bottom: 6px;">${escapeHtml(item.title)}</h4>
-    ${renderCodeBlock(item.code)}
-</div>`
-).join('\n')}`,
   },
 ];
 

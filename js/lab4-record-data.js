@@ -84,10 +84,6 @@ const LAB4_RECORD_DATA = {
     {
       "target": "lab4-conclusions",
       "label": "ВИСНОВКИ до ЛР №4"
-    },
-    {
-      "target": "lab4-questions",
-      "label": "Контрольні запитання (28)"
     }
   ],
   "tasks": [
@@ -460,19 +456,7 @@ ${LAB4_RECORD_DATA.conclusions.map((p) => `        <p>${escapeHtml(p)}</p>`).joi
     </div>
 </section>`;
 
-  const questionsHtml = `<section id="lab4-questions" class="tab-content">
-    <h2>Контрольні запитання до Лабораторної роботи №4</h2>
-${LAB4_RECORD_DATA.controlQuestions
-    .map(
-      (item) => `    <div style="margin-bottom: 18px;">
-        <h3>${escapeHtml(item.q)}</h3>
-        <p>${escapeHtml(item.a)}</p>
-    </div>`
-    )
-    .join('\n')}
-</section>`;
-
-  return [topicSection, taskSections, conclusionsHtml, questionsHtml].join('\n\n');
+  return [topicSection, taskSections, conclusionsHtml].join('\n\n');
 }
 
 if (typeof window !== 'undefined') {
