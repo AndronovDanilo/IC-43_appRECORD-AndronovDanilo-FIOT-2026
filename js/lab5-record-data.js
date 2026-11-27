@@ -270,22 +270,16 @@ const CODE_SUBTOPIC_1 = `/*
  * age, specialty, course. Заповніть властивості відповідними значеннями.
  * Виведіть об'єкт у консоль.
  */
-function task1_1(studentInput = {
-  firstName: 'Данило',
-  lastName: 'Андронов',
-  age: 19,
-  specialty: '126 Інформаційні системи та технології',
-  course: 2,
-}) {
-  const student = {
-    firstName: studentInput.firstName,
-    lastName: studentInput.lastName,
-    age: studentInput.age,
-    specialty: studentInput.specialty,
-    course: studentInput.course,
-  };
-
-  logOutput('[1.1] Об\\'єкт student:', student);
+function task1_1(
+  student = {
+    firstName: 'Данило',
+    lastName: 'Андронов',
+    age: 19,
+    specialty: '126 Інформаційні системи та технології',
+    course: 2,
+  }
+) {
+  console.log('[1.1] Об\\'єкт student:', student);
   return student;
 }
 
@@ -296,31 +290,25 @@ function task1_1(studentInput = {
  * місто, вулицю, номер будинку та поштовий індекс. Виведіть у консоль місто
  * та вулицю проживання користувача.
  */
-function task1_9(userInput = {
-  firstName: 'Данило',
-  lastName: 'Андронов',
-  age: 19,
-  address: {
-    city: 'Київ',
-    street: 'Політехнічна',
-    house: '14В',
-    postalCode: '03056',
-  },
-}) {
-  const user = {
-    firstName: userInput.firstName,
-    lastName: userInput.lastName,
-    age: userInput.age,
+function task1_9(
+  user = {
+    firstName: 'Данило',
+    lastName: 'Андронов',
+    age: 19,
     address: {
-      city: userInput.address.city,
-      street: userInput.address.street,
-      house: userInput.address.house,
-      postalCode: userInput.address.postalCode,
+      city: 'Київ',
+      street: 'Політехнічна',
+      house: '14В',
+      postalCode: '03056',
     },
+  }
+) {
+  console.log(\`[1.9] Місто проживання: \${user.address.city}, вулиця: \${user.address.street}\`);
+  return {
+    user,
+    city: user.address.city,
+    street: user.address.street,
   };
-
-  logOutput(\`[1.9] Місто проживання: \${user.address.city}, вулиця: \${user.address.street}\`);
-  return { user, city: user.address.city, street: user.address.street };
 }`;
 
 const CODE_SUBTOPIC_2 = `/*
@@ -329,23 +317,17 @@ const CODE_SUBTOPIC_2 = `/*
  * Використовуючи метод Object.keys(), отримайте масив назв усіх властивостей
  * об'єкта. Виведіть отриманий масив у консоль.
  */
-function task2_1(studentInput = {
-  name: 'Данило Андронов',
-  age: 19,
-  specialty: 'Інформаційні системи та технології',
-  course: 2,
-  group: 'ІС-43',
-}) {
-  const student = {
-    name: studentInput.name,
-    age: studentInput.age,
-    specialty: studentInput.specialty,
-    course: studentInput.course,
-    group: studentInput.group,
-  };
-
+function task2_1(
+  student = {
+    name: 'Данило Андронов',
+    age: 19,
+    specialty: 'Інформаційні системи та технології',
+    course: 2,
+    group: 'ІС-43',
+  }
+) {
   const keys = Object.keys(student);
-  logOutput('[2.1] Ключі об\\'єкта student:', keys);
+  console.log('[2.1] Ключі об\\'єкта student:', keys);
   return keys;
 }
 
@@ -356,30 +338,29 @@ function task2_1(studentInput = {
  * властивості price у копії. Перевірте, чи змінився початковий об'єкт.
  */
 function task2_8(
-  productInput = {
+  product = {
     name: 'Готельний тур «Карпатський вікенд»',
     price: 4500,
     category: 'Туризм та готелі',
   },
   newCopyPrice = 3990
 ) {
-  const product = {
-    name: productInput.name,
-    price: productInput.price,
-    category: productInput.category,
-  };
-
+  const originalPrice = product.price;
   const productCopy = Object.assign({}, product);
   productCopy.price = newCopyPrice;
 
-  const isOriginalChanged = product.price !== productInput.price;
-  logOutput('[2.8] Початковий об\\'єкт product:', product);
-  logOutput('[2.8] Поверхнева копія productCopy:', productCopy);
-  logOutput(
-    \`[2.8] Чи змінився початковий об'єкт? \${isOriginalChanged ? 'Так' : 'Ні (price залишилась ' + product.price + ')'}\`
+  const isOriginalChanged = product.price !== originalPrice;
+  console.log('[2.8] Початковий об\\'єкт product:', product);
+  console.log('[2.8] Поверхнева копія productCopy:', productCopy);
+  console.log(
+    \`[2.8] Чи змінився початковий об'єкт? \${isOriginalChanged ? 'Так' : \`Ні (price залишилась \${product.price})\`}\`
   );
 
-  return { product, productCopy, isOriginalChanged };
+  return {
+    product,
+    productCopy,
+    isOriginalChanged,
+  };
 }`;
 
 const CODE_SUBTOPIC_3 = `/*
@@ -387,19 +368,14 @@ const CODE_SUBTOPIC_3 = `/*
  * Створіть масив students, який містить три об'єкти студентів. Кожен об'єкт
  * повинен мати властивості id, name, age, group. Виведіть увесь масив у консоль.
  */
-function task3_1(studentsInput = [
-  { id: 1, name: 'Данило Андронов', age: 19, group: 'ІС-43' },
-  { id: 2, name: 'Олена Коваленко', age: 18, group: 'ІС-43' },
-  { id: 3, name: 'Максим Шевченко', age: 19, group: 'ІС-43' },
-]) {
-  const students = studentsInput.map((item) => ({
-    id: item.id,
-    name: item.name,
-    age: item.age,
-    group: item.group,
-  }));
-
-  logOutput('[3.1] Масив студентів:', students);
+function task3_1(
+  students = [
+    { id: 1, name: 'Данило Андронов', age: 19, group: 'ІС-43' },
+    { id: 2, name: 'Олена Коваленко', age: 18, group: 'ІС-43' },
+    { id: 3, name: 'Максим Шевченко', age: 19, group: 'ІС-43' },
+  ]
+) {
+  console.log('[3.1] Масив студентів:', students);
   return students;
 }
 
@@ -417,11 +393,7 @@ function task3_7(
   ],
   targetId = 102
 ) {
-  const products = productsInput.map((item) => ({
-    id: item.id,
-    name: item.name,
-    price: item.price,
-  }));
+  const products = productsInput.slice();
 
   let indexToDelete = -1;
   for (let i = 0; i < products.length; i += 1) {
@@ -433,15 +405,18 @@ function task3_7(
 
   let removedItem = null;
   if (indexToDelete !== -1) {
-    const removed = products.splice(indexToDelete, 1);
-    removedItem = removed[0];
-    logOutput(\`[3.7] Видалено товар з id=\${targetId} (індекс \${indexToDelete}):\`, removedItem);
+    [removedItem] = products.splice(indexToDelete, 1);
+    console.log(\`[3.7] Видалено товар з id=\${targetId} (індекс \${indexToDelete}):\`, removedItem);
   } else {
-    logOutput(\`[3.7] Товар з id=\${targetId} не знайдено, масив без змін.\`);
+    console.log(\`[3.7] Товар з id=\${targetId} не знайдено, масив без змін.\`);
   }
 
-  logOutput('[3.7] Оновлений масив товарів:', products);
-  return { products, removedIndex: indexToDelete, removedItem };
+  console.log('[3.7] Оновлений масив товарів:', products);
+  return {
+    products,
+    removedIndex: indexToDelete,
+    removedItem,
+  };
 }`;
 
 const CODE_SUBTOPIC_4 = `/*
@@ -450,15 +425,16 @@ const CODE_SUBTOPIC_4 = `/*
  * Використовуючи деструктуризацію, створіть окремі змінні для отримання
  * значень цих властивостей. Виведіть змінні в консоль.
  */
-function task4_1(studentInput = {
-  name: 'Данило Андронов',
-  age: 19,
-  group: 'ІС-43',
-  course: 2,
-}) {
-  const student = { ...studentInput };
+function task4_1(
+  student = {
+    name: 'Данило Андронов',
+    age: 19,
+    group: 'ІС-43',
+    course: 2,
+  }
+) {
   const { name, age, group, course } = student;
-  logOutput(\`[4.1] Деструктуризація: ім'я=\${name}, вік=\${age}, група=\${group}, курс=\${course}\`);
+  console.log(\`[4.1] Деструктуризація: ім'я=\${name}, вік=\${age}, група=\${group}, курс=\${course}\`);
   return { name, age, group, course };
 }
 
@@ -469,19 +445,20 @@ function task4_1(studentInput = {
  * rest (...) використайте для збереження решти властивостей в окремий об'єкт.
  * Виведіть усі результати.
  */
-function task4_5(studentInput = {
-  name: 'Данило Андронов',
-  age: 19,
-  group: 'ІС-43',
-  email: 'andronov.danylo@kpi.ua',
-  phone: '+380671234567',
-  course: 2,
-}) {
-  const student = { ...studentInput };
-  const { name, group, ...restProperties } = student;
-  logOutput(\`[4.5] Ім'я: \${name}, Група: \${group}\`);
-  logOutput('[4.5] Решта властивостей (...rest):', restProperties);
-  return { name, group, rest: restProperties };
+function task4_5(
+  student = {
+    name: 'Данило Андронов',
+    age: 19,
+    group: 'ІС-43',
+    email: 'andronov.danylo@kpi.ua',
+    phone: '+380671234567',
+    course: 2,
+  }
+) {
+  const { name, group, ...rest } = student;
+  console.log(\`[4.5] Ім'я: \${name}, Група: \${group}\`);
+  console.log('[4.5] Решта властивостей (...rest):', rest);
+  return { name, group, rest };
 }
 
 /*
@@ -492,17 +469,20 @@ function task4_5(studentInput = {
  * перейменування властивостей, отримайте ім'я, електронну пошту, місто та
  * статус відповіді.
  */
-function task4_10(responseInput = {
-  status: 200,
-  data: {
-    user: {
-      name: 'Данило Андронов',
-      email: 'danylo.andronov@mandrystay.ua',
-      address: { city: 'Київ' },
+function task4_10(
+  response = {
+    status: 200,
+    data: {
+      user: {
+        name: 'Данило Андронов',
+        email: 'danylo.andronov@mandrystay.ua',
+        address: {
+          city: 'Київ',
+        },
+      },
     },
-  },
-}) {
-  const response = responseInput;
+  }
+) {
   const {
     status: responseStatus,
     data: {
@@ -514,10 +494,16 @@ function task4_10(responseInput = {
     },
   } = response;
 
-  logOutput(
+  console.log(
     \`[4.10] Відповідь сервера -> статус: \${responseStatus}, користувач: \${userName}, email: \${userEmail}, місто: \${userCity}\`
   );
-  return { userName, userEmail, userCity, responseStatus };
+
+  return {
+    userName,
+    userEmail,
+    userCity,
+    responseStatus,
+  };
 }`;
 
 const CODE_SUBTOPIC_5 = `/*
@@ -540,7 +526,7 @@ function multiplyByTwo(num) {
 
 function task5_1(value = 7, callback = multiplyByTwo) {
   const result = processValue(value, callback);
-  logOutput(\`[5.1] processValue(\${value}, \${callback.name || 'callback'}) = \${result}\`);
+  console.log(\`[5.1] processValue(\${value}, \${callback.name || 'callback'}) = \${result}\`);
   return result;
 }
 
@@ -551,14 +537,13 @@ function task5_1(value = 7, callback = multiplyByTwo) {
  * через 3 секунди. Передайте функцію, яка виводить повідомлення в консоль.
  */
 function logDelayedMessage(message) {
-  logOutput(\`[5.7] Відкладене повідомлення (через 3 секунди): "\${message}"\`);
+  console.log(\`[5.7] Відкладене повідомлення (через 3 секунди): "\${message}"\`);
 }
 
 function showMessage(message, callback, delayMs = 3000) {
   if (typeof callback !== 'function') {
     throw new TypeError('callback у showMessage() має бути функцією');
   }
-
   return setTimeout(() => {
     callback(message);
   }, delayMs);
@@ -569,7 +554,7 @@ function task5_7(
   callback = logDelayedMessage,
   delayMs = 3000
 ) {
-  logOutput(\`[5.7] Заплановано відкладене повідомлення (затримка \${delayMs} мс)...\`);
+  console.log(\`[5.7] Заплановано відкладене повідомлення (затримка \${delayMs} мс)...\`);
   return showMessage(message, callback, delayMs);
 }`;
 
@@ -590,11 +575,14 @@ function task6_1(name = 'Данило') {
   const arrowResult = greetingArrow(name);
   const areEqual = regularResult === arrowResult;
 
-  logOutput(\`[6.1] Звичайна функція greeting("\${name}"): "\${regularResult}"\`);
-  logOutput(\`[6.1] Стрілочна функція greetingArrow("\${name}"): "\${arrowResult}"\`);
-  logOutput(\`[6.1] Результати однакові: \${areEqual}\`);
+  console.log(\`[6.1] greeting("\${name}"): "\${regularResult}"\`);
+  console.log(\`[6.1] greetingArrow("\${name}"): "\${arrowResult}" (однакові: \${areEqual})\`);
 
-  return { regularResult, arrowResult, areEqual };
+  return {
+    regularResult,
+    arrowResult,
+    areEqual,
+  };
 }
 
 /*
@@ -614,22 +602,29 @@ function task6_10(brand = 'Toyota') {
     getInfo() {
       return this.brand;
     },
-    getInfoArrow: () => (typeof this !== 'undefined' && this ? this.brand : undefined),
+    // Стрілочна функція лексично успадковує this зовнішньої області (undefined у strict mode)
+    getInfoArrow: () => this?.brand,
   };
 
   const methodBrand = car.getInfo();
   const arrowThisBrand = car.getInfoArrow();
   const arrowMessage = showBrand(car.brand);
   const explanation =
-    'Стрілочна функція не створює власного контексту this, а лексично успадковує this зовнішньої області видимості; ' +
+    'Стрілочна функція не має власного this і бере його з зовнішньої області видимості; ' +
     'тому для методів об\\'єкта використовують звичайні методи, а стрілочній функції дані передають через параметр.';
 
-  logOutput(\`[6.10] car.getInfo() (this.brand): "\${methodBrand}"\`);
-  logOutput(\`[6.10] car.getInfoArrow() (лексичний this.brand): \${String(arrowThisBrand)}\`);
-  logOutput(\`[6.10] showBrand(car.brand): "\${arrowMessage}"\`);
-  logOutput(\`[6.10] Пояснення: \${explanation}\`);
+  console.log(\`[6.10] car.getInfo() (this.brand): "\${methodBrand}"\`);
+  console.log(\`[6.10] car.getInfoArrow() (лексичний this.brand): \${String(arrowThisBrand)}\`);
+  console.log(\`[6.10] showBrand(car.brand): "\${arrowMessage}"\`);
+  console.log(\`[6.10] Пояснення: \${explanation}\`);
 
-  return { car, methodBrand, arrowThisBrand, arrowMessage, explanation };
+  return {
+    car,
+    methodBrand,
+    arrowThisBrand,
+    arrowMessage,
+    explanation,
+  };
 }`;
 
 const CODE_SUBTOPIC_7 = `/*
@@ -647,7 +642,7 @@ function processNumber(num, callback) {
 
 function task7_1(num = 8) {
   const result = processNumber(num, (n) => n * 5);
-  logOutput(\`[7.1] processNumber(\${num}, (n) => n * 5) = \${result}\`);
+  console.log(\`[7.1] processNumber(\${num}, (n) => n * 5) = \${result}\`);
   return result;
 }
 
@@ -671,7 +666,9 @@ function initTask7_6(doc = typeof document !== 'undefined' ? document : null) {
   if (!inputEl) return null;
 
   const renderValue = (value) => {
-    if (outputEl) outputEl.textContent = value.length > 0 ? value : '(порожньо)';
+    if (outputEl) {
+      outputEl.textContent = value.length > 0 ? value : '(порожньо)';
+    }
   };
 
   if (formEl) {
@@ -682,7 +679,7 @@ function initTask7_6(doc = typeof document !== 'undefined' ? document : null) {
   inputEl.addEventListener('input', (event) => {
     const currentValue = event.target.value;
     renderValue(currentValue);
-    logOutput(\`[7.6] Подія input -> поточне значення: "\${currentValue}"\`);
+    console.log(\`[7.6] Подія input -> поточне значення: "\${currentValue}"\`);
   });
 
   if (buttonEl) {
@@ -694,7 +691,16 @@ function initTask7_6(doc = typeof document !== 'undefined' ? document : null) {
           ? \`Підтверджено значення: "\${currentValue}"\`
           : 'Поле введення наразі порожнє.';
       if (statusEl) statusEl.textContent = statusText;
-      logOutput(\`[7.6] Натиснуто кнопку -> \${statusText}\`);
+      console.log(\`[7.6] Натиснуто кнопку -> \${statusText}\`);
+    });
+  }
+
+  if (clearBtnEl) {
+    clearBtnEl.addEventListener('click', () => {
+      inputEl.value = '';
+      renderValue('');
+      if (statusEl) statusEl.textContent = 'Поле очищено.';
+      console.log('[7.6] Поле введення очищено.');
     });
   }
 
@@ -720,24 +726,40 @@ function loadData(shouldFail = false) {
 function task7_9(shouldFail = false) {
   return loadData(shouldFail)
     .then((message) => {
-      logOutput(\`[7.9] Promise .then(): "\${message}"\`);
+      console.log(\`[7.9] Promise .then(): "\${message}"\`);
       return { ok: true, message };
     })
     .catch((error) => {
-      logOutput(\`[7.9] Promise .catch(): "\${error.message}"\`);
+      console.log(\`[7.9] Promise .catch(): "\${error.message}"\`);
       return { ok: false, error: error.message };
     });
 }`;
 
 const HTML_TASK_7_6 = `<form id="task-7-6-form">
-    <label for="task-7-6-input">Текстове поле введення:</label>
-    <input type="text" id="task-7-6-input" name="liveText" placeholder="Введіть текст..." autocomplete="off">
-    <button type="button" id="task-7-6-button">Вивести значення</button>
-    <button type="button" id="task-7-6-clear">Очистити</button>
+    <div class="form-group">
+        <label for="task-7-6-input">Текстове поле введення:</label>
+        <div class="input-row">
+            <input
+                type="text"
+                id="task-7-6-input"
+                name="liveText"
+                placeholder="Введіть текст (наприклад: MandryStay ІС-43)..."
+                autocomplete="off"
+            >
+            <button type="button" id="task-7-6-button" class="btn btn-primary">
+                Вивести значення
+            </button>
+            <button type="button" id="task-7-6-clear" class="btn btn-secondary">
+                Очистити
+            </button>
+        </div>
+    </div>
 </form>
+
 <div class="live-output-box">
     Поточне значення поля: <output id="task-7-6-output" for="task-7-6-input">(порожньо)</output>
-</div>`;
+</div>
+<p id="task-7-6-status" class="status-note" aria-live="polite"></p>`;
 
 const CODE_SUBTOPIC_8 = `/*
  * Підтема 8 «Перебираючі методи масиву» — Завдання 1. Перебір масиву за допомогою forEach()
@@ -745,20 +767,19 @@ const CODE_SUBTOPIC_8 = `/*
  * group. Використовуючи метод forEach() та стрілочну функцію, виведіть
  * інформацію про кожного студента в консоль.
  */
-function task8_1(studentsInput = [
-  { name: 'Данило Андронов', age: 19, group: 'ІС-43' },
-  { name: 'Олена Коваленко', age: 18, group: 'ІС-43' },
-  { name: 'Максим Шевченко', age: 19, group: 'ІС-43' },
-]) {
-  const students = studentsInput;
+function task8_1(
+  students = [
+    { name: 'Данило Андронов', age: 19, group: 'ІС-43' },
+    { name: 'Олена Коваленко', age: 18, group: 'ІС-43' },
+    { name: 'Максим Шевченко', age: 19, group: 'ІС-43' },
+  ]
+) {
   const formattedLines = [];
-
   students.forEach((student, index) => {
     const info = \`[8.1] Студент №\${index + 1}: \${student.name}, вік: \${student.age}, група: \${student.group}\`;
     formattedLines.push(info);
-    logOutput(info);
+    console.log(info);
   });
-
   return formattedLines;
 }
 
@@ -770,23 +791,25 @@ function task8_1(studentsInput = [
  * повідомлення.
  */
 function task8_5(
-  productsInput = [
+  products = [
     { id: 201, name: 'Тур у Яремче (2 ночі)', price: 4200 },
     { id: 202, name: 'Готель Буковель SPA', price: 6800 },
     { id: 203, name: 'Вікенд у Львові', price: 3100 },
   ],
   targetId = 202
 ) {
-  const products = productsInput;
   const foundIndex = products.findIndex((item) => item.id === targetId);
-
   const message =
     foundIndex !== -1
       ? \`[8.5] Товар з id=\${targetId} знайдено за індексом \${foundIndex} (\${products[foundIndex].name})\`
       : \`[8.5] Товар з id=\${targetId} не знайдено (індекс -1)\`;
 
-  logOutput(message);
-  return { index: foundIndex, found: foundIndex !== -1, message };
+  console.log(message);
+  return {
+    index: foundIndex,
+    found: foundIndex !== -1,
+    message,
+  };
 }
 
 /*
@@ -795,18 +818,18 @@ function task8_5(
  * price, quantity. Використовуючи метод reduce(), обчисліть загальну вартість
  * усіх товарів на складі. Результат виведіть у консоль.
  */
-function task8_8(productsInput = [
-  { name: 'Клавіатура механічна', price: 2500, quantity: 4 },
-  { name: 'Миша бездротова', price: 1400, quantity: 6 },
-  { name: 'Монітор 27"', price: 9800, quantity: 2 },
-]) {
-  const products = productsInput;
+function task8_8(
+  products = [
+    { name: 'Клавіатура механічна', price: 2500, quantity: 4 },
+    { name: 'Миша бездротова', price: 1400, quantity: 6 },
+    { name: 'Монітор 27"', price: 9800, quantity: 2 },
+  ]
+) {
   const totalCost = products.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-
-  logOutput(\`[8.8] Загальна вартість товарів на складі: \${totalCost} грн\`);
+  console.log(\`[8.8] Загальна вартість товарів на складі: \${totalCost} грн\`);
   return totalCost;
 }`;
 
@@ -894,7 +917,12 @@ ${renderCodeBlock(`[3.1] Масив студентів: [
   { id: 101, name: 'Номер Standard', price: 1800 },
   { id: 103, name: 'Шале у Буковелі', price: 5400 }
 ]
-[3.7] Товар з id=999 не знайдено, масив без змін.`)}
+[3.7] Товар з id=999 не знайдено, масив без змін.
+[3.7] Оновлений масив товарів: [
+  { id: 101, name: 'Номер Standard', price: 1800 },
+  { id: 102, name: 'Номер Deluxe Panorama', price: 3200 },
+  { id: 103, name: 'Шале у Буковелі', price: 5400 }
+]`)}
 ${renderScreenshotFigure('lab5-console-subtopic-3.png', 'Рис. 1.3: Вивід у Console для підтеми «Масив об’єктів» (3.1, 3.7)')}`,
   },
   {
@@ -947,13 +975,17 @@ ${renderScreenshotFigure('lab5-console-subtopics-5-6.png', 'Рис. 1.5–1.6: �
 <h3>1. Програмний код (<code>js/lesson-5.js</code>) з умовами у коментарях:</h3>
 ${renderCodeBlock(CODE_SUBTOPIC_6)}
 <h3>2. Результат виконання у Console:</h3>
-${renderCodeBlock(`[6.1] Звичайна функція greeting("Данило"): "Вітаємо, Данило!"
-[6.1] Стрілочна функція greetingArrow("Данило"): "Вітаємо, Данило!"
-[6.1] Результати однакові: true
+${renderCodeBlock(`[6.1] greeting("Данило"): "Вітаємо, Данило!"
+[6.1] greetingArrow("Данило"): "Вітаємо, Данило!" (однакові: true)
+[6.1] greeting("Олена"): "Вітаємо, Олена!"
+[6.1] greetingArrow("Олена"): "Вітаємо, Олена!" (однакові: true)
 [6.10] car.getInfo() (this.brand): "Toyota"
 [6.10] car.getInfoArrow() (лексичний this.brand): undefined
 [6.10] showBrand(car.brand): "Марка автомобіля: Toyota"
-[6.10] Пояснення: Стрілочна функція не створює власного контексту this, а лексично успадковує this зовнішньої області видимості; тому для методів об'єкта використовують звичайні методи, а стрілочній функції дані передають через параметр.`)}
+[6.10] Пояснення: Стрілочна функція не має власного this і бере його з зовнішньої області видимості; тому для методів об'єкта використовують звичайні методи, а стрілочній функції дані передають через параметр.
+[6.10] car.getInfo() (this.brand): "Volkswagen"
+[6.10] car.getInfoArrow() (лексичний this.brand): undefined
+[6.10] showBrand(car.brand): "Марка автомобіля: Volkswagen"`)}
 ${renderScreenshotFigure('lab5-console-subtopics-5-6.png', 'Рис. 1.6: Порівняння звичайних і стрілочних функцій та контексту this у Console')}`,
   },
   {
@@ -973,7 +1005,8 @@ ${renderCodeBlock(`[7.1] processNumber(8, (n) => n * 5) = 40
 [7.1] processNumber(-3, (n) => n * 5) = -15
 [7.6] Подія input -> поточне значення: "MandryStay ІС-43"
 [7.6] Натиснуто кнопку -> Підтверджено значення: "MandryStay ІС-43"
-[7.9] Promise .then(): "Дані успішно завантажено"`)}
+[7.9] Promise .then(): "Дані успішно завантажено"
+[7.9] Promise .catch(): "Не вдалося завантажити дані із сервера"`)}
 ${renderScreenshotFigure('lab5-task-7-6-ui.png', 'Рис. 1.7а: Інтерактивна форма Завдання 7.6 (подія input і кнопка підтвердження у браузері)')}
 ${renderScreenshotFigure('lab5-console-subtopics-7-8.png', 'Рис. 1.7б: Виконання стрілочних колбеків (7.1, 7.6, 7.9) та перебираючих методів (8.1, 8.5, 8.8) у Console')}`,
   },
@@ -1019,7 +1052,7 @@ ${renderScreenshotFigure('lab5-console-subtopics-7-8.png', 'Рис. 1.8: Рез�
         <li><strong>Об'єкти та їх методи:</strong> Створено прості та вкладені об'єкти (<code>student</code>, <code>user.address</code>), використано <code>Object.keys()</code> для інспектування ключів та <code>Object.assign()</code> для поверхневого копіювання без мутації оригіналу.</li>
         <li><strong>Масиви об'єктів та деструктуризація:</strong> Відпрацьовано ітерацію та пошукове видалення об'єктів за <code>id</code> методом <code>splice()</code>, базову деструктуризацію, збір решти полів через оператор <code>...rest</code> та вкладену деструктуризацію з перейменуванням змінних.</li>
         <li><strong>Callback-функції та стрілочні функції:</strong> Реалізовано передачу синхронних і відкладених (<code>setTimeout</code> 3000 мс) callback-функцій, перевірено поведінку контексту <code>this</code> у методах об'єкта на противагу лексичному <code>this</code> у стрілочних функціях, підключено обробник події <code>input</code> та ланцюжок <code>Promise</code> (<code>.then()</code> / <code>.catch()</code>).</li>
-        <li><strong>Перебираючі методи масивів та тестування:</strong> Застосовано <code>forEach()</code>, <code>findIndex()</code> і <code>reduce()</code> зі стрілочними функціями на кількох наборах даних; коректність усіх 19 завдань підтверджено 9 автотестами <code>node --test</code> та перевіркою в headless Chrome (0 винятків у консолі).</li>
+        <li><strong>Перебираючі методи масивів та тестування:</strong> Застосовано <code>forEach()</code>, <code>findIndex()</code> і <code>reduce()</code> зі стрілочними функціями на кількох наборах даних; коректність усіх 19 завдань підтверджено 10 автотестами <code>node --test</code> та перевіркою в headless Chrome (0 винятків у консолі).</li>
     </ol>
 </div>`,
   },
